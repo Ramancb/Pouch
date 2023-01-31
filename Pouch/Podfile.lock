@@ -1,0 +1,28 @@
+PODS:
+  - DGActivityIndicatorView (2.1.1)
+  - IQKeyboardManagerSwift (6.5.10)
+  - Kingfisher (7.4.1)
+  - ObjectMapper (4.2.0)
+
+DEPENDENCIES:
+  - DGActivityIndicatorView
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - ObjectMapper
+
+SPEC REPOS:
+  trunk:
+    - DGActivityIndicatorView
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - ObjectMapper
+
+SPEC CHECKSUMS:
+  DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+
+PODFILE CHECKSUM: ed773d1200ef99082ba57920dd8590bd1ed400b0
+
+COCOAPODS: 1.11.3

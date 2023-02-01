@@ -18,7 +18,9 @@
 		4B1B46E0298928AD0006D7F1 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B46D6298928AD0006D7F1 /* Lato-ThinItalic.ttf */; };
 		4B1B46E1298928AD0006D7F1 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B46D7298928AD0006D7F1 /* Lato-Light.ttf */; };
 		4B1B46E329892AD10006D7F1 /* LatoSemibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B46E229892AD10006D7F1 /* LatoSemibold.ttf */; };
-		4BCADD51298948210091A183 /* LoginController in Resources */ = {isa = PBXBuildFile; fileRef = 4BCADD50298948210091A183 /* LoginController */; };
+		4B4C06A1298A3428002C9E4F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C06A0298A3428002C9E4F /* LoginVC.swift */; };
+		4B4C06A9298A9C53002C9E4F /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C06A7298A9C53002C9E4F /* OtpViewController.swift */; };
+		4B4C06AA298A9C53002C9E4F /* OtpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4C06A8298A9C53002C9E4F /* OtpViewController.xib */; };
 		4BCADD55298949270091A183 /* WhyMobileNoPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */; };
 		4BCADD56298949270091A183 /* WhyMobileNoPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */; };
 		E41F7825F9EDD1481703CE1F /* Pods_Pouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */; };
@@ -248,7 +250,9 @@
 		4B1B46D6298928AD0006D7F1 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-ThinItalic.ttf"; path = "../../../../Downloads/Lato/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		4B1B46D7298928AD0006D7F1 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../../Downloads/Lato/Lato-Light.ttf"; sourceTree = "<group>"; };
 		4B1B46E229892AD10006D7F1 /* LatoSemibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LatoSemibold.ttf; path = "../../../../Downloads/lato-semibold/LatoSemibold.ttf"; sourceTree = "<group>"; };
-		4BCADD50298948210091A183 /* LoginController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoginController; sourceTree = "<group>"; };
+		4B4C06A0298A3428002C9E4F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4B4C06A7298A9C53002C9E4F /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
+		4B4C06A8298A9C53002C9E4F /* OtpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewController.xib; sourceTree = "<group>"; };
 		4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyMobileNoPopUpViewController.swift; sourceTree = "<group>"; };
 		4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhyMobileNoPopUpViewController.xib; sourceTree = "<group>"; };
 		5F9AA0F2AF9379AE7E7458C6 /* Pods-Pouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pouch.debug.xcconfig"; path = "Target Support Files/Pods-Pouch/Pods-Pouch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -499,13 +503,70 @@
 			name = "Lato Fonts";
 			sourceTree = "<group>";
 		};
-		4BCADD522989489B0091A183 /* WhyMobileNoPop */ = {
+		4B4C06A2298A3DB3002C9E4F /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B4C06A4298A3DEE002C9E4F /* Model */,
+				4B4C06A3298A3DCF002C9E4F /* View */,
+				4B4C06A5298A3DFD002C9E4F /* Presenter */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		4B4C06A3298A3DCF002C9E4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B4C06A0298A3428002C9E4F /* LoginVC.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4B4C06A4298A3DEE002C9E4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4B4C06A5298A3DFD002C9E4F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		4B4C06A6298A6A4E002C9E4F /* View */ = {
 			isa = PBXGroup;
 			children = (
 				4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */,
 				4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */,
 			);
-			name = WhyMobileNoPop;
+			name = View;
+			sourceTree = "<group>";
+		};
+		4B4C06AB298A9C62002C9E4F /* OtpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B4C06AC298A9C9A002C9E4F /* View */,
+			);
+			name = OtpViewController;
+			sourceTree = "<group>";
+		};
+		4B4C06AC298A9C9A002C9E4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B4C06A7298A9C53002C9E4F /* OtpViewController.swift */,
+				4B4C06A8298A9C53002C9E4F /* OtpViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4BCADD522989489B0091A183 /* InfoPopUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B4C06A6298A6A4E002C9E4F /* View */,
+			);
+			name = InfoPopUpViewController;
 			sourceTree = "<group>";
 		};
 		5361188A8045F71FD9FB3902 /* Frameworks */ = {
@@ -567,8 +628,9 @@
 		F17E14DC2988F8C000C336C2 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				4BCADD522989489B0091A183 /* WhyMobileNoPop */,
-				4BCADD50298948210091A183 /* LoginController */,
+				4B4C06A2298A3DB3002C9E4F /* LoginViewController */,
+				4BCADD522989489B0091A183 /* InfoPopUpViewController */,
+				4B4C06AB298A9C62002C9E4F /* OtpViewController */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -1068,6 +1130,7 @@
 				F1AD982B2988FBBF00FB83DA /* SF-Pro-Display-Semibold.otf in Resources */,
 				4B1B46E1298928AD0006D7F1 /* Lato-Light.ttf in Resources */,
 				F1AD985E2988FBBF00FB83DA /* SF-Pro-Display-BlackItalic.otf in Resources */,
+				4B4C06AA298A9C53002C9E4F /* OtpViewController.xib in Resources */,
 				F1AD985A2988FBBF00FB83DA /* SF-Pro-Text-SemiboldItalic.eot in Resources */,
 				F1AD98192988FBBF00FB83DA /* SF-Pro-Display-Light.ttf in Resources */,
 				F17E14D12988F82200C336C2 /* Assets.xcassets in Resources */,
@@ -1095,7 +1158,6 @@
 				F1AD98122988FBBF00FB83DA /* SF-Pro-Display-UltralightItalic.woff in Resources */,
 				F1AD98152988FBBF00FB83DA /* SF-Pro-Display-Semibold.eot in Resources */,
 				F1AD97F82988FBBF00FB83DA /* SF-Pro-Display-RegularItalic.eot in Resources */,
-				4BCADD51298948210091A183 /* LoginController in Resources */,
 				F1AD98552988FBBF00FB83DA /* SF-Pro-Display-ThinItalic.eot in Resources */,
 				F1AD981D2988FBBF00FB83DA /* sf-pro-text-bold.svg in Resources */,
 				F1AD97DF2988FBBF00FB83DA /* cancel_notes@3x.png in Resources */,
@@ -1266,6 +1328,7 @@
 				F1AD97EC2988FBBF00FB83DA /* HttpManager.swift in Sources */,
 				4BCADD55298949270091A183 /* WhyMobileNoPopUpViewController.swift in Sources */,
 				F1AD97A42988FBBE00FB83DA /* Validator.swift in Sources */,
+				4B4C06A1298A3428002C9E4F /* LoginVC.swift in Sources */,
 				F1AD97B52988FBBE00FB83DA /* UserDefaultsCustom.swift in Sources */,
 				F17E14CF2988F82000C336C2 /* Pouch.xcdatamodeld in Sources */,
 				F1AD97872988FBBE00FB83DA /* Double+Custom.swift in Sources */,
@@ -1274,6 +1337,7 @@
 				F1AD97762988FBBE00FB83DA /* UIView+Custom.swift in Sources */,
 				F1AD97EB2988FBBF00FB83DA /* API.swift in Sources */,
 				F1AD97B42988FBBE00FB83DA /* AutoResizeTableView.swift in Sources */,
+				4B4C06A9298A9C53002C9E4F /* OtpViewController.swift in Sources */,
 				F1AD97882988FBBE00FB83DA /* UIStoryboard+Custom.swift in Sources */,
 				F17E14C52988F82000C336C2 /* AppDelegate.swift in Sources */,
 				F1AD97842988FBBE00FB83DA /* UIButton+Custom.swift in Sources */,

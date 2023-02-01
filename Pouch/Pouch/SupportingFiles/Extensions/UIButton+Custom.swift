@@ -28,6 +28,13 @@ extension UIButton {
         //self.addTarget(nil, action: #selector(controller.toggleAction(_:)), for: .touchUpInside)
         
     }
+   
+       func addTextSpacing(spacing: CGFloat){
+           let attributedString = NSMutableAttributedString(string: (self.titleLabel?.text!)!)
+           attributedString.addAttribute(NSAttributedString.Key.kern, value: spacing, range: NSRange(location: 0, length: (self.titleLabel?.text!.count)!))
+           self.setAttributedTitle(attributedString, for: .normal)
+       }
+    
     
     func setBackButton(controller: UIViewController) {
         self.setImage(#imageLiteral(resourceName: "ic_back"), for: .normal)
@@ -343,7 +350,7 @@ extension UIButton{
             self.shadowOptacity = 1.0
             self.isUserInteractionEnabled = false
         } else {
-            self.backgroundColor = UIColor.appColor(.pink_Main)
+            self.backgroundColor = UIColor.appColor(.themeYellow)
 //            self.titleLabel?.textColor = UIColor.white
             self.shadowColor = UIColor(hexString: "#FB2193",alpha: 0.3)
             self.shadowOffset = CGSize(width: 0, height: 2)

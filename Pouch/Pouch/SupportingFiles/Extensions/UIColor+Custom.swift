@@ -353,13 +353,13 @@ extension UIColor {
     
     ///Added
     enum AppAssetColor : String{
-        case pink_Main = "Pink_Main"
-        case super_Light_Grey = "Super_Light_Grey"
-        case grey_Medium = "Grey_Medium"
-        case cyan_light_shadow = "Cyan_light_shadow"
-        case red_Light = "Red_Light"
-        case red_Light_Stroke = "Red_Light_Stroke"
-        case red_Main = "Red_Main"
+        case themeYellow = "themeYellow"
+        case themeWhite = "themeWhite"
+        case themeGrey = "themeGrey"
+        case themeDarkGrey = "themeDarkGrey"
+        case themeBlack = "themeBlack"
+        case popUpColour = "popUpColour"
+        case fontBlack = "fontBlack"
         case green_Light_Stroke = "Green_Light_Stroke"
         case green_Light = "Green_Light"
         case green_Main = "Green_Main"
@@ -373,12 +373,12 @@ extension UIColor {
         case black_001 =  "Black_001"
         case dark_Grey =  "Dark_Grey"
         case pink_Light =  "Pink_Light"
-        case gradient0_01 = "Gradient0_01"
-        case gradient0_02 =  "Gradient0_02"
-        case gradient0_03 =  "Gradient0_03"
-        case gradient0_04 =  "Gradient0_04"
-        case gradient0_05 =  "Gradient0_05"
-        case gradient0_06 =  "Gradient0_06"
+        case gradient_light_yellow = "#f8d777"
+        case gradient_dark_yellow =  "#bb962d"
+        case gradient_light_black =  "#343434"
+        case gradient_dark_black =  "#000000"
+        case gradient_yellow_shadow =  "#F8D777"
+        case gradient_yellow_dark =  "#BB962D"
         case goldMain = "Gold_Main"
         case grey056 = "Gray_056"
         case pink_light_shadow = "Pink_light_shadow"
@@ -389,20 +389,20 @@ extension UIColor {
     }
     static func appColor(_ name:AppAssetColor)->UIColor?{
         switch name{
-        case .pink_Main:
-            return UIColor(named: AppAssetColor.pink_Main.rawValue)
-        case .super_Light_Grey:
-            return UIColor(named: AppAssetColor.super_Light_Grey.rawValue)
-        case .grey_Medium:
-            return UIColor(named: AppAssetColor.grey_Medium.rawValue)
-        case .cyan_light_shadow:
-            return UIColor(named: AppAssetColor.cyan_light_shadow.rawValue)
-        case .red_Light:
-            return UIColor(named: AppAssetColor.red_Light.rawValue)
-        case .red_Light_Stroke:
-            return UIColor(named: AppAssetColor.red_Light_Stroke.rawValue)
-        case .red_Main:
-            return UIColor(named: AppAssetColor.red_Main.rawValue)
+        case .themeYellow:
+            return UIColor(named: AppAssetColor.themeYellow.rawValue)
+        case .themeWhite:
+            return UIColor(named: AppAssetColor.themeWhite.rawValue)
+        case .themeGrey:
+            return UIColor(named: AppAssetColor.themeGrey.rawValue)
+        case .themeDarkGrey:
+            return UIColor(named: AppAssetColor.themeDarkGrey.rawValue)
+        case .themeBlack:
+            return UIColor(named: AppAssetColor.themeBlack.rawValue)
+        case .popUpColour:
+            return UIColor(named: AppAssetColor.popUpColour.rawValue)
+        case .fontBlack:
+            return UIColor(named: AppAssetColor.fontBlack.rawValue)
         case .green_Light_Stroke:
             return UIColor(named: AppAssetColor.green_Light_Stroke.rawValue)
         case .green_Light:
@@ -429,18 +429,18 @@ extension UIColor {
             return UIColor(named: AppAssetColor.dark_Grey.rawValue)
         case .pink_Light:
             return UIColor(named: AppAssetColor.pink_Light.rawValue)
-        case .gradient0_01:
-            return UIColor(named: AppAssetColor.gradient0_01.rawValue)
-        case .gradient0_02 :
-            return UIColor(named: AppAssetColor.gradient0_02.rawValue)
-        case .gradient0_03:
-            return UIColor(named: AppAssetColor.gradient0_03.rawValue)
-        case .gradient0_04:
-            return UIColor(named: AppAssetColor.gradient0_04.rawValue)
-        case .gradient0_05:
-            return UIColor(named: AppAssetColor.gradient0_05.rawValue)
-        case .gradient0_06:
-            return UIColor(named: AppAssetColor.gradient0_06.rawValue)
+        case .gradient_light_yellow:
+            return UIColor(named: AppAssetColor.gradient_light_yellow.rawValue)
+        case .gradient_dark_yellow :
+            return UIColor(named: AppAssetColor.gradient_dark_yellow.rawValue)
+        case .gradient_light_black:
+            return UIColor(named: AppAssetColor.gradient_light_black.rawValue)
+        case .gradient_dark_black:
+            return UIColor(named: AppAssetColor.gradient_dark_black.rawValue)
+        case .gradient_yellow_shadow:
+            return UIColor(named: AppAssetColor.gradient_yellow_shadow.rawValue)
+        case .gradient_yellow_dark:
+            return UIColor(named: AppAssetColor.gradient_yellow_dark.rawValue)
         case .goldMain:
             return UIColor(named: AppAssetColor.goldMain.rawValue)
         case .grey056:

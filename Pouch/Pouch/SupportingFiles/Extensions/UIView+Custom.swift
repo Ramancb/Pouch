@@ -39,19 +39,7 @@ internal extension UIView {
             }
         }
     
-    func barActiveStatusColor(){
-        self.applyGradient(colours: [UIColor.appColor(.gradient0_01) ?? .green,UIColor.appColor(.gradient0_02) ?? .green], locations: [0.16, 0.92])
-    }
-    
-    func barFailStatusColor(){
-       
-        self.applyGradient(colours: [UIColor.appColor(.gradient0_04) ?? .green,UIColor.appColor(.gradient0_03) ?? .green], locations: [0.02, 1])
-    }
-   
-      
-    func barInActiveColor(){
-        self.applyGradient(colours: [UIColor.appColor(.gradient0_05) ?? .green,UIColor.appColor(.gradient0_06) ?? .green], locations: [0,1])
-    }
+  
     
     func setdd(){
          lazy var pulse: CAGradientLayer = {
@@ -797,30 +785,6 @@ extension UIPageControl {
 
 // MARK: - VIEWS USE IN APP
 extension UIView{
-    func setActiveTextFieldBgView(){
-        self.backgroundColor = UIColor.white
-        self.isUserInteractionEnabled = true
-        self.shadowOptacity = 0.0
-        self.borderColor = .appColor(.light_Grey)
-    }
-    
-    func setInActiveTextFieldBgView(){
-        self.backgroundColor = .appColor(.super_Light_Grey)
-        self.isUserInteractionEnabled = false
-        self.shadowOptacity = 0.0
-        self.borderColor = .appColor(.light_Grey)
-    }
-    
-    func invalidTextfieldBgView(){
-        self.backgroundColor = UIColor.white
-        self.shadowColor = UIColor(hexString: "#F55EFE", alpha: 0.2)
-        self.shadowOptacity = 1.0
-        self.shadowRadius = 8.0
-        self.shadowOffset = CGSize(width: 0, height: 2)
-        self.borderColor = .appColor(.red_Main)
-        
-    }
-    
     func setCurrentTextFieldBgView(){
         self.backgroundColor = UIColor.white
         self.shadowColor = UIColor(hexString: "#00B1FF", alpha: 0.2)

@@ -3,12 +3,14 @@ PODS:
   - IQKeyboardManagerSwift (6.5.10)
   - Kingfisher (7.4.1)
   - ObjectMapper (4.2.0)
+  - SVPinView (1.0.11)
 
 DEPENDENCIES:
   - DGActivityIndicatorView
   - IQKeyboardManagerSwift
   - Kingfisher
   - ObjectMapper
+  - SVPinView (~> 1.0)
 
 SPEC REPOS:
   trunk:
@@ -16,13 +18,15 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - ObjectMapper
+    - SVPinView
 
 SPEC CHECKSUMS:
   DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  SVPinView: 9b538d0ba68cdb092afe4f0f67ec84cbed079466
 
-PODFILE CHECKSUM: ed773d1200ef99082ba57920dd8590bd1ed400b0
+PODFILE CHECKSUM: a3b103f6d30ba23495b782cefb6fb881a93250e5
 
 COCOAPODS: 1.11.3

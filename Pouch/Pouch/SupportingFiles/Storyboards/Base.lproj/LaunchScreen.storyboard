@@ -4,10 +4,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -16,16 +22,65 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOW-Yf-qWC">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_bd_img" translatesAutoresizingMaskIntoConstraints="NO" id="07l-EV-3hX">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo_ic" translatesAutoresizingMaskIntoConstraints="NO" id="T0p-sC-4pS">
+                                        <rect key="frame" x="110" y="236.66666666666663" width="173" height="179"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="173" id="eA4-Pq-Zf1"/>
+                                            <constraint firstAttribute="height" constant="179" id="ndS-Fv-Sil"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARDS, REWARDS, OFFERS AND MORE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk4-kK-WdX">
+                                        <rect key="frame" x="115" y="442.66666666666669" width="163" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="IlM-A5-kSS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                        <color key="textColor" name="themeWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="T0p-sC-4pS" firstAttribute="centerX" secondItem="DOW-Yf-qWC" secondAttribute="centerX" id="2GU-7N-CX1"/>
+                                    <constraint firstAttribute="bottom" secondItem="07l-EV-3hX" secondAttribute="bottom" id="KAH-iX-xyJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="07l-EV-3hX" secondAttribute="trailing" id="cXR-CV-0dW"/>
+                                    <constraint firstItem="tk4-kK-WdX" firstAttribute="leading" secondItem="DOW-Yf-qWC" secondAttribute="leading" constant="115" id="h1L-fN-ALk"/>
+                                    <constraint firstItem="tk4-kK-WdX" firstAttribute="top" secondItem="T0p-sC-4pS" secondAttribute="bottom" constant="27" id="i8U-Bh-UqO"/>
+                                    <constraint firstAttribute="trailing" secondItem="tk4-kK-WdX" secondAttribute="trailing" constant="115" id="kzv-JY-cD9"/>
+                                    <constraint firstItem="T0p-sC-4pS" firstAttribute="centerY" secondItem="DOW-Yf-qWC" secondAttribute="centerY" constant="-100" id="rYr-mK-kDg"/>
+                                    <constraint firstItem="07l-EV-3hX" firstAttribute="top" secondItem="DOW-Yf-qWC" secondAttribute="top" id="sCk-vw-VbZ"/>
+                                    <constraint firstItem="07l-EV-3hX" firstAttribute="leading" secondItem="DOW-Yf-qWC" secondAttribute="leading" id="tkd-HL-sEz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DOW-Yf-qWC" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Nt6-q2-XBD"/>
+                            <constraint firstItem="DOW-Yf-qWC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U9q-sd-BlO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DOW-Yf-qWC" secondAttribute="trailing" id="gqJ-IQ-pxV"/>
+                            <constraint firstAttribute="bottom" secondItem="DOW-Yf-qWC" secondAttribute="bottom" id="svY-ET-gBz"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="110"/>
+            <point key="canvasLocation" x="17.557251908396946" y="109.85915492957747"/>
         </scene>
     </scenes>
     <resources>
+        <image name="splash_bd_img" width="375" height="812"/>
+        <image name="splash_logo_ic" width="173.33332824707031" height="179.66667175292969"/>
+        <namedColor name="themeWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

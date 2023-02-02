@@ -19,8 +19,13 @@
 		4B1B46E1298928AD0006D7F1 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B46D7298928AD0006D7F1 /* Lato-Light.ttf */; };
 		4B1B46E329892AD10006D7F1 /* LatoSemibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B1B46E229892AD10006D7F1 /* LatoSemibold.ttf */; };
 		4B4C06A1298A3428002C9E4F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C06A0298A3428002C9E4F /* LoginVC.swift */; };
-		4B4C06A9298A9C53002C9E4F /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C06A7298A9C53002C9E4F /* OtpViewController.swift */; };
-		4B4C06AA298A9C53002C9E4F /* OtpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4C06A8298A9C53002C9E4F /* OtpViewController.xib */; };
+		4B5534EB298BC9500024916A /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5534E9298BC9500024916A /* SideMenuVC.swift */; };
+		4B5534EC298BC9500024916A /* SideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5534EA298BC9500024916A /* SideMenuVC.xib */; };
+		4B5534EF298BC9B20024916A /* SideMenuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5534ED298BC9B20024916A /* SideMenuTableVC.swift */; };
+		4B5534F0298BC9B20024916A /* SideMenuTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5534EE298BC9B20024916A /* SideMenuTableVC.xib */; };
+		4B5534F3298BDD5F0024916A /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5534F2298BDD5F0024916A /* SectionHeaderView.swift */; };
+		4B6EE1F8298AA06F000C89F3 /* OtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6EE1F6298AA06F000C89F3 /* OtpVC.swift */; };
+		4B6EE1F9298AA06F000C89F3 /* OtpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6EE1F7298AA06F000C89F3 /* OtpVC.xib */; };
 		4BCADD55298949270091A183 /* WhyMobileNoPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */; };
 		4BCADD56298949270091A183 /* WhyMobileNoPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */; };
 		E41F7825F9EDD1481703CE1F /* Pods_Pouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */; };
@@ -251,8 +256,13 @@
 		4B1B46D7298928AD0006D7F1 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../../Downloads/Lato/Lato-Light.ttf"; sourceTree = "<group>"; };
 		4B1B46E229892AD10006D7F1 /* LatoSemibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = LatoSemibold.ttf; path = "../../../../Downloads/lato-semibold/LatoSemibold.ttf"; sourceTree = "<group>"; };
 		4B4C06A0298A3428002C9E4F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		4B4C06A7298A9C53002C9E4F /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
-		4B4C06A8298A9C53002C9E4F /* OtpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewController.xib; sourceTree = "<group>"; };
+		4B5534E9298BC9500024916A /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		4B5534EA298BC9500024916A /* SideMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuVC.xib; sourceTree = "<group>"; };
+		4B5534ED298BC9B20024916A /* SideMenuTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableVC.swift; sourceTree = "<group>"; };
+		4B5534EE298BC9B20024916A /* SideMenuTableVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableVC.xib; sourceTree = "<group>"; };
+		4B5534F2298BDD5F0024916A /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		4B6EE1F6298AA06F000C89F3 /* OtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVC.swift; sourceTree = "<group>"; };
+		4B6EE1F7298AA06F000C89F3 /* OtpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpVC.xib; sourceTree = "<group>"; };
 		4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyMobileNoPopUpViewController.swift; sourceTree = "<group>"; };
 		4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhyMobileNoPopUpViewController.xib; sourceTree = "<group>"; };
 		5F9AA0F2AF9379AE7E7458C6 /* Pods-Pouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pouch.debug.xcconfig"; path = "Target Support Files/Pods-Pouch/Pods-Pouch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -555,8 +565,28 @@
 		4B4C06AC298A9C9A002C9E4F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B4C06A7298A9C53002C9E4F /* OtpViewController.swift */,
-				4B4C06A8298A9C53002C9E4F /* OtpViewController.xib */,
+				4B6EE1F6298AA06F000C89F3 /* OtpVC.swift */,
+				4B6EE1F7298AA06F000C89F3 /* OtpVC.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4B5534E8298BC9020024916A /* SideMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				4B5534F1298BD2E90024916A /* View */,
+			);
+			name = SideMenuController;
+			sourceTree = "<group>";
+		};
+		4B5534F1298BD2E90024916A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B5534E9298BC9500024916A /* SideMenuVC.swift */,
+				4B5534EA298BC9500024916A /* SideMenuVC.xib */,
+				4B5534ED298BC9B20024916A /* SideMenuTableVC.swift */,
+				4B5534EE298BC9B20024916A /* SideMenuTableVC.xib */,
+				4B5534F2298BDD5F0024916A /* SectionHeaderView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -628,6 +658,7 @@
 		F17E14DC2988F8C000C336C2 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				4B5534E8298BC9020024916A /* SideMenuController */,
 				4B4C06A2298A3DB3002C9E4F /* LoginViewController */,
 				4BCADD522989489B0091A183 /* InfoPopUpViewController */,
 				4B4C06AB298A9C62002C9E4F /* OtpViewController */,
@@ -1095,6 +1126,7 @@
 				F1AD987D2988FBBF00FB83DA /* Inter-Black.ttf in Resources */,
 				F1AD97FF2988FBBF00FB83DA /* SF-Pro-Text-MediumItalic.eot in Resources */,
 				F1AD985D2988FBBF00FB83DA /* SF-Pro-Display-LightItalic.ttf in Resources */,
+				4B5534F0298BC9B20024916A /* SideMenuTableVC.xib in Resources */,
 				F1AD98702988FBBF00FB83DA /* SF-Pro-Display-Black.eot in Resources */,
 				F1AD98082988FBBF00FB83DA /* SF-Pro-Display-Light.otf in Resources */,
 				F1AD98662988FBBF00FB83DA /* SF-Pro-Text-Semibold.otf in Resources */,
@@ -1130,7 +1162,6 @@
 				F1AD982B2988FBBF00FB83DA /* SF-Pro-Display-Semibold.otf in Resources */,
 				4B1B46E1298928AD0006D7F1 /* Lato-Light.ttf in Resources */,
 				F1AD985E2988FBBF00FB83DA /* SF-Pro-Display-BlackItalic.otf in Resources */,
-				4B4C06AA298A9C53002C9E4F /* OtpViewController.xib in Resources */,
 				F1AD985A2988FBBF00FB83DA /* SF-Pro-Text-SemiboldItalic.eot in Resources */,
 				F1AD98192988FBBF00FB83DA /* SF-Pro-Display-Light.ttf in Resources */,
 				F17E14D12988F82200C336C2 /* Assets.xcassets in Resources */,
@@ -1177,6 +1208,7 @@
 				F1AD980A2988FBBF00FB83DA /* SF-Pro-Display-Heavy.ttf in Resources */,
 				F1AD98092988FBBF00FB83DA /* sf-pro-text-heavy.eot in Resources */,
 				F1AD98062988FBBF00FB83DA /* SF-Pro-Display-RegularItalic.otf in Resources */,
+				4B5534EC298BC9500024916A /* SideMenuVC.xib in Resources */,
 				F1AD983D2988FBBF00FB83DA /* SF-Pro-Text-Bold.otf in Resources */,
 				F1AD98632988FBBF00FB83DA /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				F1AD986A2988FBBF00FB83DA /* SF-Pro-Text-LightItalic.otf in Resources */,
@@ -1213,6 +1245,7 @@
 				F1AD98622988FBBF00FB83DA /* SF-Pro-Display-Black.otf in Resources */,
 				F1AD982C2988FBBF00FB83DA /* SF-Pro-Display-BlackItalic.woff in Resources */,
 				F1AD98392988FBBF00FB83DA /* SF-Pro-Display-RegularItalic.woff in Resources */,
+				4B6EE1F9298AA06F000C89F3 /* OtpVC.xib in Resources */,
 				4B1B46D9298928AD0006D7F1 /* Lato-Bold.ttf in Resources */,
 				F1AD98202988FBBF00FB83DA /* sf-pro-text-regular.woff in Resources */,
 				F1AD98642988FBBF00FB83DA /* sf-pro-text-medium.eot in Resources */,
@@ -1305,6 +1338,7 @@
 				F1AD97822988FBBE00FB83DA /* Data+Custom.swift in Sources */,
 				F1AD97D82988FBBF00FB83DA /* MimeType.swift in Sources */,
 				F1AD97B32988FBBE00FB83DA /* UserData.swift in Sources */,
+				4B5534EF298BC9B20024916A /* SideMenuTableVC.swift in Sources */,
 				F1AD977B2988FBBE00FB83DA /* NSLayoutContraint+Custom.swift in Sources */,
 				F1AD97772988FBBE00FB83DA /* UIColor+Custom.swift in Sources */,
 				F1AD97DD2988FBBF00FB83DA /* CustomNavigationBar.swift in Sources */,
@@ -1316,6 +1350,7 @@
 				F1AD97B92988FBBE00FB83DA /* AppNavigation.swift in Sources */,
 				F1AD97A32988FBBE00FB83DA /* PhoneContacts.swift in Sources */,
 				F1AD97ED2988FBBF00FB83DA /* ApiHandler.swift in Sources */,
+				4B5534F3298BDD5F0024916A /* SectionHeaderView.swift in Sources */,
 				F1AD97A02988FBBE00FB83DA /* Singleton.swift in Sources */,
 				F1AD97D72988FBBF00FB83DA /* Swime.swift in Sources */,
 				F1AD97E22988FBBF00FB83DA /* CustomProgressBar.swift in Sources */,
@@ -1326,10 +1361,12 @@
 				F1AD97B22988FBBE00FB83DA /* ActivityIndicator.swift in Sources */,
 				F1AD97862988FBBE00FB83DA /* UIImageView+Custom.swift in Sources */,
 				F1AD97EC2988FBBF00FB83DA /* HttpManager.swift in Sources */,
+				4B5534EB298BC9500024916A /* SideMenuVC.swift in Sources */,
 				4BCADD55298949270091A183 /* WhyMobileNoPopUpViewController.swift in Sources */,
 				F1AD97A42988FBBE00FB83DA /* Validator.swift in Sources */,
 				4B4C06A1298A3428002C9E4F /* LoginVC.swift in Sources */,
 				F1AD97B52988FBBE00FB83DA /* UserDefaultsCustom.swift in Sources */,
+				4B6EE1F8298AA06F000C89F3 /* OtpVC.swift in Sources */,
 				F17E14CF2988F82000C336C2 /* Pouch.xcdatamodeld in Sources */,
 				F1AD97872988FBBE00FB83DA /* Double+Custom.swift in Sources */,
 				F1AD977A2988FBBE00FB83DA /* AppDelegate+custom.swift in Sources */,
@@ -1337,7 +1374,6 @@
 				F1AD97762988FBBE00FB83DA /* UIView+Custom.swift in Sources */,
 				F1AD97EB2988FBBF00FB83DA /* API.swift in Sources */,
 				F1AD97B42988FBBE00FB83DA /* AutoResizeTableView.swift in Sources */,
-				4B4C06A9298A9C53002C9E4F /* OtpViewController.swift in Sources */,
 				F1AD97882988FBBE00FB83DA /* UIStoryboard+Custom.swift in Sources */,
 				F17E14C52988F82000C336C2 /* AppDelegate.swift in Sources */,
 				F1AD97842988FBBE00FB83DA /* UIButton+Custom.swift in Sources */,
@@ -1504,6 +1540,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1535,6 +1572,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

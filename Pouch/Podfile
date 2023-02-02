@@ -10,5 +10,6 @@ pod 'IQKeyboardManagerSwift'
   pod 'DGActivityIndicatorView'
 pod 'ObjectMapper'
  pod 'Kingfisher'
+ pod 'SVPinView', '~> 1.0'
 
 end

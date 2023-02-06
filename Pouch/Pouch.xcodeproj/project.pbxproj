@@ -22,6 +22,7 @@
 		4B92C118298CD49F00ED318C /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B92C117298CD49F00ED318C /* SectionHeaderView.xib */; };
 		4B92C11B298CEAA900ED318C /* SideMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C119298CEAA900ED318C /* SideMenuTableCell.swift */; };
 		4B92C11C298CEAA900ED318C /* SideMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B92C11A298CEAA900ED318C /* SideMenuTableCell.xib */; };
+		4BBAAD8829913FA9009E6F10 /* editProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBAAD8729913FA9009E6F10 /* editProfilePresenter.swift */; };
 		4BCADD55298949270091A183 /* WhyMobileNoPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */; };
 		4BCADD56298949270091A183 /* WhyMobileNoPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */; };
 		E41F7825F9EDD1481703CE1F /* Pods_Pouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */; };
@@ -111,6 +112,7 @@
 		4B92C117298CD49F00ED318C /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 		4B92C119298CEAA900ED318C /* SideMenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableCell.swift; sourceTree = "<group>"; };
 		4B92C11A298CEAA900ED318C /* SideMenuTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableCell.xib; sourceTree = "<group>"; };
+		4BBAAD8729913FA9009E6F10 /* editProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfilePresenter.swift; sourceTree = "<group>"; };
 		4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyMobileNoPopUpViewController.swift; sourceTree = "<group>"; };
 		4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhyMobileNoPopUpViewController.xib; sourceTree = "<group>"; };
 		5F9AA0F2AF9379AE7E7458C6 /* Pods-Pouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pouch.debug.xcconfig"; path = "Target Support Files/Pods-Pouch/Pods-Pouch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,8 @@
 		4B1EABF9298D3458001E89DB /* EditProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4BBAAD8629913F76009E6F10 /* Presenter */,
+				4BBAAD8529913F61009E6F10 /* View */,
 				4B1EABF5298D32A3001E89DB /* EditProfileVC.swift */,
 				4B1EABF6298D32A3001E89DB /* EditProfileVC.xib */,
 			);
@@ -304,6 +308,21 @@
 				4B8FEAFE2990D1B00071CD92 /* HomeScreenVC.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		4BBAAD8529913F61009E6F10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4BBAAD8629913F76009E6F10 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAAD8729913FA9009E6F10 /* editProfilePresenter.swift */,
+			);
+			name = Presenter;
 			sourceTree = "<group>";
 		};
 		4BCADD522989489B0091A183 /* InfoPopUpViewController */ = {
@@ -775,6 +794,7 @@
 				F1AD97792988FBBE00FB83DA /* Array+Custom.swift in Sources */,
 				F1AD97852988FBBE00FB83DA /* UITextField+Custom.swift in Sources */,
 				F17E14C72988F82000C336C2 /* SceneDelegate.swift in Sources */,
+				4BBAAD8829913FA9009E6F10 /* editProfilePresenter.swift in Sources */,
 				F1AD977F2988FBBE00FB83DA /* CustomTextField.swift in Sources */,
 				F1AD97E52988FBBF00FB83DA /* IJReachability.swift in Sources */,
 				F1AD97E32988FBBF00FB83DA /* IAPHelper.swift in Sources */,

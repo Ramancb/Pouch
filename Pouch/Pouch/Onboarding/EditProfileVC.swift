@@ -13,10 +13,16 @@ class EditProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         editProfileView.applyGradient(colours: [UIColor(hexString: "#343434"), UIColor(hexString: "#000000") ], locations: [0.1,0.7])
-        
     }
 
 
  
-
+    @IBAction func saveAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func backAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        
+    }
 }

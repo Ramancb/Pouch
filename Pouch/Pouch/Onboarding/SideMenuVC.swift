@@ -33,8 +33,7 @@ class SideMenuVC: UIViewController{
         sideMenuTableView.dataSource = self
     }
     @IBAction func backAction(_ sender: Any) {
-        let vc = HomeScreenVC()
-        self.navigationController?.popToViewController(vc, animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -43,6 +42,8 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
@@ -85,9 +86,16 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
 //        return 60
 //    }
     
+
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 70
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt: IndexPath)
+    {
+        let cell = EditProfileVC()
+        self.navigationController?.pushViewController(cell, animated: true)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

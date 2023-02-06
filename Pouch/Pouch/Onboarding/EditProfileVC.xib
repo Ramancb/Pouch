@@ -39,6 +39,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="back_ic"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="bK2-a3-xNc"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdK-iX-bQf">
                             <rect key="frame" x="120" y="57" width="143" height="24"/>
@@ -50,20 +53,20 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B28-vF-Cl1">
-                            <rect key="frame" x="38" y="137" width="76" height="15.666666666666657"/>
+                            <rect key="frame" x="38" y="137" width="76" height="14"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                             <color key="textColor" name="themeWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Arjun" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGF-Yq-FJX">
-                            <rect key="frame" x="38" y="172.66666666666666" width="317" height="50"/>
+                            <rect key="frame" x="38" y="171" width="317" height="50"/>
                             <color key="backgroundColor" name="darkestGrey"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="rZ4-4m-lEs"/>
                             </constraints>
                             <color key="textColor" name="lightGray"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                            <textInputTraits key="textInputTraits"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                     <real key="value" value="1"/>
@@ -71,29 +74,29 @@
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhZ-Yh-Nj3">
-                            <rect key="frame" x="38" y="247.66666666666666" width="76" height="15.666666666666657"/>
+                            <rect key="frame" x="38" y="246" width="76" height="14"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                             <color key="textColor" name="themeWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="abcd" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3L-6I-Txn">
-                            <rect key="frame" x="38" y="283.33333333333331" width="317" height="50"/>
+                            <rect key="frame" x="38" y="280" width="317" height="50"/>
                             <color key="backgroundColor" name="darkestGrey"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="zKL-Mu-ujX"/>
                             </constraints>
                             <color key="textColor" name="lightGray"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                            <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-39-DF5">
-                            <rect key="frame" x="38" y="358.33333333333331" width="76" height="14.666666666666686"/>
+                            <rect key="frame" x="38" y="355" width="76" height="14"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                             <color key="textColor" name="themeWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="abcd@gmail.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZw-cO-mdh">
-                            <rect key="frame" x="38" y="393" width="317" height="50"/>
+                            <rect key="frame" x="38" y="389" width="317" height="50"/>
                             <color key="backgroundColor" name="darkestGrey"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="TRi-ao-kaf"/>
@@ -102,11 +105,24 @@
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                         </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StY-hT-HHl">
+                            <rect key="frame" x="304" y="57" width="69" height="38"/>
+                            <color key="tintColor" name="themeYellow"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Save">
+                                <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="abc-kl-7bt"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="B28-vF-Cl1" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" constant="38" id="0ZY-cY-cn6"/>
                         <constraint firstItem="BHZ-Wq-dTQ" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" constant="20" id="4f5-wR-38u"/>
+                        <constraint firstItem="StY-hT-HHl" firstAttribute="leading" secondItem="JdK-iX-bQf" secondAttribute="trailing" constant="41" id="5te-Bn-wfx"/>
+                        <constraint firstItem="StY-hT-HHl" firstAttribute="top" secondItem="4q7-J7-KFo" secondAttribute="top" constant="57" id="85Q-tm-osH"/>
                         <constraint firstAttribute="trailing" secondItem="JdK-iX-bQf" secondAttribute="trailing" constant="130" id="AuJ-CC-Ogd"/>
                         <constraint firstAttribute="trailing" secondItem="h9Q-39-DF5" secondAttribute="trailing" constant="279" id="Gcu-A5-ssT"/>
                         <constraint firstAttribute="trailing" secondItem="HGF-Yq-FJX" secondAttribute="trailing" constant="38" id="Hur-UM-Ggw"/>
@@ -114,6 +130,7 @@
                         <constraint firstItem="HGF-Yq-FJX" firstAttribute="top" secondItem="B28-vF-Cl1" secondAttribute="bottom" constant="20" id="LW2-ZD-Vcp"/>
                         <constraint firstAttribute="trailing" secondItem="OZw-cO-mdh" secondAttribute="trailing" constant="38" id="LtO-b8-lbA"/>
                         <constraint firstItem="XhZ-Yh-Nj3" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" constant="38" id="NXa-Cx-CI7"/>
+                        <constraint firstAttribute="trailing" secondItem="StY-hT-HHl" secondAttribute="trailing" constant="20" id="TEa-I6-XQY"/>
                         <constraint firstAttribute="trailing" secondItem="B28-vF-Cl1" secondAttribute="trailing" constant="279" id="VL2-lR-BNE"/>
                         <constraint firstItem="BHZ-Wq-dTQ" firstAttribute="top" secondItem="4q7-J7-KFo" secondAttribute="top" constant="43" id="Z2J-v9-fZw"/>
                         <constraint firstItem="JdK-iX-bQf" firstAttribute="top" secondItem="4q7-J7-KFo" secondAttribute="top" constant="57" id="ZHs-7b-67M"/>

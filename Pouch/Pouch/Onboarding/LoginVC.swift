@@ -60,8 +60,7 @@ class LoginVC: UIViewController {
         self.navigationController?.present(vc, true)
     }
     @IBAction func continueAction(_ sender: Any) {
-//        let vc = SideMenuVC()
-        let vc = OtpVC()
+        let vc = HomeScreenVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

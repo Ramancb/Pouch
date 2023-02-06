@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -400,7 +400,7 @@
 		9BF6066E234E8785A093F90159F77610 /* ToJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToJSON.swift; path = Sources/ToJSON.swift; sourceTree = "<group>"; };
 		9C696F2D37ED0DDFBEF3615429743BF6 /* DGActivityIndicatorNineDotsAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DGActivityIndicatorNineDotsAnimation.m; path = DGActivityIndicatorView/Animations/DGActivityIndicatorNineDotsAnimation.m; sourceTree = "<group>"; };
 		9D91F25DAA73EE278E542FAA8D2D9B5E /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EA44AB23BC7F9F3F80DB3838F5089C8 /* DGActivityIndicatorBallScaleRippleAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DGActivityIndicatorBallScaleRippleAnimation.h; path = DGActivityIndicatorView/Animations/DGActivityIndicatorBallScaleRippleAnimation.h; sourceTree = "<group>"; };
 		9F1770B1170CBFB8DD0FA881C09D1FC0 /* Mapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = Sources/Mapper.swift; sourceTree = "<group>"; };
 		9F7940A4D24212404ABB7969D3BE5996 /* DGActivityIndicatorDoubleBounceAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DGActivityIndicatorDoubleBounceAnimation.h; path = DGActivityIndicatorView/Animations/DGActivityIndicatorDoubleBounceAnimation.h; sourceTree = "<group>"; };
@@ -563,7 +563,6 @@
 				4A1754667F4CC1FA6AE268AE3E9D3E3D /* Resources */,
 				AEE9EFC240FC258CDD777835458575DE /* Support Files */,
 			);
-			name = SVPinView;
 			path = SVPinView;
 			sourceTree = "<group>";
 		};
@@ -696,7 +695,6 @@
 				5BFA8765ED22421640A4FF401C4B13D9 /* DGActivityIndicatorView.m */,
 				629927362AF574CC6D21D7E9AC0F0D72 /* Support Files */,
 			);
-			name = DGActivityIndicatorView;
 			path = DGActivityIndicatorView;
 			sourceTree = "<group>";
 		};
@@ -794,7 +792,6 @@
 				6D3F161C4D6F87CBBB4CB5CD5F50CD09 /* IQUIViewController+Additions.swift */,
 				5A4FBBECE3D3C40C757DCBBE092DB127 /* Support Files */,
 			);
-			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
@@ -879,7 +876,6 @@
 				6239D7BB4BEB4C50F3855F56282E9F21 /* WKInterfaceImage+Kingfisher.swift */,
 				60F8D34EC59E4760B1EBB893CCC0D6AB /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -944,7 +940,6 @@
 				E3BF9751B179006D63F426E73ECFACF9 /* URLTransform.swift */,
 				80478BD898BDD901A694CF4238C9CFA2 /* Support Files */,
 			);
-			name = ObjectMapper;
 			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
@@ -1161,7 +1156,7 @@
 				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

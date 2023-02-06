@@ -26,6 +26,8 @@
 		4B5534F3298BDD5F0024916A /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5534F2298BDD5F0024916A /* SectionHeaderView.swift */; };
 		4B6EE1F8298AA06F000C89F3 /* OtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6EE1F6298AA06F000C89F3 /* OtpVC.swift */; };
 		4B6EE1F9298AA06F000C89F3 /* OtpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6EE1F7298AA06F000C89F3 /* OtpVC.xib */; };
+		4B8FEAFF2990D1B00071CD92 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FEAFD2990D1B00071CD92 /* HomeScreenVC.swift */; };
+		4B8FEB002990D1B00071CD92 /* HomeScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B8FEAFE2990D1B00071CD92 /* HomeScreenVC.xib */; };
 		4B92C118298CD49F00ED318C /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B92C117298CD49F00ED318C /* SectionHeaderView.xib */; };
 		4B92C11B298CEAA900ED318C /* SideMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C119298CEAA900ED318C /* SideMenuTableCell.swift */; };
 		4B92C11C298CEAA900ED318C /* SideMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B92C11A298CEAA900ED318C /* SideMenuTableCell.xib */; };
@@ -266,6 +268,8 @@
 		4B5534F2298BDD5F0024916A /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		4B6EE1F6298AA06F000C89F3 /* OtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVC.swift; sourceTree = "<group>"; };
 		4B6EE1F7298AA06F000C89F3 /* OtpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpVC.xib; sourceTree = "<group>"; };
+		4B8FEAFD2990D1B00071CD92 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
+		4B8FEAFE2990D1B00071CD92 /* HomeScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenVC.xib; sourceTree = "<group>"; };
 		4B92C117298CD49F00ED318C /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 		4B92C119298CEAA900ED318C /* SideMenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableCell.swift; sourceTree = "<group>"; };
 		4B92C11A298CEAA900ED318C /* SideMenuTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableCell.xib; sourceTree = "<group>"; };
@@ -517,6 +521,7 @@
 				4B1B46D6298928AD0006D7F1 /* Lato-ThinItalic.ttf */,
 			);
 			name = "Lato Fonts";
+			path = ../../../..;
 			sourceTree = "<group>";
 		};
 		4B1EABF9298D3458001E89DB /* EditProfileViewController */ = {
@@ -607,6 +612,23 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		4B8FEB012990D1B80071CD92 /* HomeScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B8FEB022990D1E40071CD92 /* View */,
+			);
+			name = HomeScreenViewController;
+			sourceTree = "<group>";
+		};
+		4B8FEB022990D1E40071CD92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B8FEAFD2990D1B00071CD92 /* HomeScreenVC.swift */,
+				4B8FEAFE2990D1B00071CD92 /* HomeScreenVC.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		4BCADD522989489B0091A183 /* InfoPopUpViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -637,7 +659,6 @@
 			isa = PBXGroup;
 			children = (
 				F17E14C32988F82000C336C2 /* Pouch */,
-				4B1B46B8298927C00006D7F1 /* Lato Fonts */,
 				F17E14C22988F82000C336C2 /* Products */,
 				7153CD7E88F78781ADCA7DF8 /* Pods */,
 				5361188A8045F71FD9FB3902 /* Frameworks */,
@@ -674,6 +695,7 @@
 		F17E14DC2988F8C000C336C2 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				4B8FEB012990D1B80071CD92 /* HomeScreenViewController */,
 				4B1EABF9298D3458001E89DB /* EditProfileViewController */,
 				4B5534E8298BC9020024916A /* SideMenuController */,
 				4B4C06A2298A3DB3002C9E4F /* LoginViewController */,
@@ -860,6 +882,7 @@
 		F1AD96D22988FBBD00FB83DA /* App Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				4B1B46B8298927C00006D7F1 /* Lato Fonts */,
 				F1AD96D32988FBBD00FB83DA /* FontAwesome */,
 				F1AD96DA2988FBBD00FB83DA /* Kalam */,
 				F1AD96DF2988FBBD00FB83DA /* sf-pro-display-font */,
@@ -1217,6 +1240,7 @@
 				F1AD986B2988FBBF00FB83DA /* SF-Pro-Display-SemiboldItalic.woff in Resources */,
 				F1AD98102988FBBF00FB83DA /* SF-Pro-Display-SemiboldItalic.eot in Resources */,
 				F1AD98512988FBBF00FB83DA /* SF-Pro-Display-MediumItalic.ttf in Resources */,
+				4B8FEB002990D1B00071CD92 /* HomeScreenVC.xib in Resources */,
 				F1AD98692988FBBF00FB83DA /* SF-Pro-Display-LightItalic.woff in Resources */,
 				F1AD97E02988FBBF00FB83DA /* ErrorView.xib in Resources */,
 				F1AD98832988FBBF00FB83DA /* SFUIText-Light.ttf in Resources */,
@@ -1389,6 +1413,7 @@
 				4B6EE1F8298AA06F000C89F3 /* OtpVC.swift in Sources */,
 				F17E14CF2988F82000C336C2 /* Pouch.xcdatamodeld in Sources */,
 				F1AD97872988FBBE00FB83DA /* Double+Custom.swift in Sources */,
+				4B8FEAFF2990D1B00071CD92 /* HomeScreenVC.swift in Sources */,
 				F1AD977A2988FBBE00FB83DA /* AppDelegate+custom.swift in Sources */,
 				F1AD977E2988FBBE00FB83DA /* UIViewController+Custom.swift in Sources */,
 				F1AD97762988FBBE00FB83DA /* UIView+Custom.swift in Sources */,

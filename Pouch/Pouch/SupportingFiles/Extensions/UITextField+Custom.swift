@@ -101,6 +101,9 @@ extension UITextField {
         self.addShadow()
         self.delegate = delegate
     }
+    func setPlaceHolderColorWith(strPH: String, color: UIColor) {
+        self.attributedPlaceholder = NSAttributedString(string: strPH, attributes: [NSAttributedString.Key.foregroundColor : color])
+    }
     
     func setPlaceHolder(_ text:String?, placeholderColor color:UIColor?, font:FONT_NAME, size:CGFloat) {
         self.placeholder = text

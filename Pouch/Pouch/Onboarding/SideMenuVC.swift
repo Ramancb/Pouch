@@ -32,6 +32,10 @@ class SideMenuVC: UIViewController{
         sideMenuTableView.delegate = self
         sideMenuTableView.dataSource = self
     }
+    @IBAction func backAction(_ sender: Any) {
+        let vc = HomeScreenVC()
+        self.navigationController?.popToViewController(vc, animated: true)
+    }
 }
 
 extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{

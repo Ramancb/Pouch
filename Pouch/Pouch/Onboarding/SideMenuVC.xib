@@ -41,6 +41,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="back_ic"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="IW1-TA-ZlF"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIW-6l-wwZ">
                             <rect key="frame" x="165" y="78" width="71" height="24"/>

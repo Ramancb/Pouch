@@ -56,7 +56,6 @@ struct UserDefaultsCustom {
         }
     }
     
- 
 //    static func getDeviceToken() -> String {
 //        let token = Messaging.messaging().fcmToken
 //        print("FCM token: \(token ?? "")")

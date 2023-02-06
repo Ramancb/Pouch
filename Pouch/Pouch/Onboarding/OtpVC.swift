@@ -14,7 +14,6 @@ class OtpVC: UIViewController {
     @IBOutlet weak var otpBGView: UIView!
 
     @IBOutlet weak var otpField1: MyOTPTF!
-    
     @IBOutlet weak var otpField2: MyOTPTF!
     @IBOutlet weak var otpField3: MyOTPTF!
     @IBOutlet weak var otpField4: MyOTPTF!

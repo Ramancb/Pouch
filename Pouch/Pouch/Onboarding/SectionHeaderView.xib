@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SectionHeaderView" customModule="Pouch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="527" height="139"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YB9-PO-J53">
+                    <rect key="frame" x="0.0" y="0.0" width="527" height="139"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_ic" translatesAutoresizingMaskIntoConstraints="NO" id="vPz-V1-4GR">
+                            <rect key="frame" x="19" y="10" width="30" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="IRY-UK-oRu"/>
+                                <constraint firstAttribute="height" constant="35" id="Pzd-Wb-z8n"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52e-i5-xZU">
+                            <rect key="frame" x="64" y="13" width="443" height="21"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="6VV-qj-e6Y"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="17"/>
+                            <color key="textColor" name="themeWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKf-Po-yMl">
+                            <rect key="frame" x="19" y="59" width="488" height="1"/>
+                            <color key="backgroundColor" name="gray"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="0jR-9d-iJS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="52e-i5-xZU" secondAttribute="trailing" constant="20" id="BZ9-LI-tU5"/>
+                        <constraint firstItem="52e-i5-xZU" firstAttribute="top" secondItem="YB9-PO-J53" secondAttribute="top" constant="13" id="HGW-Sv-NGJ"/>
+                        <constraint firstItem="vPz-V1-4GR" firstAttribute="leading" secondItem="YB9-PO-J53" secondAttribute="leading" constant="19" id="JBH-Cu-BL0"/>
+                        <constraint firstItem="52e-i5-xZU" firstAttribute="leading" secondItem="vPz-V1-4GR" secondAttribute="trailing" constant="15" id="RpN-Mj-jRM"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="52e-i5-xZU" secondAttribute="bottom" constant="20" id="Wbs-sd-8ap"/>
+                        <constraint firstItem="iKf-Po-yMl" firstAttribute="top" secondItem="vPz-V1-4GR" secondAttribute="bottom" constant="14" id="bK4-OO-gzu"/>
+                        <constraint firstItem="vPz-V1-4GR" firstAttribute="top" secondItem="YB9-PO-J53" secondAttribute="top" constant="10" id="mUF-P6-mnc"/>
+                        <constraint firstItem="iKf-Po-yMl" firstAttribute="trailing" secondItem="52e-i5-xZU" secondAttribute="trailing" id="n3y-EC-X70"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vPz-V1-4GR" secondAttribute="bottom" constant="20" id="og0-Zc-coR"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="iKf-Po-yMl" secondAttribute="bottom" constant="20" id="z41-EM-gNI"/>
+                        <constraint firstItem="iKf-Po-yMl" firstAttribute="leading" secondItem="vPz-V1-4GR" secondAttribute="leading" id="zXp-dn-1jX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="SectionHeaderView"/>
+            <constraints>
+                <constraint firstItem="YB9-PO-J53" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BOf-4R-CQa"/>
+                <constraint firstAttribute="bottom" secondItem="YB9-PO-J53" secondAttribute="bottom" id="Re9-Dz-Cgz"/>
+                <constraint firstItem="YB9-PO-J53" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eAm-Hd-QWc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YB9-PO-J53" secondAttribute="trailing" id="wXg-s1-nLE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="borderView" destination="iKf-Po-yMl" id="gU8-rV-SDD"/>
+                <outlet property="headerImage" destination="vPz-V1-4GR" id="nA5-Cc-f7m"/>
+                <outlet property="headerLabel" destination="52e-i5-xZU" id="2rn-Ij-pv0"/>
+            </connections>
+            <point key="canvasLocation" x="212.97709923664121" y="257.3943661971831"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="account_ic" width="13.666666984558105" height="24"/>
+        <namedColor name="gray">
+            <color red="0.14901960784313725" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="themeWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -20,6 +20,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileVC" customModule="Pouch" customModuleProvider="target">
             <connections>
                 <outlet property="editProfileView" destination="4q7-J7-KFo" id="CRb-uJ-G5h"/>
+                <outlet property="emailField" destination="OZw-cO-mdh" id="DTg-qs-aRC"/>
+                <outlet property="lastNameField" destination="J3L-6I-Txn" id="ak8-6j-h6q"/>
+                <outlet property="nameField" destination="HGF-Yq-FJX" id="aV1-T1-nWe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,10 +32,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4q7-J7-KFo">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHZ-Wq-dTQ">
-                            <rect key="frame" x="20" y="43" width="50" height="50"/>
+                            <rect key="frame" x="20" y="20" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="9o9-GW-FOa"/>
                                 <constraint firstAttribute="height" constant="50" id="ckV-y3-Jmm"/>
@@ -44,7 +47,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdK-iX-bQf">
-                            <rect key="frame" x="120" y="57" width="143" height="24"/>
+                            <rect key="frame" x="120" y="35" width="143" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="fHx-5q-Npf"/>
                             </constraints>
@@ -53,14 +56,15 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B28-vF-Cl1">
-                            <rect key="frame" x="38" y="137" width="76" height="14"/>
+                            <rect key="frame" x="38" y="134" width="317" height="14"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                             <color key="textColor" name="themeWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Arjun" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGF-Yq-FJX">
-                            <rect key="frame" x="38" y="171" width="317" height="50"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGF-Yq-FJX">
+                            <rect key="frame" x="38" y="168" width="317" height="50"/>
                             <color key="backgroundColor" name="darkestGrey"/>
+                            <color key="tintColor" name="themeYellow"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="rZ4-4m-lEs"/>
                             </constraints>
@@ -68,82 +72,107 @@
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhZ-Yh-Nj3">
-                            <rect key="frame" x="38" y="246" width="76" height="14"/>
+                            <rect key="frame" x="38" y="243" width="317" height="14"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                             <color key="textColor" name="themeWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="abcd" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3L-6I-Txn">
-                            <rect key="frame" x="38" y="280" width="317" height="50"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3L-6I-Txn">
+                            <rect key="frame" x="38" y="277" width="317" height="50"/>
                             <color key="backgroundColor" name="darkestGrey"/>
+                            <color key="tintColor" name="themeYellow"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="zKL-Mu-ujX"/>
                             </constraints>
                             <color key="textColor" name="lightGray"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-39-DF5">
-                            <rect key="frame" x="38" y="355" width="76" height="14"/>
+                            <rect key="frame" x="38" y="352" width="317" height="14"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                             <color key="textColor" name="themeWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="abcd@gmail.com" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZw-cO-mdh">
-                            <rect key="frame" x="38" y="389" width="317" height="50"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZw-cO-mdh">
+                            <rect key="frame" x="38" y="386" width="317" height="50"/>
                             <color key="backgroundColor" name="darkestGrey"/>
+                            <color key="tintColor" name="themeYellow"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="TRi-ao-kaf"/>
                             </constraints>
                             <color key="textColor" name="lightGray"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="StY-hT-HHl">
-                            <rect key="frame" x="304" y="57" width="69" height="38"/>
-                            <color key="tintColor" name="themeYellow"/>
+                            <rect key="frame" x="304" y="30" width="69" height="38"/>
+                            <color key="tintColor" name="themeWhite"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Save">
-                                <fontDescription key="titleFontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                <fontDescription key="titleFontDescription" name="Lato-Semibold" family="Lato" pointSize="20"/>
                             </buttonConfiguration>
                             <connections>
                                 <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="abc-kl-7bt"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iSb-I1-Amg">
+                            <rect key="frame" x="20" y="98" width="353" height="1"/>
+                            <color key="backgroundColor" name="lightGray"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="ZUf-3m-Pjr"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="J3L-6I-Txn" firstAttribute="trailing" secondItem="XhZ-Yh-Nj3" secondAttribute="trailing" id="0Ca-fx-x1K"/>
                         <constraint firstItem="B28-vF-Cl1" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" constant="38" id="0ZY-cY-cn6"/>
+                        <constraint firstItem="iSb-I1-Amg" firstAttribute="leading" secondItem="BHZ-Wq-dTQ" secondAttribute="leading" id="1tj-0p-VUs"/>
+                        <constraint firstItem="h9Q-39-DF5" firstAttribute="leading" secondItem="J3L-6I-Txn" secondAttribute="leading" id="2Xc-16-tjS"/>
+                        <constraint firstItem="XhZ-Yh-Nj3" firstAttribute="leading" secondItem="HGF-Yq-FJX" secondAttribute="leading" id="34s-db-hbL"/>
                         <constraint firstItem="BHZ-Wq-dTQ" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" constant="20" id="4f5-wR-38u"/>
                         <constraint firstItem="StY-hT-HHl" firstAttribute="leading" secondItem="JdK-iX-bQf" secondAttribute="trailing" constant="41" id="5te-Bn-wfx"/>
-                        <constraint firstItem="StY-hT-HHl" firstAttribute="top" secondItem="4q7-J7-KFo" secondAttribute="top" constant="57" id="85Q-tm-osH"/>
+                        <constraint firstItem="StY-hT-HHl" firstAttribute="top" secondItem="4q7-J7-KFo" secondAttribute="top" constant="30" id="85Q-tm-osH"/>
                         <constraint firstAttribute="trailing" secondItem="JdK-iX-bQf" secondAttribute="trailing" constant="130" id="AuJ-CC-Ogd"/>
-                        <constraint firstAttribute="trailing" secondItem="h9Q-39-DF5" secondAttribute="trailing" constant="279" id="Gcu-A5-ssT"/>
-                        <constraint firstAttribute="trailing" secondItem="HGF-Yq-FJX" secondAttribute="trailing" constant="38" id="Hur-UM-Ggw"/>
-                        <constraint firstItem="B28-vF-Cl1" firstAttribute="top" secondItem="4q7-J7-KFo" secondAttribute="top" constant="137" id="IwI-ig-rTd"/>
+                        <constraint firstItem="XhZ-Yh-Nj3" firstAttribute="trailing" secondItem="HGF-Yq-FJX" secondAttribute="trailing" id="FkW-zh-QJN"/>
                         <constraint firstItem="HGF-Yq-FJX" firstAttribute="top" secondItem="B28-vF-Cl1" secondAttribute="bottom" constant="20" id="LW2-ZD-Vcp"/>
-                        <constraint firstAttribute="trailing" secondItem="OZw-cO-mdh" secondAttribute="trailing" constant="38" id="LtO-b8-lbA"/>
-                        <constraint firstItem="XhZ-Yh-Nj3" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" constant="38" id="NXa-Cx-CI7"/>
+                        <constraint firstItem="OZw-cO-mdh" firstAttribute="leading" secondItem="h9Q-39-DF5" secondAttribute="leading" id="NJE-dZ-r5j"/>
                         <constraint firstAttribute="trailing" secondItem="StY-hT-HHl" secondAttribute="trailing" constant="20" id="TEa-I6-XQY"/>
-                        <constraint firstAttribute="trailing" secondItem="B28-vF-Cl1" secondAttribute="trailing" constant="279" id="VL2-lR-BNE"/>
-                        <constraint firstItem="BHZ-Wq-dTQ" firstAttribute="top" secondItem="4q7-J7-KFo" secondAttribute="top" constant="43" id="Z2J-v9-fZw"/>
-                        <constraint firstItem="JdK-iX-bQf" firstAttribute="top" secondItem="4q7-J7-KFo" secondAttribute="top" constant="57" id="ZHs-7b-67M"/>
+                        <constraint firstItem="HGF-Yq-FJX" firstAttribute="trailing" secondItem="B28-vF-Cl1" secondAttribute="trailing" id="TL0-zG-ybh"/>
+                        <constraint firstItem="OZw-cO-mdh" firstAttribute="trailing" secondItem="h9Q-39-DF5" secondAttribute="trailing" id="Ti7-nk-6I4"/>
+                        <constraint firstAttribute="trailing" secondItem="B28-vF-Cl1" secondAttribute="trailing" constant="38" id="VL2-lR-BNE"/>
+                        <constraint firstItem="BHZ-Wq-dTQ" firstAttribute="top" secondItem="4q7-J7-KFo" secondAttribute="top" constant="20" id="Z2J-v9-fZw"/>
+                        <constraint firstItem="JdK-iX-bQf" firstAttribute="top" secondItem="4q7-J7-KFo" secondAttribute="top" constant="35" id="ZHs-7b-67M"/>
                         <constraint firstItem="h9Q-39-DF5" firstAttribute="top" secondItem="J3L-6I-Txn" secondAttribute="bottom" constant="25" id="Zxs-w9-Mis"/>
                         <constraint firstItem="XhZ-Yh-Nj3" firstAttribute="top" secondItem="HGF-Yq-FJX" secondAttribute="bottom" constant="25" id="a8w-nj-1cO"/>
+                        <constraint firstItem="iSb-I1-Amg" firstAttribute="trailing" secondItem="StY-hT-HHl" secondAttribute="trailing" id="cTv-KJ-J0g"/>
                         <constraint firstItem="OZw-cO-mdh" firstAttribute="top" secondItem="h9Q-39-DF5" secondAttribute="bottom" constant="20" id="fHf-hY-Q1W"/>
-                        <constraint firstAttribute="trailing" secondItem="XhZ-Yh-Nj3" secondAttribute="trailing" constant="279" id="gJc-xs-OMz"/>
-                        <constraint firstAttribute="trailing" secondItem="J3L-6I-Txn" secondAttribute="trailing" constant="38" id="grK-8w-fOR"/>
                         <constraint firstItem="J3L-6I-Txn" firstAttribute="top" secondItem="XhZ-Yh-Nj3" secondAttribute="bottom" constant="20" id="hEs-7x-YPz"/>
-                        <constraint firstItem="OZw-cO-mdh" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" constant="38" id="hvm-lC-M59"/>
-                        <constraint firstItem="HGF-Yq-FJX" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" constant="38" id="i6R-XV-A2Q"/>
-                        <constraint firstItem="h9Q-39-DF5" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" constant="38" id="jUN-il-3nl"/>
-                        <constraint firstItem="J3L-6I-Txn" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" constant="38" id="pJO-IK-DiG"/>
+                        <constraint firstItem="iSb-I1-Amg" firstAttribute="top" secondItem="BHZ-Wq-dTQ" secondAttribute="bottom" constant="28" id="ld4-iK-kXL"/>
+                        <constraint firstItem="B28-vF-Cl1" firstAttribute="top" secondItem="iSb-I1-Amg" secondAttribute="bottom" constant="35" id="owy-GF-gDl"/>
+                        <constraint firstItem="h9Q-39-DF5" firstAttribute="trailing" secondItem="J3L-6I-Txn" secondAttribute="trailing" id="pUT-Mx-4C6"/>
+                        <constraint firstItem="HGF-Yq-FJX" firstAttribute="leading" secondItem="B28-vF-Cl1" secondAttribute="leading" id="shB-Cn-B27"/>
+                        <constraint firstItem="J3L-6I-Txn" firstAttribute="leading" secondItem="XhZ-Yh-Nj3" secondAttribute="leading" id="tXy-bX-he4"/>
                         <constraint firstItem="JdK-iX-bQf" firstAttribute="leading" secondItem="BHZ-Wq-dTQ" secondAttribute="trailing" constant="50" id="uiq-Rx-ZYw"/>
                     </constraints>
                 </view>
@@ -151,7 +180,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="4q7-J7-KFo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ddZ-gD-iOb"/>
+                <constraint firstItem="4q7-J7-KFo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ddZ-gD-iOb"/>
                 <constraint firstItem="4q7-J7-KFo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eoJ-4o-d4F"/>
                 <constraint firstAttribute="bottom" secondItem="4q7-J7-KFo" secondAttribute="bottom" id="rAn-4c-cDd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4q7-J7-KFo" secondAttribute="trailing" id="uZu-W9-GEb"/>

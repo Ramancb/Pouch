@@ -8,7 +8,7 @@
 import UIKit
 
 class WhyMobileNoPopUpViewController: UIViewController {
-
+    
     @IBOutlet weak var gotItBtn: UIButton!
     @IBOutlet weak var informationLabel: UILabel!
     
@@ -33,5 +33,4 @@ class WhyMobileNoPopUpViewController: UIViewController {
     @IBAction func gotItAction(_ sender: Any) {
         self.dismiss(animated: false)
     }
-    
 }

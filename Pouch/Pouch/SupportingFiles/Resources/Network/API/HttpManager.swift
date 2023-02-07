@@ -32,6 +32,7 @@ class HttpManager: NSObject {
             request.setValue("\(accessToken)", forHTTPHeaderField: "Authorization")
             print(accessToken)
         }
+        request.setValue("IOS", forHTTPHeaderField: "platform")
         if(httpMethod == API.HttpMethod.POST
            || httpMethod == API.HttpMethod.PUT
            || httpMethod == API.HttpMethod.DELETE) {

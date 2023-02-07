@@ -77,7 +77,6 @@
                                         </state>
                                         <connections>
                                             <action selector="countryCodeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Akl-bO-gYE"/>
-                                            <action selector="infoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8r-sW-KXf"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-JO-hJp">

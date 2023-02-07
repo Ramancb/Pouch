@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseMessaging
 
 
 struct UserDefaultsCustom {
@@ -56,11 +57,11 @@ struct UserDefaultsCustom {
         }
     }
     
-//    static func getDeviceToken() -> String {
-//        let token = Messaging.messaging().fcmToken
-//        print("FCM token: \(token ?? "")")
-//        return token ?? deviceToken
-//    }
+    static func getDeviceToken() -> String {
+        let token = Messaging.messaging().fcmToken
+        print("FCM token: \(token ?? "")")
+        return token ?? deviceToken
+    }
     
     static var firstTimeOpen: Bool {
         return UserDefaults.standard.value(forKey: "firstTimeOpen") == nil
@@ -70,9 +71,9 @@ struct UserDefaultsCustom {
         UserDefaults.standard.setValue(value, forKey: key)
     }
     
-    static func getAccessToken() -> String {
+    static func getAccessToken() -> String? {
         if let value = UserDefaults.standard.value(forKey: UserDefaultsCustom.accessToken) {
-            return value as! String
+            return value as? String
         } else {
             return ""
         }

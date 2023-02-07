@@ -30,7 +30,9 @@
                 <outlet property="otpField4" destination="2OA-cY-9ti" id="rHo-4n-FlS"/>
                 <outlet property="otpField5" destination="JCO-Le-Uee" id="CfF-sL-0Oh"/>
                 <outlet property="otpField6" destination="Ipw-qp-1iQ" id="HKU-cs-syL"/>
+                <outlet property="otpStackView" destination="NBx-Xm-7pZ" id="tkr-Lg-Fbz"/>
                 <outlet property="resendOtpButton" destination="KSr-Ua-BBV" id="iqR-Wf-Xt5"/>
+                <outlet property="timerLabel" destination="Gsm-zv-zcu" id="VkV-1z-MeF"/>
                 <outlet property="verifyNumberLabel" destination="pjy-JI-zNK" id="Urd-yg-JWh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -214,6 +216,9 @@
                                     <state key="normal" title="RESEND OTP">
                                         <color key="titleColor" name="themeYellow"/>
                                     </state>
+                                    <connections>
+                                        <action selector="resendOtpAction:" destination="-1" eventType="touchUpInside" id="61M-Hm-gdw"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

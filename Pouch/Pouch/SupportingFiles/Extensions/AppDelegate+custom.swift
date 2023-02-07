@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseMessaging
 
 
 
@@ -40,11 +41,11 @@ extension AppDelegate {
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-//        Messaging.messaging().apnsToken = deviceToken
-//        let token = deviceToken.reduce("") { $0 + String(format: "%02.2hhx", $1) }
-//        print("registered for notifications", token)
-//        print(Messaging.messaging().fcmToken)
-//        print("\(UserDefaultsCustom.getDeviceToken())")
+        Messaging.messaging().apnsToken = deviceToken
+        let token = deviceToken.reduce("") { $0 + String(format: "%02.2hhx", $1) }
+        print("registered for notifications", token)
+        print(Messaging.messaging().fcmToken)
+        print("\(UserDefaultsCustom.getDeviceToken())")
     }
     
 }

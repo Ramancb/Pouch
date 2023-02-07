@@ -49,13 +49,15 @@ class ActivityIndicator: UIView {
                 self.activityIndicator.removeFromSuperview()
                 self.activityIndicator = nil
             }
-            self.activityIndicator = DGActivityIndicatorView.init(type: DGActivityIndicatorAnimationType.ballClipRotate, tintColor: .white, size: 40.0)
+             self.activityIndicator = DGActivityIndicatorView.init(type: DGActivityIndicatorAnimationType.ballClipRotate, tintColor: .white, size: 40.0)
             self.activityIndicator.frame = CGRect(x: 0, y: 0, width: 70, height: 70)
             self.activityIndicator.center = self.center
             self.activityIndicator.clipsToBounds = true
             self.activityIndicator.startAnimating()
             self.addSubview(self.activityIndicator)
-            UIApplication.shared.keyWindow?.addSubview(self)
+             if let keyWindow = UIWindow.key {
+                 keyWindow.addSubview(self)
+             }
         })
      }
     
@@ -67,13 +69,15 @@ class ActivityIndicator: UIView {
                 self.activityIndicator.removeFromSuperview()
                 self.activityIndicator = nil
             }
-            self.activityIndicator = DGActivityIndicatorView.init(type: DGActivityIndicatorAnimationType.lineScalePulseOutRapid, tintColor: .white, size: 40.0)
+            self.activityIndicator = DGActivityIndicatorView.init(type: DGActivityIndicatorAnimationType.ballClipRotate, tintColor: .white, size: 40.0)
             self.activityIndicator.frame = CGRect(x: 0, y: 0, width: 70, height: 70)
             self.activityIndicator.center = self.center
             self.activityIndicator.clipsToBounds = true
             self.activityIndicator.startAnimating()
             self.addSubview(self.activityIndicator)
-            UIApplication.shared.keyWindow?.addSubview(self)
+            if let keyWindow = UIWindow.key {
+                keyWindow.addSubview(self)
+            }
         })
     }
     
@@ -87,5 +91,16 @@ class ActivityIndicator: UIView {
                 self.removeFromSuperview()
             }
         })
+    }
+}
+
+
+extension UIWindow {
+    static var key: UIWindow? {
+        if #available(iOS 13, *) {
+            return UIApplication.shared.windows.first { $0.isKeyWindow }
+        } else {
+            return UIApplication.shared.keyWindow
+        }
     }
 }

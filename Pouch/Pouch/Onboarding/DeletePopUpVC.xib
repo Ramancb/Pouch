@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeletePopUpVC" customModule="Pouch" customModuleProvider="target">
+            <connections>
+                <outlet property="deleteMessageLabel" destination="rcn-VU-JOW" id="qQC-NG-hPY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhu-Fw-NXo">
+                    <rect key="frame" x="0.0" y="442.5" width="414" height="453.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dq5-MB-vpf">
+                            <rect key="frame" x="156" y="10" width="102" height="6"/>
+                            <color key="backgroundColor" name="themeGrey"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="6" id="Pzc-Bu-BvW"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete_ic-1" translatesAutoresizingMaskIntoConstraints="NO" id="Sqf-f2-lBD">
+                            <rect key="frame" x="147" y="46" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Sqf-f2-lBD" secondAttribute="height" multiplier="1:1" id="mTa-TG-vb1"/>
+                                <constraint firstAttribute="height" constant="120" id="wdu-2V-fh4"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Membership" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkF-VY-BcJ">
+                            <rect key="frame" x="50" y="196" width="314" height="24"/>
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to delete the membership." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcn-VU-JOW">
+                            <rect key="frame" x="50" y="240" width="314" height="43.5"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                            <color key="textColor" name="themeGrey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="h6C-9t-QPf">
+                            <rect key="frame" x="50" y="313.5" width="314" height="70"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGp-xr-raM">
+                                    <rect key="frame" x="0.0" y="0.0" width="149.5" height="70"/>
+                                    <color key="backgroundColor" name="themeYellow"/>
+                                    <state key="normal" title="NO">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhY-y2-LnF">
+                                    <rect key="frame" x="164.5" y="0.0" width="149.5" height="70"/>
+                                    <color key="backgroundColor" name="lightestGrey"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="Sah-3c-7Rn"/>
+                                    </constraints>
+                                    <state key="normal" title="YES">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="h6C-9t-QPf" firstAttribute="top" secondItem="rcn-VU-JOW" secondAttribute="bottom" constant="30" id="7XH-8Y-sSS"/>
+                        <constraint firstAttribute="trailing" secondItem="tkF-VY-BcJ" secondAttribute="trailing" constant="50" id="8Ft-SO-NsG"/>
+                        <constraint firstAttribute="trailing" secondItem="rcn-VU-JOW" secondAttribute="trailing" constant="50" id="9wO-yS-S8M"/>
+                        <constraint firstAttribute="bottom" secondItem="h6C-9t-QPf" secondAttribute="bottom" constant="70" id="Dje-Iw-nwh"/>
+                        <constraint firstItem="Sqf-f2-lBD" firstAttribute="top" secondItem="Dq5-MB-vpf" secondAttribute="bottom" constant="30" id="GyX-Ki-IzT"/>
+                        <constraint firstItem="tkF-VY-BcJ" firstAttribute="top" secondItem="Sqf-f2-lBD" secondAttribute="bottom" constant="30" id="J1R-EM-xPE"/>
+                        <constraint firstItem="rcn-VU-JOW" firstAttribute="top" secondItem="tkF-VY-BcJ" secondAttribute="bottom" constant="20" id="MdZ-r0-QVj"/>
+                        <constraint firstItem="rcn-VU-JOW" firstAttribute="leading" secondItem="bhu-Fw-NXo" secondAttribute="leading" constant="50" id="PVJ-PW-0K6"/>
+                        <constraint firstItem="Dq5-MB-vpf" firstAttribute="top" secondItem="bhu-Fw-NXo" secondAttribute="top" constant="10" id="RmR-DW-bO5"/>
+                        <constraint firstItem="Dq5-MB-vpf" firstAttribute="leading" secondItem="bhu-Fw-NXo" secondAttribute="leading" constant="156" id="Y0O-ul-b4d"/>
+                        <constraint firstItem="tkF-VY-BcJ" firstAttribute="leading" secondItem="bhu-Fw-NXo" secondAttribute="leading" constant="50" id="ZQh-a6-37T"/>
+                        <constraint firstItem="Dq5-MB-vpf" firstAttribute="centerX" secondItem="bhu-Fw-NXo" secondAttribute="centerX" id="cL7-du-3Xo"/>
+                        <constraint firstAttribute="trailing" secondItem="Dq5-MB-vpf" secondAttribute="trailing" constant="156" id="d8o-0w-pz9"/>
+                        <constraint firstItem="h6C-9t-QPf" firstAttribute="leading" secondItem="bhu-Fw-NXo" secondAttribute="leading" constant="50" id="npE-i6-FP0"/>
+                        <constraint firstItem="Sqf-f2-lBD" firstAttribute="centerX" secondItem="bhu-Fw-NXo" secondAttribute="centerX" id="num-Th-PJH"/>
+                        <constraint firstAttribute="trailing" secondItem="h6C-9t-QPf" secondAttribute="trailing" constant="50" id="rYx-Qh-KFU"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="topCornerRadius">
+                            <real key="value" value="35"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bhu-Fw-NXo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="4jM-M6-ZmP"/>
+                <constraint firstAttribute="bottom" secondItem="bhu-Fw-NXo" secondAttribute="bottom" id="6B6-ld-5ht"/>
+                <constraint firstItem="bhu-Fw-NXo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OyA-1R-aG8"/>
+                <constraint firstItem="bhu-Fw-NXo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jl8-Hu-nr5"/>
+            </constraints>
+            <point key="canvasLocation" x="105.79710144927537" y="89.732142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="delete_ic-1" width="121" height="121"/>
+        <namedColor name="lightestGrey">
+            <color red="0.74901960784313726" green="0.75686274509803919" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="themeGrey">
+            <color red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="themeYellow">
+            <color red="0.86699998378753662" green="0.72200000286102295" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

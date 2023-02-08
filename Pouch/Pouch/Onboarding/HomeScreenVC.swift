@@ -48,4 +48,8 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         return CGSize(width: calculatedFrame.width + 40, height: 50)
     }
     
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      
+//    }
+    
 }

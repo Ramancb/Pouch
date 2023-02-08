@@ -42,7 +42,7 @@ internal extension UIView {
   
     
     func setdd(){
-         lazy var pulse: CAGradientLayer = {
+        var pulse: CAGradientLayer = {
             let l = CAGradientLayer()
             l.type = .radial
             l.colors = [ UIColor.red.cgColor,

@@ -20,6 +20,9 @@ class SideMenuVC: UIViewController {
     var AccountHeader:[String] = ["Account", "Notification","More"]
     var HeaderImage:[UIImage] = [UIImage(named:"account_ic")!, UIImage(named:"notification_ic")!, UIImage(named:"more_ic")!]
     var section: Int?
+    var isSelectedSwitchButton: Bool? = false
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +48,7 @@ class SideMenuVC: UIViewController {
         sideMenuTableView.delegate = self
         sideMenuTableView.dataSource = self
     }
+    
     @IBAction func backAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -74,13 +78,20 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "SideMenuTableCell", for: indexPath) as! SideMenuTableCell
         section = indexPath.section
         self.selectedIndex = indexPath.row
+        
         switch indexPath.section {
         case 0:
             cell.sideMenuLabel.text = Account[indexPath.row]
+            
             cell.notificationToggleBtnOutlet.isHidden = true
             cell.rightArrowOutlet.isHidden = false
         case 1:
+          
+            
             cell.sideMenuLabel.text = Notification[indexPath.row]
+//
+            cell.setSwitchButton(isButton:isSelectedSwitchButton)
+//
             cell.notificationToggleBtnOutlet.isHidden = false
             cell.rightArrowOutlet.isHidden = true
         case 2:
@@ -99,7 +110,8 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
         switch indexPath.section{
         case 0:
             if indexPath.row == 0{
-                self.navigationController?.pushViewController(EditProfileVC(), animated: true)
+                let vc = EditProfilePresenter.CreateEditProfileModule()
+                self.pushViewController(vc, true)
             }
             break
         case 1:
@@ -116,17 +128,9 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
         }
         self.sideMenuTableView.reloadData()
     }
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 70
     }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt: IndexPath)
-    {
-        let vc = EditProfilePresenter.CreateEditProfileModule()
-        self.pushViewController(vc, true)
-    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionHeader = UINib(nibName: "SectionHeaderView",bundle: nil).instantiateView as! SectionHeaderView
         switch section {

@@ -140,16 +140,16 @@ class OtpVC: UIViewController {
     
     func verifyOtP(){
         self.view.endEditing(true)
-        ApiHandler.call( apiName: API.Name.login_attempt, params: self.jsonToVarifyOtp(), httpMethod:.POST) { (data:MessageResponse?, error) in
+//        ApiHandler.call( apiName: API.Name.login_attempt, params: self.jsonToVarifyOtp(), httpMethod:.POST) { (data:MessageResponse?, error) in
             DispatchQueue.main.async {
-                guard let _ = data else {
-                    Singleton.shared.showMessage(message: error ?? "", isError: .error)
-                    return
-                }
-                UserDefaultsCustom.setValue(value: UserDefaultsCustom.accessToken, for: data?.response ?? "")
+//                guard let _ = data else {
+//                    Singleton.shared.showMessage(message: error ?? "", isError: .error)
+//                    return
+//                }
+//                UserDefaultsCustom.setValue(value: UserDefaultsCustom.accessToken, for: data?.response ?? "")
                 self.pushViewController(HomeScreenVC(), true)
             }
-        }
+//        }
         
     }
 }

@@ -67,23 +67,26 @@ class LoginVC: UIViewController {
     
     @IBAction func continueAction(_ sender: Any) {
         self.view.endEditing(true)
-        let validateField = Validator.validatePhoneNumber(number: self.phoneNoTextField.text)
-        guard validateField.0 == true else{
-            Singleton.shared.showMessage(message: validateField.1, isError: .error)
-            return
-        }
-        let apiName = API.Name.login_Init + (self.phoneNoTextField.text ?? "")
-        ApiHandler.call(apiName: apiName, params: [:], httpMethod: .POST) { (data:MessageResponse?, error) in
-            DispatchQueue.main.async {
-                guard let _ = data else {
-                    Singleton.shared.showMessage(message: error ?? "", isError: .error)
-                    return
-                }
-                let controller = OtpVC()
-                controller.mobileNumber = self.phoneNoTextField.text
-                self.pushViewController(controller, true)
-            }
-        }
+        let controller = OtpVC()
+        controller.mobileNumber = "8888888"//self.phoneNoTextField.text
+        self.pushViewController(controller, true)
+//        let validateField = Validator.validatePhoneNumber(number: self.phoneNoTextField.text)
+//        guard validateField.0 == true else{
+//            Singleton.shared.showMessage(message: validateField.1, isError: .error)
+//            return
+//        }
+//        let apiName = API.Name.login_Init + (self.phoneNoTextField.text ?? "")
+//        ApiHandler.call(apiName: apiName, params: [:], httpMethod: .POST) { (data:MessageResponse?, error) in
+//            DispatchQueue.main.async {
+//                guard let _ = data else {
+//                    Singleton.shared.showMessage(message: error ?? "", isError: .error)
+//                    return
+//                }
+//                let controller = OtpVC()
+//                controller.mobileNumber = self.phoneNoTextField.text
+//                self.pushViewController(controller, true)
+//            }
+//        }
     }
 }
 

@@ -44,8 +44,10 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         cell.itemLabel.text = item[indexPath.row]
         if self.selectedIndex == indexPath.row{
             cell.contentHighlightView.isHidden = false
+            cell.itemLabel.textColor = UIColor.appColor(.themeWhite)
         }else{
             cell.contentHighlightView.isHidden = true
+            cell.itemLabel.textColor = UIColor.appColor(.lightGray)
         }
         return cell
     }

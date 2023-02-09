@@ -7,35 +7,40 @@
 
 import UIKit
 
+protocol SideMenuTableCellDelegate{
+    func updatedRowData(data:SettingsRowDataModel?,index:IndexPath?)
+}
+
 class SideMenuTableCell: UITableViewCell {
 
     @IBOutlet weak var sideMenuLabel: UILabel!
-    @IBOutlet weak var notificationToggleBtnOutlet: UIButton!
-    @IBOutlet weak var rightArrowOutlet: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
+    
+    var row_data:SettingsRowDataModel?
+    var delegate:SideMenuTableCellDelegate?
+    var selectedIndex:IndexPath?
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
-    func setSwitchButton(isButton: Bool?){
-    
-        if isButton == true{
-            notificationToggleBtnOutlet.setImage(UIImage(named: "toggle_on_ic"), for: .normal)
+    func setCellData(data:SettingsRowDataModel?,delegate:SideMenuTableCellDelegate?,index:IndexPath?){
+        self.delegate = delegate
+        self.row_data = data
+        self.selectedIndex = indexPath
+        self.sideMenuLabel.text = data?.title
+        if data?.type == .notifation || data?.type == .appNotification{
+            self.rightButton.setImage(data?.isSelected == true ? data?.icon : data?.unselectedIcon, for: .normal)
+        }else{
+            self.rightButton.setImage(data?.icon, for: .normal)
         }
-        else
-        {
-            notificationToggleBtnOutlet.setImage(UIImage(named: "toggle_off_ic"), for: .normal)
-        }
-    }
-    
-    @IBAction func rightArrowBtnAction(_ sender: Any) {
-    }
-    
-    @IBAction func notificationBtnToggleAction(_ sender: UIButton) {
-        sender.isSelected = !(sender.isSelected)
         
+    }
+   
+  
+    @IBAction func rightBtnAction(_ sender: UIButton) {
+        sender.isSelected = !(sender.isSelected)
+        self.row_data?.isSelected = sender.isSelected
+        self.delegate?.updatedRowData(data: self.row_data,index: self.selectedIndex)
     }
 }

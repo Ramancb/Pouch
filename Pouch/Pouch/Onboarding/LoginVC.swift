@@ -15,8 +15,9 @@ class LoginVC: UIViewController {
     @IBOutlet weak var phoneNoTextField: UITextField!
     @IBOutlet weak var continuebottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var enterDetailLabel: UILabel!
-    
     @IBOutlet weak var continueBtnBgView: UIView!
+    
+    var presenter: LoginPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +60,12 @@ class LoginVC: UIViewController {
     @IBAction func infoAction(_ sender: Any) {
         
     let vc = WhyMobileNoPopUpViewController()
-        self.navigationController?.present(vc, true)
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, false)
     }
     
     @IBAction func countryCodeAction(_ sender: UIButton) {
+        
     }
     
     @IBAction func continueAction(_ sender: Any) {
@@ -84,7 +87,16 @@ class LoginVC: UIViewController {
                 self.pushViewController(controller, true)
             }
         }
+//        let controller = OtpVC()
+//        controller.mobileNumber = self.phoneNoTextField.text
+//        self.pushViewController(controller, true)
     }
+}
+
+extension LoginVC: LoginViewProtocol{
+     
+    
+    
 }
 
 extension LoginVC:UITextFieldDelegate{

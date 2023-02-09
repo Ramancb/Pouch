@@ -74,10 +74,12 @@ class OtpVC: UIViewController {
     @objc func fireTimer() {
         runCount -= 1
         self.timerLabel.text = "Resend code in \(runCount) secs"
+        self.resendOtpButton.isEnabled = false
         if runCount == 0 {
+            self.resendOtpButton.isEnabled = true
             timer?.invalidate()
             runCount = 120
-            self.timerLabel.text = "Resend code"
+            self.timerLabel.text = ""
         }
     }
     
@@ -147,10 +149,9 @@ class OtpVC: UIViewController {
                     return
                 }
                 UserDefaultsCustom.setValue(value: UserDefaultsCustom.accessToken, for: data?.response ?? "")
-                self.pushViewController(HomeScreenVC(), true)
+                Singleton.shared.gotoHome()
             }
         }
-        
     }
 }
 

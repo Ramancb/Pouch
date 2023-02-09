@@ -16,6 +16,7 @@ class HomeScreenVC: UIViewController {
     @IBOutlet weak var itemCollectionView: UICollectionView!
     
     var selectedIndex:Int = 0
+    var presenter: HomePresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,5 +60,9 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         let calculatedFrame = item[indexPath.row].widthWithConstrainedHeight(height: 50, font: UIFont.setCustom(.latoSemibold, 14))
         return CGSize(width: calculatedFrame.width + 40, height: 50)
     }
+    
+}
+
+extension HomeScreenVC: HomeViewProtocol{
     
 }

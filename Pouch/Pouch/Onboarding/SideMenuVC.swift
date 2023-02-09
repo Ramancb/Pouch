@@ -48,6 +48,11 @@ class SideMenuVC: UIViewController {
     @IBAction func backAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func logoutAction(_ sender: UIButton) {
+        ApiHandler.call(apiName: API.Name.login_Init, params: [:], httpMethod: .POST) { (data:MessageResponse?, error) in
+            
+        }
+    }
 }
 
 extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{

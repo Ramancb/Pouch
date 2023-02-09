@@ -24,16 +24,17 @@ class EditProfilePresenter: EditProfilePresenterProtocol {
         }
     
     func validateFields() -> Bool {
-        guard email != "" else {
-            Singleton.shared.showErrorMessage(error: "Please enter your email.", isError: .error)
-            return false
-        }
+        
         guard firstName != "" else {
             Singleton.shared.showErrorMessage(error: "Please enter first name.", isError: .error)
             return false
         }
         guard lastName != "" else {
             Singleton.shared.showErrorMessage(error: "Please enter last name.", isError: .error)
+            return false
+        }
+        guard email != "" else {
+            Singleton.shared.showErrorMessage(error: "Please enter your email.", isError: .error)
             return false
         }
         let isValidEmail = Validator.validateEmail(candidate: email ?? "")

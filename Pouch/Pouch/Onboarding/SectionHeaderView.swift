@@ -10,7 +10,6 @@ import UIKit
 class SectionHeaderView: UIView {
 
     @IBOutlet weak var headerLabel: UILabel!
-    
     @IBOutlet weak var borderView: UIView!
     @IBOutlet weak var headerImage: UIImageView!
 }

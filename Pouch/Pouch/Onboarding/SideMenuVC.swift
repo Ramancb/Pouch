@@ -11,28 +11,21 @@ class SideMenuVC: UIViewController {
     
     @IBOutlet weak var viewOutlet: UIView!
     @IBOutlet weak var sideMenuTableView: UITableView!
-    var selectedIndex : Int?
-    var Account:[String] = ["EditProfile","Privacy"]
-    var Notification:[String] = ["Notifications", "App Notifications"]
-    var more:[String] = ["Language", "Country"]
-    var countriesArr:[String] = ["India", "Ukraine","Germany","Australia","New Zealand","New York"]
-    var languageArr:[String] = ["English","Hindi"]
-    var AccountHeader:[String] = ["Account", "Notification","More"]
-    var HeaderImage:[UIImage] = [UIImage(named:"account_ic")!, UIImage(named:"notification_ic")!, UIImage(named:"more_ic")!]
-    var section: Int?
     
+    var settingsData:[SettingsSectionData] = SettingsDataModel.array
+    var setData:[SettingsRowDataModel] = NotificationSection.array
+    var countriesArr: [String] = ["India","New York","Australia","England","London"]
+    var languageArr: [String] = ["English","Hindi"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewOutlet.applyGradient(colours: [UIColor(hexString: "#343434"), UIColor(hexString: "#000000") ], locations: [0.1,0.4])
         setTableView()
-        
     }
     func setDropDown(){
         let picker = CustomPickerController()
         picker.set(countriesArr, delegate: self,tag: 0)
         self.present(picker, false)
-        
     }
     func languageDropDown(){
         let picker = CustomPickerController()
@@ -40,8 +33,7 @@ class SideMenuVC: UIViewController {
         self.present(picker, false)
     }
     func setTableView(){
-        
-        sideMenuTableView.register(UINib(nibName: "SideMenuTableCell", bundle: nil), forCellReuseIdentifier: "SideMenuTableCell")
+        sideMenuTableView.register(cellClass: SideMenuTableCell.self)
         sideMenuTableView.delegate = self
         sideMenuTableView.dataSource = self
     }
@@ -58,98 +50,44 @@ class SideMenuVC: UIViewController {
 extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return self.settingsData.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return Account.count
-        case 1:
-            return Notification.count
-        case 2:
-            return more.count
-        default :
-            break
-        }
-        return 0
+        return self.settingsData[section].rowData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SideMenuTableCell", for: indexPath) as! SideMenuTableCell
-        section = indexPath.section
-        self.selectedIndex = indexPath.row
-        switch indexPath.section {
-        case 0:
-            cell.sideMenuLabel.text = Account[indexPath.row]
-            cell.notificationToggleBtnOutlet.isHidden = true
-            cell.rightArrowOutlet.isHidden = false
-        case 1:
-            cell.sideMenuLabel.text = Notification[indexPath.row]
-            cell.notificationToggleBtnOutlet.isHidden = false
-            cell.rightArrowOutlet.isHidden = true
-        case 2:
-            
-            cell.sideMenuLabel.text = more[indexPath.row]
-            cell.notificationToggleBtnOutlet.isHidden = true
-            cell.rightArrowOutlet.isHidden = false
-        default:
-            return cell
-        }
+        let cell = tableView.dequeue(cellClass: SideMenuTableCell.self, forIndexPath: indexPath)
+        cell.setCellData(data: self.settingsData[indexPath.section].rowData?[indexPath.row], delegate: self, index: indexPath)//setCellData(data: self.settingsData[indexPath.section].rowData?[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedIndex = indexPath.row
-        switch indexPath.section{
-        case 0:
-            if indexPath.row == 0{
-                self.navigationController?.pushViewController(EditProfileVC(), animated: true)
-            }
+        switch self.settingsData[indexPath.section].rowData?[indexPath.row].type{
+        case .editProfile:
+            let vc = EditProfilePresenter.CreateEditProfileModule()
+            self.pushViewController(vc, true)
+        case .privacy:
             break
-        case 1:
-            break
-        case 2:
-            if indexPath.row == 1 {
-                self.setDropDown()
-            }else if indexPath.row == 0{
-                self.languageDropDown()
-            }
-            
+        case .country:
+            self.setDropDown()
+        case .language:
+            self.languageDropDown()
         default:
             break
         }
-        self.sideMenuTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 70
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt: IndexPath)
-    {
-        let vc = EditProfilePresenter.CreateEditProfileModule()
-        self.pushViewController(vc, true)
-    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionHeader = UINib(nibName: "SectionHeaderView",bundle: nil).instantiateView as! SectionHeaderView
-        switch section {
-        case 0:
-            sectionHeader.headerLabel.text = AccountHeader[0]
-            sectionHeader.headerImage.image = HeaderImage[0]
-        case 1:
-            sectionHeader.headerLabel.text = AccountHeader[1]
-            sectionHeader.headerImage.image = HeaderImage[1]
-        case 2:
-            sectionHeader.headerLabel.text = AccountHeader[2]
-            sectionHeader.headerImage.image = HeaderImage[2]
-            
-        default:
-            return sectionHeader
-        }
+        sectionHeader.headerLabel.text = self.settingsData[section].SectionTitle
+        sectionHeader.headerImage.image = self.settingsData[section].sectionIcon
         return sectionHeader
-        
     }
 }
 extension SideMenuVC: CustomPickerControllerDelegate{
@@ -157,5 +95,14 @@ extension SideMenuVC: CustomPickerControllerDelegate{
     }
     
     func cancel(picker: CustomPickerController, _ tag: Int) {
+    }
+}
+
+extension SideMenuVC: SideMenuTableCellDelegate{
+    func updatedRowData(data: SettingsRowDataModel?, index: IndexPath?) {
+        guard let row_data = data else{return}
+        guard let indexpath = index else{return}
+        self.settingsData[indexpath.section].rowData?[indexpath.row] = row_data
+        self.sideMenuTableView.reloadRows(at: [indexpath], with: .automatic)
     }
 }

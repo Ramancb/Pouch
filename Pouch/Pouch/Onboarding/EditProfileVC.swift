@@ -27,8 +27,9 @@ class EditProfileVC: UIViewController {
         emailField.delegate = self
         nameField.delegate = self
         lastNameField.delegate = self
-        editProfileView.applyGradient(colours: [UIColor(hexString: "#343434"), UIColor(hexString: "#000000") ], locations: [0.1,0.7])
+        editProfileView.applyGradient(colours: [UIColor(hexString: "#343434"), UIColor(hexString: "#000000") ], locations: [0.0,0.5])
     }
+        
     @IBAction func saveAction(_ sender: Any) {
         if presenter?.validateFields() == true{
             print("success")
@@ -49,15 +50,14 @@ extension EditProfileVC: EditProfileViewProtocol{
 extension EditProfileVC: UITextFieldDelegate{
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if  emailField != nil {
-            emailField.borderWidth = 2
-            emailField.borderColor = UIColor.appColor(.themeYellow)
-        }else if nameField == nil{
-            nameField.borderWidth = 2
-            nameField.borderColor = UIColor.appColor(.themeYellow)
-        }else if lastNameField == nil{
-            lastNameField.borderWidth = 2
-            lastNameField.borderColor = UIColor.appColor(.themeYellow)
-        }
+        
+        textField.borderWidth = 2
+        textField.borderColor = UIColor.appColor(.themeYellow)
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.borderWidth = 0
+        textField.borderColor = UIColor.clear
+    }
+    
 }

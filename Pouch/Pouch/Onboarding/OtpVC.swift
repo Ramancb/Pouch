@@ -152,6 +152,7 @@ class OtpVC: UIViewController {
                 Singleton.shared.gotoHome()
             }
         }
+
     }
 }
 

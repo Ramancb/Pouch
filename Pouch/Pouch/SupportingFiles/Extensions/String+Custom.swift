@@ -712,6 +712,15 @@ extension String {
         return self.replacingOccurrences(of: target, with: withString, options: NSString.CompareOptions.literal, range: nil)
     }
     
+    func jsonToPrettyString(json:Any)->String{
+        if let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
+            return String(decoding: jsonData, as: UTF8.self)
+        } else {
+            return "json data malformed"
+        }
+    }
+    
 }
+
 
 

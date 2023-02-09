@@ -13,7 +13,7 @@ class API {
     
     //    DEV HOST
     static let imageHost = "http://www.21by90.com/api/"
-    static let host = "http://www.21by90.com/api/"
+    static let host = "http://testio.pouch.club/"
     
     
     static let deviceType = "Ios"
@@ -25,81 +25,8 @@ class API {
     }
     
     struct Name {
-        static let device_token_update = "device_token_update"
-        static let get_city = "get_city"
-        static let user_image = "user_image"
-        static let get_country = "get_country"
-        static let mobile_verification = "mobile_verification"
-        static let otp_verification = "otp_verification"
-        static let user_register = "user_register"
-        static let get_quote = "get_quote"
-        static let get_user_awards = "get_user_awards"
-        static let profile_overview = "profile_overview"
-        static let success_report = "success_report"
-        static let challenge_overview = "challenge_overview"
-        static let successRate = "success_rate"
-        static let recentChallenges = "recent_challenges"
-        static let pollslisting = "polls_listing"
-        static let plans_listing = "plans_listing"
-        static let pollsAnswer = "polls_answer"
-        static let buy_plan = "buy_plan"
-        static let cancel_plan = "cancel_plan"
-        static let user_account_delete = "user_account_delete"
-        static let logout = "logout"
-        static let get_category = "get_category"
-        
-        
-        
-        static let challenge_description = "challenge_description"
-        static let search_habit = "search_habit"
-        static let trendingHabits = "trending_habits"
-        static let getTags = "get_tags"
-        static let start_challenge = "start_challenge"
-        static let searchChallengesbytag = "search_challenges_by_tag"
-        
-        static let failed_challenge_list = "failed_challenge_list"
-        static let active_challenge_list = "active_challenge_list"
-        static let complete_challenge_list = "complete_challenge_list"
-        static let custom_habits = "custom_habits"
-        static let start_custom_challenge = "start_custom_challenge"
-        static let upcoming_challenge = "upcoming_challenge"
-        static let get_tip = "get_tip"
-        static  let challenge_log_list = "challenge_log_list/"
-        static let add_challenge_log = "add_challenge_log"
-        static let edit_challenge_log = "edit_challenge_log"
-        static let log_delete_mood = "log_delete_mood"
-        static let log_delete_photo = "log_delete_photo"
-        static let log_delete_text_note = "log_delete_text_note"
-        static let edit_challenge = "edit_challenge"
-        static let page_detail = "page_detail"
-        static let get_user_profile = "get_user_profile"
-        static let user_ranking = "user_ranking"
-        
-        static let user_level_rule = "user_level_rule"
-        static let user_level_detail = "user_level_detail"
-        static let contact = "contact"
-        static let userEditProfile = "user_edit_profile"
-        
-        static let city_leaderboard = "city_leaderboard"
-        static let country_leaderboard = "country_leaderboard"
-        static let global_leaderboard = "global_leaderboard"
-        
-        static let earned_awards = "earned_awards"
-        static let upcoming_awards = "upcoming_awards"
-        static let award_screenshot = "award_screenshot"
-        
-        static let user_public_profile = "user_public_profile"
-        
-        static let accountVerifyUserImage = "account_verify_user_image"
-        static let accountVerifyRequestStatus = "account_verify_request_status"
-        static let accountVerifyRequestCancel = "account_verify_request_cancel"
-        static let newMobileVerification = "new_mobile_verification"
-        static let newMobileOtpVerification = "new_mobile_otp_verification"
-        static let createFeedback = "create_feedback"
-        static let getRoadmap = "get_roadmap"
-        static let updateNotificationSetting = "update_notification_setting"
-        static let getFAQ = "get_faq"
-        static let getNotificationSetting = "get_notification_setting"
+        static let login_Init = "login/init/"
+        static let login_attempt = "login/attempt"
         
     }
     

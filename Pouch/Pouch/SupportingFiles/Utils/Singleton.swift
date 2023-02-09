@@ -54,7 +54,7 @@ class Singleton: NSObject {
     //MARK: ERROR MESSAGE
     func showErrorMessage(error:String, isError: ERROR_TYPE) {
         DispatchQueue.main.async {
-            guard let window = Singleton.shared.window else {return}
+            guard let window = UIWindow.key else {return}
             if self.errorMessageView == nil {
                 self.errorMessageView = UINib(nibName: NIB_NAME.errorView, bundle: nil).instantiate(withOwner: self, options: nil)[0] as? ErrorView
                 self.errorMessageView.delegate = self

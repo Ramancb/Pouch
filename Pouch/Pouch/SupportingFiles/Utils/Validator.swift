@@ -33,8 +33,8 @@ class Validator {
         return true
     }
     
-    static public func validateUserName(userName: String) -> Bool {
-        guard userName != "" else {
+    static public func validateLastName(lastName: String) -> Bool {
+        guard lastName != "" else {
             return false
         }
         return true

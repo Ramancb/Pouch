@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B14F1E4299218CD0073E6AA /* editProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14F1E3299218CD0073E6AA /* editProfileModel.swift */; };
+		4B14F1E62992388A0073E6AA /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14F1E52992388A0073E6AA /* Protocol.swift */; };
+		4B14F1E82992424E0073E6AA /* editProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14F1E72992424E0073E6AA /* editProfilePresenter.swift */; };
+		4B14F1F129926EBF0073E6AA /* CustomPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14F1EF29926EBF0073E6AA /* CustomPickerController.swift */; };
+		4B14F1F229926EBF0073E6AA /* CustomPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B14F1F029926EBF0073E6AA /* CustomPickerController.xib */; };
 		4B1EABF7298D32A3001E89DB /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1EABF5298D32A3001E89DB /* EditProfileVC.swift */; };
 		4B1EABF8298D32A3001E89DB /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1EABF6298D32A3001E89DB /* EditProfileVC.xib */; };
 		4B4278D229911A0E005DD94F /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4278D029911A0E005DD94F /* HomeCollectionCell.xib */; };
@@ -28,13 +33,14 @@
 		A32541572991286500E051B4 /* MembershipVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32541552991286500E051B4 /* MembershipVC.xib */; };
 		A325415E299272C900E051B4 /* DeletePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A325415C299272C900E051B4 /* DeletePopUpVC.swift */; };
 		A325415F299272C900E051B4 /* DeletePopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A325415D299272C900E051B4 /* DeletePopUpVC.xib */; };
-		E41F7825F9EDD1481703CE1F /* Pods_Pouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */; };
+		B952CCF1D49E5B2814BEE52A /* Pods_Pouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */; };
 		F17E14C52988F82000C336C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E14C42988F82000C336C2 /* AppDelegate.swift */; };
 		F17E14C72988F82000C336C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E14C62988F82000C336C2 /* SceneDelegate.swift */; };
 		F17E14CC2988F82000C336C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17E14CA2988F82000C336C2 /* Main.storyboard */; };
 		F17E14CF2988F82000C336C2 /* Pouch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F17E14CD2988F82000C336C2 /* Pouch.xcdatamodeld */; };
 		F17E14D12988F82200C336C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17E14D02988F82200C336C2 /* Assets.xcassets */; };
 		F17E14D42988F82200C336C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17E14D22988F82200C336C2 /* LaunchScreen.storyboard */; };
+		F18AB69329914825009BF43B /* ErrorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18AB69229914825009BF43B /* ErrorResponseModel.swift */; };
 		F1AC50BE2990E3F8007F1450 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC50BD2990E3F8007F1450 /* OTPTextField.swift */; };
 		F1AD97752988FBBE00FB83DA /* UILabel+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AD96392988FBB800FB83DA /* UILabel+Custom.swift */; };
 		F1AD97762988FBBE00FB83DA /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AD963A2988FBB800FB83DA /* UIView+Custom.swift */; };
@@ -99,6 +105,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B14F1E3299218CD0073E6AA /* editProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileModel.swift; sourceTree = "<group>"; };
+		4B14F1E52992388A0073E6AA /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		4B14F1E72992424E0073E6AA /* editProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfilePresenter.swift; sourceTree = "<group>"; };
+		4B14F1EF29926EBF0073E6AA /* CustomPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerController.swift; sourceTree = "<group>"; };
+		4B14F1F029926EBF0073E6AA /* CustomPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPickerController.xib; sourceTree = "<group>"; };
 		4B1B46B9298927C60006D7F1 /* Pods_Pouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Pouch.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Pouch-hldinwnpgttrwzgcaaquwkgkegqx/Build/Products/Debug-iphoneos/Pods_Pouch.framework"; sourceTree = "<group>"; };
 		4B1EABF5298D32A3001E89DB /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		4B1EABF6298D32A3001E89DB /* EditProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileVC.xib; sourceTree = "<group>"; };
@@ -132,6 +143,7 @@
 		F17E14D02988F82200C336C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F17E14D32988F82200C336C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17E14D52988F82200C336C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Pouch/SupportingFiles/Info.plist; sourceTree = SOURCE_ROOT; };
+		F18AB69229914825009BF43B /* ErrorResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseModel.swift; sourceTree = "<group>"; };
 		F1AC50BD2990E3F8007F1450 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		F1AD96392988FBB800FB83DA /* UILabel+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Custom.swift"; sourceTree = "<group>"; };
 		F1AD963A2988FBB800FB83DA /* UIView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
@@ -200,18 +212,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E41F7825F9EDD1481703CE1F /* Pods_Pouch.framework in Frameworks */,
+				B952CCF1D49E5B2814BEE52A /* Pods_Pouch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B14F1E0299217C60073E6AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B14F1E3299218CD0073E6AA /* editProfileModel.swift */,
+				4B14F1E52992388A0073E6AA /* Protocol.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4B14F1EE29926EBF0073E6AA /* CustomPickerController */ = {
+			isa = PBXGroup;
+			children = (
+				4B14F1EF29926EBF0073E6AA /* CustomPickerController.swift */,
+				4B14F1F029926EBF0073E6AA /* CustomPickerController.xib */,
+			);
+			path = CustomPickerController;
+			sourceTree = "<group>";
+		};
 		4B1EABF9298D3458001E89DB /* EditProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4B1EABF5298D32A3001E89DB /* EditProfileVC.swift */,
-				4B1EABF6298D32A3001E89DB /* EditProfileVC.xib */,
+				4B14F1E0299217C60073E6AA /* Model */,
+				4BBAAD8629913F76009E6F10 /* Presenter */,
+				4BBAAD8529913F61009E6F10 /* View */,
 			);
 			name = EditProfileViewController;
 			sourceTree = "<group>";
@@ -312,6 +343,23 @@
 				4B8FEAFE2990D1B00071CD92 /* HomeScreenVC.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		4BBAAD8529913F61009E6F10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B1EABF5298D32A3001E89DB /* EditProfileVC.swift */,
+				4B1EABF6298D32A3001E89DB /* EditProfileVC.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4BBAAD8629913F76009E6F10 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4B14F1E72992424E0073E6AA /* editProfilePresenter.swift */,
+			);
+			name = Presenter;
 			sourceTree = "<group>";
 		};
 		4BCADD522989489B0091A183 /* InfoPopUpViewController */ = {
@@ -481,6 +529,14 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		F18AB6912991480A009BF43B /* ErrorResponse */ = {
+			isa = PBXGroup;
+			children = (
+				F18AB69229914825009BF43B /* ErrorResponseModel.swift */,
+			);
+			path = ErrorResponse;
+			sourceTree = "<group>";
+		};
 		F1AD96382988FBB800FB83DA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,6 +617,7 @@
 		F1AD96B42988FBB900FB83DA /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				4B14F1EE29926EBF0073E6AA /* CustomPickerController */,
 				F1AD96B82988FBB900FB83DA /* CustomNavigationBar */,
 				F1AD96BB2988FBB900FB83DA /* ErrorView */,
 				F1AD96C02988FBB900FB83DA /* CustomProgressBar */,
@@ -608,6 +665,7 @@
 		F1AD96C42988FBBD00FB83DA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F18AB6912991480A009BF43B /* ErrorResponse */,
 				F1AD96C72988FBBD00FB83DA /* Network */,
 				F1AD96D22988FBBD00FB83DA /* App Fonts */,
 			);
@@ -729,6 +787,7 @@
 				4BCADD56298949270091A183 /* WhyMobileNoPopUpViewController.xib in Resources */,
 				F1AD97A22988FBBE00FB83DA /* CountryCodes.json in Resources */,
 				4B1EABF8298D32A3001E89DB /* EditProfileVC.xib in Resources */,
+				4B14F1F229926EBF0073E6AA /* CustomPickerController.xib in Resources */,
 				F1BBC98C2990DE8000D1EFDA /* Lato-Black.ttf in Resources */,
 				F1BBC9922990DE8000D1EFDA /* Lato-ThinItalic.ttf in Resources */,
 				F1BBC98F2990DE8000D1EFDA /* Lato-BlackItalic.ttf in Resources */,
@@ -813,9 +872,11 @@
 				F1AD97782988FBBE00FB83DA /* String+Custom.swift in Sources */,
 				4B1EABF7298D32A3001E89DB /* EditProfileVC.swift in Sources */,
 				F1AD977D2988FBBE00FB83DA /* UICollectionView+Custom.swift in Sources */,
+				4B14F1E62992388A0073E6AA /* Protocol.swift in Sources */,
 				F1AD97B92988FBBE00FB83DA /* AppNavigation.swift in Sources */,
 				F1AD97A32988FBBE00FB83DA /* PhoneContacts.swift in Sources */,
 				F1AD97ED2988FBBF00FB83DA /* ApiHandler.swift in Sources */,
+				4B14F1F129926EBF0073E6AA /* CustomPickerController.swift in Sources */,
 				4B92C11B298CEAA900ED318C /* SideMenuTableCell.swift in Sources */,
 				4B5534F3298BDD5F0024916A /* SectionHeaderView.swift in Sources */,
 				F1AD97A02988FBBE00FB83DA /* Singleton.swift in Sources */,
@@ -831,6 +892,7 @@
 				F1AD97EC2988FBBF00FB83DA /* HttpManager.swift in Sources */,
 				4B5534EB298BC9500024916A /* SideMenuVC.swift in Sources */,
 				4BCADD55298949270091A183 /* WhyMobileNoPopUpViewController.swift in Sources */,
+				4B14F1E4299218CD0073E6AA /* editProfileModel.swift in Sources */,
 				F1AC50BE2990E3F8007F1450 /* OTPTextField.swift in Sources */,
 				F1AD97A42988FBBE00FB83DA /* Validator.swift in Sources */,
 				4B4C06A1298A3428002C9E4F /* LoginVC.swift in Sources */,
@@ -850,8 +912,10 @@
 				F1AD978A2988FBBE00FB83DA /* UITableView+Custom.swift in Sources */,
 				F1AD97892988FBBE00FB83DA /* RadicalView.swift in Sources */,
 				F1AD97E12988FBBF00FB83DA /* ErrorView.swift in Sources */,
+				F18AB69329914825009BF43B /* ErrorResponseModel.swift in Sources */,
 				4B4278D329911A0E005DD94F /* HomeCollectionCell.swift in Sources */,
 				A325415E299272C900E051B4 /* DeletePopUpVC.swift in Sources */,
+				4B14F1E82992424E0073E6AA /* editProfilePresenter.swift in Sources */,
 				F1AD97792988FBBE00FB83DA /* Array+Custom.swift in Sources */,
 				F1AD97852988FBBE00FB83DA /* UITextField+Custom.swift in Sources */,
 				F17E14C72988F82000C336C2 /* SceneDelegate.swift in Sources */,
@@ -918,6 +982,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -978,6 +1043,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -991,6 +1057,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1007,6 +1074,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5448ZQBK98;
+				ENABLE_BITCODE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pouch/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1027,6 +1095,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -1039,6 +1108,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5448ZQBK98;
+				ENABLE_BITCODE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pouch/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1054,11 +1124,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stackgeeks.Pouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};

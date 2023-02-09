@@ -14,7 +14,6 @@ class MembershipVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         cardNumberView.applyGradient(colours: [UIColor(hexString: "#A2134A"), UIColor(hexString: "#000000") ], locations: [0.1,0.4])
     }
 

@@ -52,10 +52,11 @@ extension AppDelegate {
 
 extension AppDelegate: UNUserNotificationCenterDelegate{
     //MARK: - Background Fetch Result
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
-        UIApplication.shared.applicationIconBadgeNumber = 1
-        return .newData
-    }
+//    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
+//        UIApplication.shared.applicationIconBadgeNumber = 1
+//        return .newData
+//    }
+    
     
     //MARK: - Forground push notification
     // Receive displayed notifications for iOS 10 devices.

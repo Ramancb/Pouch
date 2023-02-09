@@ -29,7 +29,11 @@
 		4B92C11C298CEAA900ED318C /* SideMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B92C11A298CEAA900ED318C /* SideMenuTableCell.xib */; };
 		4BCADD55298949270091A183 /* WhyMobileNoPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */; };
 		4BCADD56298949270091A183 /* WhyMobileNoPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */; };
-		707141DE5FFDA655724634A7 /* Pods_Pouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */; };
+		A32541562991286500E051B4 /* MembershipVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32541542991286500E051B4 /* MembershipVC.swift */; };
+		A32541572991286500E051B4 /* MembershipVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32541552991286500E051B4 /* MembershipVC.xib */; };
+		A325415E299272C900E051B4 /* DeletePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A325415C299272C900E051B4 /* DeletePopUpVC.swift */; };
+		A325415F299272C900E051B4 /* DeletePopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A325415D299272C900E051B4 /* DeletePopUpVC.xib */; };
+		B952CCF1D49E5B2814BEE52A /* Pods_Pouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */; };
 		F17E14C52988F82000C336C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E14C42988F82000C336C2 /* AppDelegate.swift */; };
 		F17E14C72988F82000C336C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E14C62988F82000C336C2 /* SceneDelegate.swift */; };
 		F17E14CC2988F82000C336C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17E14CA2988F82000C336C2 /* Main.storyboard */; };
@@ -131,6 +135,10 @@
 		5F9AA0F2AF9379AE7E7458C6 /* Pods-Pouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pouch.debug.xcconfig"; path = "Target Support Files/Pods-Pouch/Pods-Pouch.debug.xcconfig"; sourceTree = "<group>"; };
 		784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4F90C311984A2732F20C4D /* Pods-Pouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pouch.release.xcconfig"; path = "Target Support Files/Pods-Pouch/Pods-Pouch.release.xcconfig"; sourceTree = "<group>"; };
+		A32541542991286500E051B4 /* MembershipVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipVC.swift; sourceTree = "<group>"; };
+		A32541552991286500E051B4 /* MembershipVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MembershipVC.xib; sourceTree = "<group>"; };
+		A325415C299272C900E051B4 /* DeletePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePopUpVC.swift; sourceTree = "<group>"; };
+		A325415D299272C900E051B4 /* DeletePopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeletePopUpVC.xib; sourceTree = "<group>"; };
 		F17E14C12988F82000C336C2 /* Pouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17E14C42988F82000C336C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F17E14C62988F82000C336C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -212,7 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				707141DE5FFDA655724634A7 /* Pods_Pouch.framework in Frameworks */,
+				B952CCF1D49E5B2814BEE52A /* Pods_Pouch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +392,72 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A325414E2991262A00E051B4 /* Membership */ = {
+			isa = PBXGroup;
+			children = (
+				A325414F2991267B00E051B4 /* Model */,
+				A32541502991270300E051B4 /* View */,
+				A32541512991272900E051B4 /* Presenter */,
+			);
+			name = Membership;
+			sourceTree = "<group>";
+		};
+		A325414F2991267B00E051B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A32541502991270300E051B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A3254152299127BA00E051B4 /* Controller */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A32541512991272900E051B4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		A3254152299127BA00E051B4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A32541542991286500E051B4 /* MembershipVC.swift */,
+				A32541552991286500E051B4 /* MembershipVC.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A32541592992726800E051B4 /* DeletePopUp */ = {
+			isa = PBXGroup;
+			children = (
+				A325415A2992728400E051B4 /* View */,
+			);
+			name = DeletePopUp;
+			sourceTree = "<group>";
+		};
+		A325415A2992728400E051B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A325415B299272A300E051B4 /* Controller */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A325415B299272A300E051B4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A325415C299272C900E051B4 /* DeletePopUpVC.swift */,
+				A325415D299272C900E051B4 /* DeletePopUpVC.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		F17E14B82988F82000C336C2 = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +498,8 @@
 		F17E14DC2988F8C000C336C2 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				A32541592992726800E051B4 /* DeletePopUp */,
+				A325414E2991262A00E051B4 /* Membership */,
 				4B8FEB012990D1B80071CD92 /* HomeScreenViewController */,
 				4B1EABF9298D3458001E89DB /* EditProfileViewController */,
 				4B5534E8298BC9020024916A /* SideMenuController */,
@@ -737,6 +813,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A325415F299272C900E051B4 /* DeletePopUpVC.xib in Resources */,
 				F1AD97DE2988FBBF00FB83DA /* cancel_notes@2x.png in Resources */,
 				F1BBC9912990DE8000D1EFDA /* Lato-Light.ttf in Resources */,
 				F1BBC9882990DE8000D1EFDA /* Lato-Italic.ttf in Resources */,
@@ -751,6 +828,7 @@
 				F1BBC9922990DE8000D1EFDA /* Lato-ThinItalic.ttf in Resources */,
 				F1BBC98F2990DE8000D1EFDA /* Lato-BlackItalic.ttf in Resources */,
 				F17E14D42988F82200C336C2 /* LaunchScreen.storyboard in Resources */,
+				A32541572991286500E051B4 /* MembershipVC.xib in Resources */,
 				F1BBC98E2990DE8000D1EFDA /* Lato-Regular.ttf in Resources */,
 				F1BBC98D2990DE8000D1EFDA /* LatoSemibold.ttf in Resources */,
 				F1BBC9892990DE8000D1EFDA /* Lato-LightItalic.ttf in Resources */,
@@ -847,6 +925,7 @@
 				F1AD97D92988FBBF00FB83DA /* Values.swift in Sources */,
 				F1AD97B22988FBBE00FB83DA /* ActivityIndicator.swift in Sources */,
 				F1AD97862988FBBE00FB83DA /* UIImageView+Custom.swift in Sources */,
+				A32541562991286500E051B4 /* MembershipVC.swift in Sources */,
 				F1AD97EC2988FBBF00FB83DA /* HttpManager.swift in Sources */,
 				4B5534EB298BC9500024916A /* SideMenuVC.swift in Sources */,
 				4BCADD55298949270091A183 /* WhyMobileNoPopUpViewController.swift in Sources */,
@@ -874,6 +953,7 @@
 				F1AD97E12988FBBF00FB83DA /* ErrorView.swift in Sources */,
 				F18AB69329914825009BF43B /* ErrorResponseModel.swift in Sources */,
 				4B4278D329911A0E005DD94F /* HomeCollectionCell.swift in Sources */,
+				A325415E299272C900E051B4 /* DeletePopUpVC.swift in Sources */,
 				4B14F1E82992424E0073E6AA /* editProfilePresenter.swift in Sources */,
 				F1AD97792988FBBE00FB83DA /* Array+Custom.swift in Sources */,
 				F1AD97852988FBBE00FB83DA /* UITextField+Custom.swift in Sources */,
@@ -942,7 +1022,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1003,7 +1083,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1034,7 +1114,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5448ZQBK98;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pouch/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1068,7 +1148,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5448ZQBK98;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pouch/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -9,7 +9,6 @@ import UIKit
 
 class LoginVC: UIViewController {
     
-    
     @IBOutlet weak var countryCodeBtn: UIButton!
     @IBOutlet weak var continueBtn: UIButton!
     @IBOutlet weak var phoneNoTextField: UITextField!

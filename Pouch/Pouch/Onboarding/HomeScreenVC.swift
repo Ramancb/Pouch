@@ -29,6 +29,7 @@ class HomeScreenVC: UIViewController {
         itemCollectionView.dataSource = self
         itemCollectionView.register(UINib(nibName: "HomeCollectionCell"), forCellWithReuseIdentifier: "HomeCollectionCell")
     }
+    
     @IBAction func moreAction(_ sender: Any) {
         let vc = SideMenuVC()
         self.navigationController?.pushViewController(vc, animated: true)
@@ -60,6 +61,10 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         let calculatedFrame = item[indexPath.row].widthWithConstrainedHeight(height: 50, font: UIFont.setCustom(.latoSemibold, 14))
         return CGSize(width: calculatedFrame.width + 40, height: 50)
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      
+//    }
     
 }
 

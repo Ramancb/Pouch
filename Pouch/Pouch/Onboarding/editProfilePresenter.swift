@@ -42,8 +42,8 @@ class EditProfilePresenter: EditProfilePresenterProtocol {
             return isValidEmail
         }else {
             Singleton.shared.showErrorMessage(error: "Please enter valid email.", isError: .error)
-            return isValidEmail
+            return false
         }
-        self.view?.receiveData()
+       // self.view?.receiveData()
     }
 }

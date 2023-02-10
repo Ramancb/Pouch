@@ -13,6 +13,7 @@ protocol SideMenuTableCellDelegate{
 
 class SideMenuTableCell: UITableViewCell {
 
+    @IBOutlet weak var countrySelectedLabel: UILabel!
     @IBOutlet weak var sideMenuLabel: UILabel!
     @IBOutlet weak var rightButton: UIButton!
     

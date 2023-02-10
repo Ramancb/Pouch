@@ -19,7 +19,7 @@ struct UserDefaultsCustom {
     static let messageKey = "MessageKey"
     static let updated_OTP = "updated_OTP"
     static  let tipid =  "tipid"
-    static let buyPlanData = "buyPlanData"
+    
   
     static var isCompleteSignUp : Bool? {
         set {

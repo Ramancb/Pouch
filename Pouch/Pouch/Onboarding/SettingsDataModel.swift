@@ -49,9 +49,9 @@ class NotificationSection{
 }
 class MoreSection{
     static var array: [SettingsRowDataModel] = [
-        SettingsRowDataModel.init(title: AppStrings.country, rightIcon: UIImage(named: "arrow_ryt_grey_ic"), settingRow: .country),
-        SettingsRowDataModel.init(title: AppStrings.language, rightIcon: UIImage(named: "arrow_ryt_grey_ic"), settingRow: .language)
-    ]
+        SettingsRowDataModel.init(title: AppStrings.language, rightIcon: UIImage(named: "arrow_ryt_grey_ic"), settingRow: .language),
+        SettingsRowDataModel.init(title: AppStrings.country, rightIcon: UIImage(named: "arrow_ryt_grey_ic"), settingRow: .country)
+        ]
 }
 
 struct SettingsSectionData{
@@ -63,8 +63,8 @@ struct SettingsSectionData{
 class SettingsDataModel{
     static var array: [SettingsSectionData] = [
         SettingsSectionData(SectionTitle: AppStrings.account, rowData: AccountSection.array, sectionIcon: UIImage(named: "account_ic")),
-        SettingsSectionData(SectionTitle: AppStrings.account, rowData: NotificationSection.array, sectionIcon: UIImage(named: "notification_ic")),
-        SettingsSectionData(SectionTitle: AppStrings.account, rowData: MoreSection.array, sectionIcon: UIImage(named: "more_ic"))
+        SettingsSectionData(SectionTitle: AppStrings.notification, rowData: NotificationSection.array, sectionIcon: UIImage(named: "notification_ic")),
+        SettingsSectionData(SectionTitle: AppStrings.more, rowData: MoreSection.array, sectionIcon: UIImage(named: "more_ic"))
     ]
 }
 

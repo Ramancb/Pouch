@@ -23,19 +23,23 @@ class EditProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        emailField.placeHolderTextColor = UIColor.appColor(.lightGray)
+        lastNameField.placeHolderTextColor = UIColor.appColor(.lightGray)
+        nameField.placeHolderTextColor = UIColor.appColor(.lightGray)
         emailField.delegate = self
         nameField.delegate = self
         lastNameField.delegate = self
         editProfileView.applyGradient(colours: [UIColor(hexString: "#343434"), UIColor(hexString: "#000000") ], locations: [0.0,0.5])
     }
         
-    @IBAction func saveAction(_ sender: Any) {
+    
+    @IBAction func saveAction(_ sender: UIButton) {
+//        self.view.endEditing(true)
         if presenter?.validateFields() == true{
             print("success")
         }
     }
-    @IBAction func backAction(_ sender: Any) {
+    @IBAction func backAction(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 }
@@ -53,11 +57,13 @@ extension EditProfileVC: UITextFieldDelegate{
         
         textField.borderWidth = 2
         textField.borderColor = UIColor.appColor(.themeYellow)
+        textField.backgroundColor = UIColor.appColor(.backgroundWhite)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.borderWidth = 0
         textField.borderColor = UIColor.clear
+        textField.backgroundColor = UIColor.clear
     }
     
 }

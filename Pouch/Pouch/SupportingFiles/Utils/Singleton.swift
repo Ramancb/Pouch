@@ -75,11 +75,11 @@ class Singleton: NSObject {
             let view = HomePresenter.createHomeModule()
             let navController = UINavigationController(rootViewController: view)
             navController.navigationBar.isHidden = true
-            if let window = UIWindow.key{
-                window.rootViewController = navController
-                Singleton.shared.window = window
-                window.makeKeyAndVisible()
-            }
+//            if let window = UIWindow.key{
+            self.window?.rootViewController = navController
+//                Singleton.shared.window = window
+            self.window?.makeKeyAndVisible()
+//            }
         }
     }
 }

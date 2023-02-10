@@ -29,13 +29,13 @@
 		4B92C11B298CEAA900ED318C /* SideMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C119298CEAA900ED318C /* SideMenuTableCell.swift */; };
 		4BCADD55298949270091A183 /* WhyMobileNoPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */; };
 		4BCADD56298949270091A183 /* WhyMobileNoPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */; };
+		4BDBE23A2994CD71007C8A0A /* SettingsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBE2392994CD71007C8A0A /* SettingsDataModel.swift */; };
+		4BDBE23C2994E71D007C8A0A /* SideMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BDBE23B2994E71D007C8A0A /* SideMenuTableCell.xib */; };
 		A32541562991286500E051B4 /* MembershipVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32541542991286500E051B4 /* MembershipVC.swift */; };
 		A32541572991286500E051B4 /* MembershipVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32541552991286500E051B4 /* MembershipVC.xib */; };
 		A325415E299272C900E051B4 /* DeletePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A325415C299272C900E051B4 /* DeletePopUpVC.swift */; };
 		A325415F299272C900E051B4 /* DeletePopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A325415D299272C900E051B4 /* DeletePopUpVC.xib */; };
 		B952CCF1D49E5B2814BEE52A /* Pods_Pouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */; };
-		4BDBE23A2994CD71007C8A0A /* SettingsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBE2392994CD71007C8A0A /* SettingsDataModel.swift */; };
-		4BDBE23C2994E71D007C8A0A /* SideMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BDBE23B2994E71D007C8A0A /* SideMenuTableCell.xib */; };
 		F17E14C52988F82000C336C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E14C42988F82000C336C2 /* AppDelegate.swift */; };
 		F17E14C72988F82000C336C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E14C62988F82000C336C2 /* SceneDelegate.swift */; };
 		F17E14CC2988F82000C336C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17E14CA2988F82000C336C2 /* Main.storyboard */; };
@@ -231,6 +231,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B04252C29966EFB005442DF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B5534E9298BC9500024916A /* SideMenuVC.swift */,
+				4B5534EA298BC9500024916A /* SideMenuVC.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		4B14F1E0299217C60073E6AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,8 +323,6 @@
 		4B5534E8298BC9020024916A /* SettingsController */ = {
 			isa = PBXGroup;
 			children = (
-				4B82394429951544000A30A1 /* Header */,
-				4B8239432995150F000A30A1 /* Cell */,
 				4B82394229951502000A30A1 /* Presenter */,
 				4BDBE2342994C94D007C8A0A /* SettingsDataModel */,
 				4B5534F1298BD2E90024916A /* View */,
@@ -326,8 +333,9 @@
 		4B5534F1298BD2E90024916A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B5534E9298BC9500024916A /* SideMenuVC.swift */,
-				4B5534EA298BC9500024916A /* SideMenuVC.xib */,
+				4B82394429951544000A30A1 /* Header */,
+				4B8239432995150F000A30A1 /* Cell */,
+				4B04252C29966EFB005442DF /* Controller */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -537,7 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				A32541592992726800E051B4 /* DeletePopUp */,
-				A325414E2991262A00E051B4 /* Membership */,	
+				A325414E2991262A00E051B4 /* Membership */,
 				4B8FEB012990D1B80071CD92 /* HomeScreenController */,
 				4B1EABF9298D3458001E89DB /* EditProfileController */,
 				4B5534E8298BC9020024916A /* SettingsController */,

@@ -24,19 +24,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sey-OH-YAR">
-                        <rect key="frame" x="0.0" y="3" width="430" height="51"/>
+                        <rect key="frame" x="0.0" y="3" width="430" height="39"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="JOR-gm-omo">
-                                <rect key="frame" x="20" y="0.0" width="76.666666666666671" height="51"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JOR-gm-omo">
+                                <rect key="frame" x="20" y="0.0" width="38" height="39"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhK-eC-Wj3">
-                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhK-eC-Wj3">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="19.333333333333332"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" name="lightGray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="qefffwfewrfrfr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVU-cw-NW1">
-                                        <rect key="frame" x="0.0" y="29" width="76.666666666666671" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVU-cw-NW1">
+                                        <rect key="frame" x="0.0" y="24.333333333333332" width="38" height="14.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                         <color key="textColor" name="lightGray"/>
                                         <nil key="highlightedColor"/>
@@ -44,13 +44,15 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmW-kX-Bva">
-                                <rect key="frame" x="355" y="0.0" width="55" height="29"/>
+                                <rect key="frame" x="380" y="-5" width="30" height="29.333333333333332"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpv-Bc-CV9">
-                                        <rect key="frame" x="0.0" y="0.0" width="55" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="29.333333333333332"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="uqR-jA-h4V"/>
+                                        </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="toggle_off_ic"/>
                                         <state key="selected" image="toggle_on_ic"/>
                                         <connections>
                                             <action selector="rightBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aJp-hQ-3cZ"/>
@@ -65,11 +67,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="JOR-gm-omo" secondAttribute="bottom" id="6Ft-sB-wxO"/>
-                            <constraint firstItem="JmW-kX-Bva" firstAttribute="top" secondItem="sey-OH-YAR" secondAttribute="top" id="Jzc-hB-2LE"/>
                             <constraint firstItem="JOR-gm-omo" firstAttribute="top" secondItem="sey-OH-YAR" secondAttribute="top" id="N5z-gP-pTF"/>
                             <constraint firstAttribute="trailing" secondItem="JmW-kX-Bva" secondAttribute="trailing" constant="20" id="OYj-Yr-Wib"/>
                             <constraint firstItem="JOR-gm-omo" firstAttribute="leading" secondItem="sey-OH-YAR" secondAttribute="leading" constant="20" id="VMD-WL-aHt"/>
-                            <constraint firstItem="qhK-eC-Wj3" firstAttribute="centerY" secondItem="JmW-kX-Bva" secondAttribute="centerY" id="uDg-bk-r4Z"/>
+                            <constraint firstItem="JmW-kX-Bva" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JOR-gm-omo" secondAttribute="trailing" constant="16" id="d74-rc-SDa"/>
+                            <constraint firstItem="qhK-eC-Wj3" firstAttribute="centerY" secondItem="fpv-Bc-CV9" secondAttribute="centerY" id="ugc-we-Hew"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -78,7 +80,7 @@
                     <constraint firstItem="sey-OH-YAR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8Ia-Le-qsO"/>
                     <constraint firstAttribute="trailing" secondItem="sey-OH-YAR" secondAttribute="trailing" id="M0g-61-W8T"/>
                     <constraint firstItem="sey-OH-YAR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="O9E-bn-nxC"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sey-OH-YAR" secondAttribute="bottom" constant="20" id="xOU-CT-1Ci"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sey-OH-YAR" secondAttribute="bottom" priority="750" constant="20" id="xOU-CT-1Ci"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -92,7 +94,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="toggle_off_ic" width="55" height="29"/>
         <image name="toggle_on_ic" width="55" height="29"/>
         <namedColor name="lightGray">
             <color red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -24,6 +24,7 @@ class SideMenuTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+
     
     func setCellData(data:SettingsRowDataModel?,delegate:SideMenuTableCellDelegate?,index:IndexPath?){
         self.delegate = delegate

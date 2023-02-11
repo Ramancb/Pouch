@@ -20,9 +20,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileVC" customModule="Pouch" customModuleProvider="target">
             <connections>
                 <outlet property="editProfileView" destination="4q7-J7-KFo" id="CRb-uJ-G5h"/>
-                <outlet property="emailField" destination="OZw-cO-mdh" id="DTg-qs-aRC"/>
-                <outlet property="lastNameField" destination="J3L-6I-Txn" id="ak8-6j-h6q"/>
-                <outlet property="nameField" destination="HGF-Yq-FJX" id="aV1-T1-nWe"/>
+                <outlet property="emailAddressLabel" destination="h9Q-39-DF5" id="dSn-fe-aV1"/>
+                <outlet property="emailField" destination="XFg-4S-SjQ" id="cFh-8a-c5x"/>
+                <outlet property="emailTextView" destination="De6-GH-M0e" id="SXC-zv-8BV"/>
+                <outlet property="firstNameLabel" destination="B28-vF-Cl1" id="svy-ax-N8T"/>
+                <outlet property="lastNameField" destination="TLP-IZ-QDd" id="HSC-ka-fPl"/>
+                <outlet property="lastNameLabel" destination="XhZ-Yh-Nj3" id="i2b-kE-EGd"/>
+                <outlet property="lastNameTextView" destination="zzH-z2-uCm" id="gAV-yd-5rK"/>
+                <outlet property="nameField" destination="1qP-tc-3UL" id="0jw-Z3-2sI"/>
+                <outlet property="saveButton" destination="rf8-Ny-3U5" id="ACd-gC-kB1"/>
+                <outlet property="settingsLabel" destination="Qcb-kl-GO9" id="KNW-ty-Ck9"/>
+                <outlet property="textView" destination="VCO-y1-333" id="Acx-2y-YFM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -94,92 +102,149 @@
                             <color key="textColor" name="themeWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HGF-Yq-FJX">
-                            <rect key="frame" x="38" y="162" width="317" height="50"/>
-                            <color key="backgroundColor" name="darkestGrey"/>
-                            <color key="tintColor" name="themeYellow"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="rZ4-4m-lEs"/>
-                            </constraints>
-                            <color key="textColor" name="themeWhite"/>
-                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="12"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhZ-Yh-Nj3">
                             <rect key="frame" x="38" y="237" width="317" height="14"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                             <color key="textColor" name="themeWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3L-6I-Txn">
-                            <rect key="frame" x="38" y="262" width="317" height="50"/>
-                            <color key="backgroundColor" name="darkestGrey"/>
-                            <color key="tintColor" name="themeYellow"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="zKL-Mu-ujX"/>
-                            </constraints>
-                            <color key="textColor" name="themeWhite"/>
-                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="12"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9Q-39-DF5">
                             <rect key="frame" x="38" y="337" width="317" height="14"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                             <color key="textColor" name="themeWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZw-cO-mdh">
-                            <rect key="frame" x="38" y="362" width="317" height="50"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCO-y1-333">
+                            <rect key="frame" x="38" y="162" width="317" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1qP-tc-3UL">
+                                    <rect key="frame" x="17" y="0.0" width="300" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" name="themeYellow"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="9yS-vX-6KM"/>
+                                    </constraints>
+                                    <color key="textColor" name="themeWhite"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
                             <color key="backgroundColor" name="darkestGrey"/>
-                            <color key="tintColor" name="themeYellow"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="50" id="TRi-ao-kaf"/>
+                                <constraint firstAttribute="height" constant="50" id="Ghs-C1-ZEh"/>
+                                <constraint firstAttribute="bottom" secondItem="1qP-tc-3UL" secondAttribute="bottom" id="U1j-sJ-fuh"/>
+                                <constraint firstItem="1qP-tc-3UL" firstAttribute="top" secondItem="VCO-y1-333" secondAttribute="top" id="Uo2-la-iiz"/>
+                                <constraint firstAttribute="trailing" secondItem="1qP-tc-3UL" secondAttribute="trailing" id="jXk-Jh-8sv"/>
+                                <constraint firstItem="1qP-tc-3UL" firstAttribute="leading" secondItem="VCO-y1-333" secondAttribute="leading" constant="17" id="ktj-tG-tZ2"/>
                             </constraints>
-                            <color key="textColor" name="themeWhite"/>
-                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="12"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
-                        </textField>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="De6-GH-M0e">
+                            <rect key="frame" x="38" y="362" width="317" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XFg-4S-SjQ">
+                                    <rect key="frame" x="17" y="0.0" width="300" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" name="themeYellow"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="kGX-Lm-lU6"/>
+                                    </constraints>
+                                    <color key="textColor" name="themeWhite"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="darkestGrey"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="8fT-1D-gzR"/>
+                                <constraint firstItem="XFg-4S-SjQ" firstAttribute="leading" secondItem="De6-GH-M0e" secondAttribute="leading" constant="17" id="gl7-7F-FPw"/>
+                                <constraint firstAttribute="bottom" secondItem="XFg-4S-SjQ" secondAttribute="bottom" id="pJr-pV-PZD"/>
+                                <constraint firstAttribute="trailing" secondItem="XFg-4S-SjQ" secondAttribute="trailing" id="pyY-au-126"/>
+                                <constraint firstItem="XFg-4S-SjQ" firstAttribute="top" secondItem="De6-GH-M0e" secondAttribute="top" id="vAi-2f-9Mu"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzH-z2-uCm">
+                            <rect key="frame" x="38" y="262" width="317" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLP-IZ-QDd">
+                                    <rect key="frame" x="17" y="0.0" width="300" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" name="themeYellow"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="pvn-aM-i5M"/>
+                                    </constraints>
+                                    <color key="textColor" name="themeWhite"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="darkestGrey"/>
+                            <constraints>
+                                <constraint firstItem="TLP-IZ-QDd" firstAttribute="top" secondItem="zzH-z2-uCm" secondAttribute="top" id="53Y-JV-Mgt"/>
+                                <constraint firstAttribute="height" constant="50" id="5xV-bM-twk"/>
+                                <constraint firstAttribute="trailing" secondItem="TLP-IZ-QDd" secondAttribute="trailing" id="6iz-ux-w3G"/>
+                                <constraint firstAttribute="bottom" secondItem="TLP-IZ-QDd" secondAttribute="bottom" id="T7i-yg-NVZ"/>
+                                <constraint firstItem="TLP-IZ-QDd" firstAttribute="leading" secondItem="zzH-z2-uCm" secondAttribute="leading" constant="17" id="p4j-8n-2lC"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isRounded" value="NO"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="J3L-6I-Txn" firstAttribute="trailing" secondItem="XhZ-Yh-Nj3" secondAttribute="trailing" id="0Ca-fx-x1K"/>
                         <constraint firstItem="B28-vF-Cl1" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" constant="38" id="0ZY-cY-cn6"/>
-                        <constraint firstItem="h9Q-39-DF5" firstAttribute="leading" secondItem="J3L-6I-Txn" secondAttribute="leading" id="2Xc-16-tjS"/>
-                        <constraint firstItem="XhZ-Yh-Nj3" firstAttribute="leading" secondItem="HGF-Yq-FJX" secondAttribute="leading" id="34s-db-hbL"/>
+                        <constraint firstItem="h9Q-39-DF5" firstAttribute="trailing" secondItem="zzH-z2-uCm" secondAttribute="trailing" id="4tf-wA-MT7"/>
+                        <constraint firstItem="De6-GH-M0e" firstAttribute="leading" secondItem="h9Q-39-DF5" secondAttribute="leading" id="6DN-3F-Hwa"/>
                         <constraint firstItem="BkL-bE-cj5" firstAttribute="leading" secondItem="4q7-J7-KFo" secondAttribute="leading" id="8VB-Wn-euY"/>
                         <constraint firstAttribute="trailing" secondItem="BkL-bE-cj5" secondAttribute="trailing" id="Ee2-7S-9gS"/>
-                        <constraint firstItem="XhZ-Yh-Nj3" firstAttribute="trailing" secondItem="HGF-Yq-FJX" secondAttribute="trailing" id="FkW-zh-QJN"/>
-                        <constraint firstItem="HGF-Yq-FJX" firstAttribute="top" secondItem="B28-vF-Cl1" secondAttribute="bottom" constant="11" id="LW2-ZD-Vcp"/>
-                        <constraint firstItem="OZw-cO-mdh" firstAttribute="leading" secondItem="h9Q-39-DF5" secondAttribute="leading" id="NJE-dZ-r5j"/>
-                        <constraint firstItem="HGF-Yq-FJX" firstAttribute="trailing" secondItem="B28-vF-Cl1" secondAttribute="trailing" id="TL0-zG-ybh"/>
-                        <constraint firstItem="OZw-cO-mdh" firstAttribute="trailing" secondItem="h9Q-39-DF5" secondAttribute="trailing" id="Ti7-nk-6I4"/>
+                        <constraint firstItem="h9Q-39-DF5" firstAttribute="top" secondItem="zzH-z2-uCm" secondAttribute="bottom" constant="25" id="FSc-OD-dTA"/>
+                        <constraint firstItem="VCO-y1-333" firstAttribute="top" secondItem="B28-vF-Cl1" secondAttribute="bottom" constant="11" id="Ila-xy-WUu"/>
+                        <constraint firstItem="XhZ-Yh-Nj3" firstAttribute="leading" secondItem="VCO-y1-333" secondAttribute="leading" id="KT2-8Z-Twe"/>
+                        <constraint firstItem="zzH-z2-uCm" firstAttribute="leading" secondItem="XhZ-Yh-Nj3" secondAttribute="leading" id="L0q-iA-Acs"/>
+                        <constraint firstItem="XhZ-Yh-Nj3" firstAttribute="trailing" secondItem="1qP-tc-3UL" secondAttribute="trailing" id="N21-O2-r8e"/>
+                        <constraint firstItem="VCO-y1-333" firstAttribute="trailing" secondItem="B28-vF-Cl1" secondAttribute="trailing" id="U3n-Gk-IRc"/>
                         <constraint firstAttribute="trailing" secondItem="B28-vF-Cl1" secondAttribute="trailing" constant="38" id="VL2-lR-BNE"/>
-                        <constraint firstItem="h9Q-39-DF5" firstAttribute="top" secondItem="J3L-6I-Txn" secondAttribute="bottom" constant="25" id="Zxs-w9-Mis"/>
-                        <constraint firstItem="XhZ-Yh-Nj3" firstAttribute="top" secondItem="HGF-Yq-FJX" secondAttribute="bottom" constant="25" id="a8w-nj-1cO"/>
-                        <constraint firstItem="OZw-cO-mdh" firstAttribute="top" secondItem="h9Q-39-DF5" secondAttribute="bottom" constant="11" id="fHf-hY-Q1W"/>
-                        <constraint firstItem="J3L-6I-Txn" firstAttribute="top" secondItem="XhZ-Yh-Nj3" secondAttribute="bottom" constant="11" id="hEs-7x-YPz"/>
+                        <constraint firstItem="De6-GH-M0e" firstAttribute="top" secondItem="h9Q-39-DF5" secondAttribute="bottom" constant="11" id="ZkW-uy-fKF"/>
+                        <constraint firstItem="XhZ-Yh-Nj3" firstAttribute="top" secondItem="VCO-y1-333" secondAttribute="bottom" constant="25" id="ag7-16-2cz"/>
+                        <constraint firstItem="h9Q-39-DF5" firstAttribute="leading" secondItem="zzH-z2-uCm" secondAttribute="leading" id="g8M-cM-Ugw"/>
                         <constraint firstItem="B28-vF-Cl1" firstAttribute="top" secondItem="BkL-bE-cj5" secondAttribute="bottom" constant="27" id="jqN-tM-ZeT"/>
-                        <constraint firstItem="h9Q-39-DF5" firstAttribute="trailing" secondItem="J3L-6I-Txn" secondAttribute="trailing" id="pUT-Mx-4C6"/>
-                        <constraint firstItem="HGF-Yq-FJX" firstAttribute="leading" secondItem="B28-vF-Cl1" secondAttribute="leading" id="shB-Cn-B27"/>
-                        <constraint firstItem="J3L-6I-Txn" firstAttribute="leading" secondItem="XhZ-Yh-Nj3" secondAttribute="leading" id="tXy-bX-he4"/>
+                        <constraint firstItem="zzH-z2-uCm" firstAttribute="trailing" secondItem="XhZ-Yh-Nj3" secondAttribute="trailing" id="lyj-Fu-d8a"/>
+                        <constraint firstItem="De6-GH-M0e" firstAttribute="trailing" secondItem="h9Q-39-DF5" secondAttribute="trailing" id="mhD-9W-TWQ"/>
+                        <constraint firstItem="VCO-y1-333" firstAttribute="leading" secondItem="B28-vF-Cl1" secondAttribute="leading" id="pJr-Jp-bUi"/>
+                        <constraint firstItem="zzH-z2-uCm" firstAttribute="top" secondItem="XhZ-Yh-Nj3" secondAttribute="bottom" constant="11" id="vtc-tb-QY3"/>
                         <constraint firstItem="BkL-bE-cj5" firstAttribute="top" secondItem="4q7-J7-KFo" secondAttribute="top" id="wxn-Gq-47E"/>
                     </constraints>
                 </view>

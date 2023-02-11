@@ -22,7 +22,14 @@ struct AppStrings {
     static let more = "More"
     static let language = "Language"
     static let country = "Country"
-    
+    static let emailAddress = "Email Address"
+    static let firstName = "First Name"
+    static let lastName = "Last Name"
+    static let save = "Save"
+    static let settings = "Settings"
+    static let enterEmail = "Enter a Email"
+    static let enterLastName = "Enter a Last Name"
+    static let enterFirstName = "Enter a First Name"
 }
 
 struct Messages {

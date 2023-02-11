@@ -31,7 +31,7 @@ class SideMenuVC: UIViewController {
     func countryDropDown(){
         let picker = CustomPickerController()
         picker.delegate = self
-        picker.set(countriesArr, delegate: self,tag: 0)
+        picker.set(countriesArr, delegate: self,tag: 1)
         
         self.present(picker, false)
     }
@@ -80,11 +80,10 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
             cell.countrySelectedLabel.isHidden = true
         case 2:
             if indexPath.row == 0{
-                self.isLanguageSelected = true
                 cell.countrySelectedLabel.isHidden = false
                 cell.countrySelectedLabel.text = updatedLanguage ?? ""
             }else{
-                self.isLanguageSelected = true
+                
                 cell.countrySelectedLabel.isHidden = false
                 cell.countrySelectedLabel.text = updatedCountry ?? ""
             }
@@ -92,9 +91,7 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
             break
         }
         return cell
-        
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch self.settingsData[indexPath.section].rowData?[indexPath.row].type{
         case .editProfile:
@@ -129,44 +126,17 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
 extension SideMenuVC: CustomPickerControllerDelegate{
     
     func didSelectPicker(_ value: String, _ index: Int, _ tag: Int?, custom picker: CustomPickerController) {
-        if isLanguageSelected == true {
+        if tag == 0 {
             let selectedLanguage = languageArr[index]
             self.updatedLanguage = selectedLanguage
-            print("dss\(selectedLanguage)")
-            print("dsdsdsdds\(updatedLanguage)")
             sideMenuTableView.reloadData()
-        } else {
+        }else{
             let selectedCountry = countriesArr[index]
-                self.updatedCountry = selectedCountry
-                sideMenuTableView.reloadData()
+            self.updatedCountry = selectedCountry
+            sideMenuTableView.reloadData()
         }
-       
-//        switch index{
-//
-//        case 0:
-//          break
-//        case 1:break
-//
-//        case 2:
-//            if languageRow?.row == 0{
-//                let selectedLanguage = languageArr[index]
-//                self.updatedLanguage = selectedLanguage
-//                print("dss\(selectedLanguage)")
-//                print("dsdsdsdds\(updatedLanguage)")
-//
-//            }else{
-//                let selectedCountry = countriesArr[index]
-//                    self.updatedCountry = selectedCountry
-//
-//            }
-//            sideMenuTableView.reloadData()
-//        default:
-//            break
-//        }
-}
-    
+    }
     func cancel(picker: CustomPickerController, _ tag: Int) {
-        
     }
 }
 extension SideMenuVC: SideMenuTableCellDelegate{
@@ -174,6 +144,6 @@ extension SideMenuVC: SideMenuTableCellDelegate{
         guard let row_data = data else{return}
         guard let indexpath = index else{return}
         self.settingsData[indexpath.section].rowData?[indexpath.row] = row_data
-        self.sideMenuTableView.reloadRows(at: [indexpath], with: .automatic)
+        self.sideMenuTableView.reloadData()
     }
 }

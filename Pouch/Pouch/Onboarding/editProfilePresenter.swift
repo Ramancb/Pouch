@@ -11,19 +11,15 @@ import UIKit
 class EditProfilePresenter: EditProfilePresenterProtocol {
     
     var view: EditProfileViewProtocol?
-    var email:String?
-    var firstName:String?
-    var lastName:String?
-    
     static func CreateEditProfileModule()->UIViewController{
-             let view =  EditProfileVC()
-                var presenter:EditProfilePresenterProtocol = EditProfilePresenter()
-                view.presenter = presenter
-                presenter.view = view
-                return view
-        }
+        let view =  EditProfileVC()
+        var presenter:EditProfilePresenterProtocol = EditProfilePresenter()
+        view.presenter = presenter
+        presenter.view = view
+        return view
+    }
     
-    func validateFields() -> Bool {
+    func validateFields(firstName: String, email : String, lastName : String) -> Bool {
         
         guard firstName != "" else {
             Singleton.shared.showErrorMessage(error: "Please enter first name.", isError: .error)
@@ -37,13 +33,15 @@ class EditProfilePresenter: EditProfilePresenterProtocol {
             Singleton.shared.showErrorMessage(error: "Please enter your email.", isError: .error)
             return false
         }
+        
         let isValidEmail = Validator.validateEmail(candidate: email ?? "")
         if isValidEmail == true {
             return isValidEmail
         }else {
             Singleton.shared.showErrorMessage(error: "Please enter valid email.", isError: .error)
-            return isValidEmail
+            return false
         }
-        self.view?.receiveData()
+        //   self.view?.receiveData()
+        
     }
 }

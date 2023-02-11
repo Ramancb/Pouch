@@ -235,6 +235,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B04252C29966EFB005442DF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B5534E9298BC9500024916A /* SideMenuVC.swift */,
+				4B5534EA298BC9500024916A /* SideMenuVC.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		4B14F1E0299217C60073E6AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,8 +327,6 @@
 		4B5534E8298BC9020024916A /* SettingsController */ = {
 			isa = PBXGroup;
 			children = (
-				4B82394429951544000A30A1 /* Header */,
-				4B8239432995150F000A30A1 /* Cell */,
 				4B82394229951502000A30A1 /* Presenter */,
 				4BDBE2342994C94D007C8A0A /* SettingsDataModel */,
 				4B5534F1298BD2E90024916A /* View */,
@@ -330,8 +337,9 @@
 		4B5534F1298BD2E90024916A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B5534E9298BC9500024916A /* SideMenuVC.swift */,
-				4B5534EA298BC9500024916A /* SideMenuVC.xib */,
+				4B82394429951544000A30A1 /* Header */,
+				4B8239432995150F000A30A1 /* Cell */,
+				4B04252C29966EFB005442DF /* Controller */,
 			);
 			name = View;
 			sourceTree = "<group>";

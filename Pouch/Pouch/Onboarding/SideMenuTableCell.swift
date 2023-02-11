@@ -13,6 +13,7 @@ protocol SideMenuTableCellDelegate{
 
 class SideMenuTableCell: UITableViewCell {
 
+    @IBOutlet weak var countrySelectedLabel: UILabel!
     @IBOutlet weak var sideMenuLabel: UILabel!
     @IBOutlet weak var rightButton: UIButton!
     
@@ -23,6 +24,7 @@ class SideMenuTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+
     
     func setCellData(data:SettingsRowDataModel?,delegate:SideMenuTableCellDelegate?,index:IndexPath?){
         self.delegate = delegate

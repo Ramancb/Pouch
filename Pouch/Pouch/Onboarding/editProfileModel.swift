@@ -9,9 +9,11 @@ import Foundation
 
 
 
-class editProfileData {
+class EditProfileData {
     var firstname:String?
     var lastname:String?
     var email:String?
   }
+
+
 

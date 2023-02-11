@@ -14,8 +14,8 @@
 		4B14F1F229926EBF0073E6AA /* CustomPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B14F1F029926EBF0073E6AA /* CustomPickerController.xib */; };
 		4B1EABF7298D32A3001E89DB /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1EABF5298D32A3001E89DB /* EditProfileVC.swift */; };
 		4B1EABF8298D32A3001E89DB /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1EABF6298D32A3001E89DB /* EditProfileVC.xib */; };
-		4B4278D229911A0E005DD94F /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4278D029911A0E005DD94F /* HomeCollectionCell.xib */; };
-		4B4278D329911A0E005DD94F /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4278D129911A0E005DD94F /* HomeCollectionCell.swift */; };
+		4B4278D229911A0E005DD94F /* ItemsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4278D029911A0E005DD94F /* ItemsCollectionCell.xib */; };
+		4B4278D329911A0E005DD94F /* ItemsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4278D129911A0E005DD94F /* ItemsCollectionCell.swift */; };
 		4B4C06A1298A3428002C9E4F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C06A0298A3428002C9E4F /* LoginVC.swift */; };
 		4B5534EB298BC9500024916A /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5534E9298BC9500024916A /* SideMenuVC.swift */; };
 		4B5534EC298BC9500024916A /* SideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5534EA298BC9500024916A /* SideMenuVC.xib */; };
@@ -29,13 +29,13 @@
 		4B92C11B298CEAA900ED318C /* SideMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C119298CEAA900ED318C /* SideMenuTableCell.swift */; };
 		4BCADD55298949270091A183 /* WhyMobileNoPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */; };
 		4BCADD56298949270091A183 /* WhyMobileNoPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */; };
+		4BDBE23A2994CD71007C8A0A /* SettingsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBE2392994CD71007C8A0A /* SettingsDataModel.swift */; };
+		4BDBE23C2994E71D007C8A0A /* SideMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BDBE23B2994E71D007C8A0A /* SideMenuTableCell.xib */; };
 		A32541562991286500E051B4 /* MembershipVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32541542991286500E051B4 /* MembershipVC.swift */; };
 		A32541572991286500E051B4 /* MembershipVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32541552991286500E051B4 /* MembershipVC.xib */; };
 		A325415E299272C900E051B4 /* DeletePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A325415C299272C900E051B4 /* DeletePopUpVC.swift */; };
 		A325415F299272C900E051B4 /* DeletePopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A325415D299272C900E051B4 /* DeletePopUpVC.xib */; };
 		B952CCF1D49E5B2814BEE52A /* Pods_Pouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */; };
-		4BDBE23A2994CD71007C8A0A /* SettingsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBE2392994CD71007C8A0A /* SettingsDataModel.swift */; };
-		4BDBE23C2994E71D007C8A0A /* SideMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BDBE23B2994E71D007C8A0A /* SideMenuTableCell.xib */; };
 		F17E14C52988F82000C336C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E14C42988F82000C336C2 /* AppDelegate.swift */; };
 		F17E14C72988F82000C336C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E14C62988F82000C336C2 /* SceneDelegate.swift */; };
 		F17E14CC2988F82000C336C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17E14CA2988F82000C336C2 /* Main.storyboard */; };
@@ -47,6 +47,8 @@
 		F1A20B4029937C4600E30E4D /* LoginViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A20B3F29937C4600E30E4D /* LoginViewProtocols.swift */; };
 		F1A20B442993825700E30E4D /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A20B432993825700E30E4D /* HomeProtocols.swift */; };
 		F1A20B46299382D000E30E4D /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A20B45299382D000E30E4D /* HomePresenter.swift */; };
+		F1A640AC2997889F0029C0F5 /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A640AA2997889F0029C0F5 /* HomeCollectionCell.swift */; };
+		F1A640AD2997889F0029C0F5 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A640AB2997889F0029C0F5 /* HomeCollectionCell.xib */; };
 		F1AC50BE2990E3F8007F1450 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC50BD2990E3F8007F1450 /* OTPTextField.swift */; };
 		F1AD97752988FBBE00FB83DA /* UILabel+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AD96392988FBB800FB83DA /* UILabel+Custom.swift */; };
 		F1AD97762988FBBE00FB83DA /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AD963A2988FBB800FB83DA /* UIView+Custom.swift */; };
@@ -119,8 +121,8 @@
 		4B1B46B9298927C60006D7F1 /* Pods_Pouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Pouch.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Pouch-hldinwnpgttrwzgcaaquwkgkegqx/Build/Products/Debug-iphoneos/Pods_Pouch.framework"; sourceTree = "<group>"; };
 		4B1EABF5298D32A3001E89DB /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		4B1EABF6298D32A3001E89DB /* EditProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileVC.xib; sourceTree = "<group>"; };
-		4B4278D029911A0E005DD94F /* HomeCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
-		4B4278D129911A0E005DD94F /* HomeCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
+		4B4278D029911A0E005DD94F /* ItemsCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsCollectionCell.xib; sourceTree = "<group>"; };
+		4B4278D129911A0E005DD94F /* ItemsCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsCollectionCell.swift; sourceTree = "<group>"; };
 		4B4C06A0298A3428002C9E4F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4B5534E9298BC9500024916A /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		4B5534EA298BC9500024916A /* SideMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuVC.xib; sourceTree = "<group>"; };
@@ -156,6 +158,8 @@
 		F1A20B3F29937C4600E30E4D /* LoginViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewProtocols.swift; sourceTree = "<group>"; };
 		F1A20B432993825700E30E4D /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		F1A20B45299382D000E30E4D /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		F1A640AA2997889F0029C0F5 /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
+		F1A640AB2997889F0029C0F5 /* HomeCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
 		F1AC50BD2990E3F8007F1450 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		F1AD96392988FBB800FB83DA /* UILabel+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Custom.swift"; sourceTree = "<group>"; };
 		F1AD963A2988FBB800FB83DA /* UIView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
@@ -371,10 +375,8 @@
 		4B8FEB022990D1E40071CD92 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B4278D129911A0E005DD94F /* HomeCollectionCell.swift */,
-				4B4278D029911A0E005DD94F /* HomeCollectionCell.xib */,
-				4B8FEAFD2990D1B00071CD92 /* HomeScreenVC.swift */,
-				4B8FEAFE2990D1B00071CD92 /* HomeScreenVC.xib */,
+				F14C02DE29966355002C817C /* ViewController */,
+				F14C02DD29966342002C817C /* Cells */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -496,6 +498,26 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		F14C02DD29966342002C817C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4B4278D129911A0E005DD94F /* ItemsCollectionCell.swift */,
+				4B4278D029911A0E005DD94F /* ItemsCollectionCell.xib */,
+				F1A640AA2997889F0029C0F5 /* HomeCollectionCell.swift */,
+				F1A640AB2997889F0029C0F5 /* HomeCollectionCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		F14C02DE29966355002C817C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4B8FEAFD2990D1B00071CD92 /* HomeScreenVC.swift */,
+				4B8FEAFE2990D1B00071CD92 /* HomeScreenVC.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		F17E14B82988F82000C336C2 = {
 			isa = PBXGroup;
 			children = (
@@ -537,7 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				A32541592992726800E051B4 /* DeletePopUp */,
-				A325414E2991262A00E051B4 /* Membership */,	
+				A325414E2991262A00E051B4 /* Membership */,
 				4B8FEB012990D1B80071CD92 /* HomeScreenController */,
 				4B1EABF9298D3458001E89DB /* EditProfileController */,
 				4B5534E8298BC9020024916A /* SettingsController */,
@@ -879,7 +901,8 @@
 				4B5534EC298BC9500024916A /* SideMenuVC.xib in Resources */,
 				F1AD97DC2988FBBF00FB83DA /* CustomNavigationBar.xib in Resources */,
 				4B6EE1F9298AA06F000C89F3 /* OtpVC.xib in Resources */,
-				4B4278D229911A0E005DD94F /* HomeCollectionCell.xib in Resources */,
+				F1A640AD2997889F0029C0F5 /* HomeCollectionCell.xib in Resources */,
+				4B4278D229911A0E005DD94F /* ItemsCollectionCell.xib in Resources */,
 				F1AD97A12988FBBE00FB83DA /* successSign.json in Resources */,
 				F17E14CC2988F82000C336C2 /* Main.storyboard in Resources */,
 			);
@@ -954,6 +977,7 @@
 				4B14F1F129926EBF0073E6AA /* CustomPickerController.swift in Sources */,
 				4B92C11B298CEAA900ED318C /* SideMenuTableCell.swift in Sources */,
 				4B5534F3298BDD5F0024916A /* SectionHeaderView.swift in Sources */,
+				F1A640AC2997889F0029C0F5 /* HomeCollectionCell.swift in Sources */,
 				F1AD97A02988FBBE00FB83DA /* Singleton.swift in Sources */,
 				F1AD97D72988FBBF00FB83DA /* Swime.swift in Sources */,
 				F1AD97E22988FBBF00FB83DA /* CustomProgressBar.swift in Sources */,
@@ -991,7 +1015,7 @@
 				F1AD97892988FBBE00FB83DA /* RadicalView.swift in Sources */,
 				F1AD97E12988FBBF00FB83DA /* ErrorView.swift in Sources */,
 				F18AB69329914825009BF43B /* ErrorResponseModel.swift in Sources */,
-				4B4278D329911A0E005DD94F /* HomeCollectionCell.swift in Sources */,
+				4B4278D329911A0E005DD94F /* ItemsCollectionCell.swift in Sources */,
 				A325415E299272C900E051B4 /* DeletePopUpVC.swift in Sources */,
 				4B14F1E82992424E0073E6AA /* editProfilePresenter.swift in Sources */,
 				F1AD97792988FBBE00FB83DA /* Array+Custom.swift in Sources */,

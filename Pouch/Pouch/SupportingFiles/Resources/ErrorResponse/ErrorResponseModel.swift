@@ -49,7 +49,6 @@ struct ErrorData : Mappable {
     }
 
     mutating func mapping(map: Map) {
-
         message <- map["message"]
         status_code <- map["status_code"]
         code <- map["code"]

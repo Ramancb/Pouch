@@ -2,18 +2,16 @@
 //  HomeCollectionCell.swift
 //  Pouch
 //
-//  Created by Piyush Kumar on 06/02/23.
+//  Created by Raman choudhary on 11/02/23.
 //
 
 import UIKit
 
 class HomeCollectionCell: UICollectionViewCell {
 
-    @IBOutlet weak var contentHighlightView: UIView!
-    @IBOutlet weak var itemLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-       
+        // Initialization code
     }
+
 }

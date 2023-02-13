@@ -27,6 +27,8 @@
 		4B8FEB002990D1B00071CD92 /* HomeScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B8FEAFE2990D1B00071CD92 /* HomeScreenVC.xib */; };
 		4B92C118298CD49F00ED318C /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B92C117298CD49F00ED318C /* SectionHeaderView.xib */; };
 		4B92C11B298CEAA900ED318C /* SideMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C119298CEAA900ED318C /* SideMenuTableCell.swift */; };
+		4BB0AF84299A5AA400F63D1F /* Membership Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB0AF83299A5AA400F63D1F /* Membership Model.swift */; };
+		4BB0AF86299A5ABD00F63D1F /* Membership Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB0AF85299A5ABD00F63D1F /* Membership Presenter.swift */; };
 		4BCADD55298949270091A183 /* WhyMobileNoPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */; };
 		4BCADD56298949270091A183 /* WhyMobileNoPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */; };
 		4BDBE23A2994CD71007C8A0A /* SettingsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBE2392994CD71007C8A0A /* SettingsDataModel.swift */; };
@@ -134,6 +136,8 @@
 		4B8FEAFE2990D1B00071CD92 /* HomeScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenVC.xib; sourceTree = "<group>"; };
 		4B92C117298CD49F00ED318C /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 		4B92C119298CEAA900ED318C /* SideMenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableCell.swift; sourceTree = "<group>"; };
+		4BB0AF83299A5AA400F63D1F /* Membership Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Membership Model.swift"; sourceTree = "<group>"; };
+		4BB0AF85299A5ABD00F63D1F /* Membership Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Membership Presenter.swift"; sourceTree = "<group>"; };
 		4BCADD53298949270091A183 /* WhyMobileNoPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyMobileNoPopUpViewController.swift; sourceTree = "<group>"; };
 		4BCADD54298949270091A183 /* WhyMobileNoPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhyMobileNoPopUpViewController.xib; sourceTree = "<group>"; };
 		4BDBE2392994CD71007C8A0A /* SettingsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataModel.swift; sourceTree = "<group>"; };
@@ -453,6 +457,7 @@
 		A325414F2991267B00E051B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4BB0AF83299A5AA400F63D1F /* Membership Model.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 		A32541512991272900E051B4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				4BB0AF85299A5ABD00F63D1F /* Membership Presenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -976,6 +982,7 @@
 				F1AD97832988FBBE00FB83DA /* UIFont+Custom.swift in Sources */,
 				F1AD97782988FBBE00FB83DA /* String+Custom.swift in Sources */,
 				4B1EABF7298D32A3001E89DB /* EditProfileVC.swift in Sources */,
+				4BB0AF84299A5AA400F63D1F /* Membership Model.swift in Sources */,
 				F1AD977D2988FBBE00FB83DA /* UICollectionView+Custom.swift in Sources */,
 				F1A20B4029937C4600E30E4D /* LoginViewProtocols.swift in Sources */,
 				4B14F1E62992388A0073E6AA /* Protocol.swift in Sources */,
@@ -1005,6 +1012,7 @@
 				4B4C06A1298A3428002C9E4F /* LoginVC.swift in Sources */,
 				F1AD97B52988FBBE00FB83DA /* UserDefaultsCustom.swift in Sources */,
 				4B6EE1F8298AA06F000C89F3 /* OtpVC.swift in Sources */,
+				4BB0AF86299A5ABD00F63D1F /* Membership Presenter.swift in Sources */,
 				F17E14CF2988F82000C336C2 /* Pouch.xcdatamodeld in Sources */,
 				F1AD97872988FBBE00FB83DA /* Double+Custom.swift in Sources */,
 				4B8FEAFF2990D1B00071CD92 /* HomeScreenVC.swift in Sources */,

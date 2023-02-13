@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4B0007EA-082F-4EEF-922D-DDC29FC0DF3E"
+            uuid = "9AC37066-F92A-47AE-BB1F-E49AFE5590BF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pouch/Onboarding/EditProfileVC.swift"
+            filePath = "Pouch/Onboarding/MembershipVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "textFieldDidEndEditing(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1585A320-2B86-466D-8208-FC4C7E627863"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pouch/Onboarding/EditProfileVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "textFieldDidBeginEditing(_:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "Membership()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

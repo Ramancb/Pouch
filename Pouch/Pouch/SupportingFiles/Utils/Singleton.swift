@@ -62,11 +62,11 @@ class Singleton: NSObject {
             let view = LoginPresenter.createLoginModule()
             let navController = UINavigationController(rootViewController: view)
             navController.navigationBar.isHidden = true
-            if let window = UIWindow.key{
-                window.rootViewController = navController
-                Singleton.shared.window = window
-                window.makeKeyAndVisible()
-            }
+            self.window?.rootViewController = navController
+            self.window?.makeKeyAndVisible()
+//            if let window = UIWindow.key{
+//
+//            }
         }
         
     }

@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let token = UserDefaultsCustom.getAccessToken(), token.count > 0  {
             Singleton.shared.gotoHome()
         } else {
-//            Singleton.shared.gotoLogin()
-            Singleton.shared.gotoHome()
+            Singleton.shared.gotoLogin()
+//            Singleton.shared.gotoHome()
         }
     }
 

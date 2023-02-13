@@ -20,8 +20,6 @@ class SideMenuVC: UIViewController {
     var updatedLanguage : String?
     var isLanguageSelected: Bool = false
     var languageRow : IndexPath?
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,21 +38,23 @@ class SideMenuVC: UIViewController {
         picker.set(languageArr, delegate: self,tag: 0)
         self.present(picker, false)
     }
+    
     func setTableView(){
         sideMenuTableView.register(cellClass: SideMenuTableCell.self)
         sideMenuTableView.delegate = self
         sideMenuTableView.dataSource = self
     }
+    
     @IBAction func backAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func logoutAction(_ sender: UIButton) {
         ApiHandler.call(apiName: API.Name.login_Init, params: [:], httpMethod: .POST) { (data:MessageResponse?, error) in
             Singleton.shared.logoutFromDevice()
             
         }
         Singleton.shared.logoutFromDevice()
-       
     }
 }
 
@@ -92,6 +92,7 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
         }
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch self.settingsData[indexPath.section].rowData?[indexPath.row].type{
         case .editProfile:
@@ -108,6 +109,7 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
             break
         }
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
@@ -136,14 +138,20 @@ extension SideMenuVC: CustomPickerControllerDelegate{
             sideMenuTableView.reloadData()
         }
     }
+    
     func cancel(picker: CustomPickerController, _ tag: Int) {
+        
     }
 }
 extension SideMenuVC: SideMenuTableCellDelegate{
-    func updatedRowData(data: SettingsRowDataModel?, index: IndexPath?) {
-        guard let row_data = data else{return}
-        guard let indexpath = index else{return}
-        self.settingsData[indexpath.section].rowData?[indexpath.row] = row_data
+    func updatedRowData(sender: UIButton) {
+        let section = sender.tag / 10
+        let row = sender.tag % 10
+        print("section: \(section), row: \(row)")
+        if let data = self.settingsData[section].rowData?[row]{
+            data.isSelected =  true
+            self.settingsData[section].rowData?[row] = data
+        }
         self.sideMenuTableView.reloadData()
     }
 }

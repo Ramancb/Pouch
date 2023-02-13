@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SideMenuTableCellDelegate{
-    func updatedRowData(data:SettingsRowDataModel?,index:IndexPath?)
+    func updatedRowData(sender:UIButton)
 }
 
 class SideMenuTableCell: UITableViewCell {
@@ -17,9 +17,8 @@ class SideMenuTableCell: UITableViewCell {
     @IBOutlet weak var sideMenuLabel: UILabel!
     @IBOutlet weak var rightButton: UIButton!
     
-    var row_data:SettingsRowDataModel?
     var delegate:SideMenuTableCellDelegate?
-    var selectedIndex:IndexPath?
+//    var selectedIndex:IndexPath?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,13 +27,15 @@ class SideMenuTableCell: UITableViewCell {
     
     func setCellData(data:SettingsRowDataModel?,delegate:SideMenuTableCellDelegate?,index:IndexPath?){
         self.delegate = delegate
-        self.row_data = data
-        self.selectedIndex = indexPath
+        self.rightButton.tag = ((indexPath?.section ?? 0) * 10) + (indexPath?.row ?? 0)
         self.sideMenuLabel.text = data?.title
         if data?.type == .notifation || data?.type == .appNotification{
             self.rightButton.setImage(data?.isSelected == true ? data?.icon : data?.unselectedIcon, for: .normal)
+            self.rightButton.isUserInteractionEnabled = true
         }else{
-            self.rightButton.setImage(data?.icon, for: .normal)
+            self.rightButton.isSelected = false
+            self.rightButton.isUserInteractionEnabled = false
+            self.rightButton.setImage(data?.isSelected == true ? data?.icon : data?.icon, for: .normal)
         }
         
     }
@@ -42,7 +43,6 @@ class SideMenuTableCell: UITableViewCell {
   
     @IBAction func rightBtnAction(_ sender: UIButton) {
         sender.isSelected = !(sender.isSelected)
-        self.row_data?.isSelected = sender.isSelected
-        self.delegate?.updatedRowData(data: self.row_data,index: self.selectedIndex)
+        self.delegate?.updatedRowData(sender: sender)
     }
 }

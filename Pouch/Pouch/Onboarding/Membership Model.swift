@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MembershipType:String {
+enum CardType:String {
     
     case membership = "Membership"
     case foodVoucher = "Food Voucher"

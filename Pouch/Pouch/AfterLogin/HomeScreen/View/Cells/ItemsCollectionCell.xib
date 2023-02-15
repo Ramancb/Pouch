@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="147" height="112"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPL-m8-KpW">
-                                <rect key="frame" x="10" y="0.0" width="127" height="103"/>
+                                <rect key="frame" x="10" y="10" width="127" height="85"/>
                                 <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
                                 <color key="textColor" name="lightGray"/>
                                 <color key="highlightedColor" name="lightGray"/>
@@ -68,11 +68,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="wso-vq-StV" secondAttribute="trailing" id="4HC-sc-uGv"/>
                             <constraint firstAttribute="bottom" secondItem="wso-vq-StV" secondAttribute="bottom" constant="2" id="A1R-F3-zCJ"/>
-                            <constraint firstItem="jPL-m8-KpW" firstAttribute="top" secondItem="nNp-re-SgM" secondAttribute="top" id="D7M-te-n6V"/>
+                            <constraint firstItem="jPL-m8-KpW" firstAttribute="top" secondItem="nNp-re-SgM" secondAttribute="top" constant="10" id="D7M-te-n6V"/>
                             <constraint firstItem="jPL-m8-KpW" firstAttribute="leading" secondItem="nNp-re-SgM" secondAttribute="leading" constant="10" id="GXG-1E-zvo"/>
                             <constraint firstItem="6cM-fq-dCD" firstAttribute="trailing" secondItem="jPL-m8-KpW" secondAttribute="trailing" id="K06-b9-nEH"/>
                             <constraint firstItem="6cM-fq-dCD" firstAttribute="leading" secondItem="jPL-m8-KpW" secondAttribute="leading" id="Vob-9e-s9y"/>
-                            <constraint firstItem="wso-vq-StV" firstAttribute="top" secondItem="jPL-m8-KpW" secondAttribute="bottom" constant="5" id="aZq-KO-6wl"/>
+                            <constraint firstItem="wso-vq-StV" firstAttribute="top" secondItem="jPL-m8-KpW" secondAttribute="bottom" constant="13" id="aZq-KO-6wl"/>
                             <constraint firstItem="wso-vq-StV" firstAttribute="leading" secondItem="nNp-re-SgM" secondAttribute="leading" id="cnK-Mq-Gnb"/>
                             <constraint firstAttribute="trailing" secondItem="jPL-m8-KpW" secondAttribute="trailing" constant="10" id="sUx-D5-9Xs"/>
                         </constraints>

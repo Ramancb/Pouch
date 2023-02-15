@@ -21,7 +21,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WhyMobileNoPopUpViewController" customModule="Pouch" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationPopUpController" customModule="Pouch" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="WQo-tq-nZz" id="Yvf-p0-xWp"/>
                 <outlet property="gotItBtnBgView" destination="5gq-B6-gOw" id="Jv6-iv-Jel"/>

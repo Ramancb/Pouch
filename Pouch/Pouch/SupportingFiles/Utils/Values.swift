@@ -30,6 +30,14 @@ struct AppStrings {
     static let enterEmail = "Enter a Email"
     static let enterLastName = "Enter a Last Name"
     static let enterFirstName = "Enter a First Name"
+    static let title = "Vacation World"
+    static let tollFree = "Toll Free Number: 1800 532 2060"
+    static let dinnerType = "Food Voucher"
+    static let backgroundImage = "membership_bg_img"
+    static let code = "Your Code: MA000567"
+    static let rsOff = "Rs \nOFF"
+    static let hotelName = "This is non transferable coupon"
+    static let coupon = "Coupon_ic"
 }
 
 struct Messages {

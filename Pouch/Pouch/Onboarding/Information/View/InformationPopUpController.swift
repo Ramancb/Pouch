@@ -7,16 +7,17 @@
 
 import UIKit
 
-class WhyMobileNoPopUpViewController: UIViewController {
+class InformationPopUpController: UIViewController, InformationViewProtocol {
     
     @IBOutlet weak var contentView: UIView!
-    
     @IBOutlet weak var gotItBtnBgView: UIView!
     @IBOutlet weak var informationLabel: UILabel!
     
+    var presenter: InformationPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        information()
+        informationLabel.setLineSpacing(lineSpacing: 5.0, textAlignment: .center)
         self.contentView.transform = CGAffineTransform(translationX: 0, y: self.contentView.frame.height)
     }
     
@@ -25,15 +26,6 @@ class WhyMobileNoPopUpViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.contentView.transform = CGAffineTransform.identity
         }
-    }
-    
-    func information() {
-        let attributedString = NSMutableAttributedString(string: "Lorem ipsem is dummy text \n Used for printing and text.")
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 5
-        paragraphStyle.alignment = .center
-        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
-        informationLabel.attributedText = attributedString
     }
     
     @IBAction func gotItAction(_ sender: Any) {

@@ -21,7 +21,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpVC" customModule="Pouch" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerifyOtpVC" customModule="Pouch" customModuleProvider="target">
             <connections>
                 <outlet property="otpBGView" destination="Nz8-fh-L8n" id="IEv-ea-ozL"/>
                 <outlet property="otpField1" destination="gnK-MR-l4y" id="bpm-Cb-pAH"/>

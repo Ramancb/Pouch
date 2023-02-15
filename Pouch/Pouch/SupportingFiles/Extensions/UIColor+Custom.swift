@@ -362,15 +362,15 @@ extension UIColor {
         case fontBlack = "fontBlack"
         case green_Light_Stroke = "Green_Light_Stroke"
         case green_Light = "Green_Light"
-        case green_Main = "Green_Main"
+        case Grey = "Grey"
         case lightest_Grey = "Lightest_Grey"
         case cyan_Light = "Cyan_Light"
-        case blue_Main = "Blue_Main"
+        case transparent = "transparent"
         case light_Grey = "Light_Grey"
         case cyan_Main = "Cyan_Main"
         case pale_Grey = "Pale_Grey"
         case cyan_Light_Stroke = "Cyan_Light_Stroke"
-        case black_001 =  "Black_001"
+        case whiteOpacity =  "whiteOpacity"
         case dark_Grey =  "Dark_Grey"
         case pink_Light =  "Pink_Light"
         case gradient_light_yellow = "#f8d777"
@@ -380,7 +380,7 @@ extension UIColor {
         case gradient_yellow_shadow =  "#F8D777"
         case gradient_yellow_dark =  "#BB962D"
         case fadeGrey = "#707070"
-        case grey056 = "Gray_056"
+        case whiteTransparent = "whiteTransparent"
         case lightYellow = "lightYellow"
         case backgroundWhite = "backgroundWhite"
         case lightGray = "lightGray"
@@ -407,14 +407,14 @@ extension UIColor {
             return UIColor(named: AppAssetColor.green_Light_Stroke.rawValue)
         case .green_Light:
             return UIColor(named: AppAssetColor.green_Light.rawValue)
-        case .green_Main:
-            return UIColor(named: AppAssetColor.green_Main.rawValue)
+        case .Grey:
+            return UIColor(named: AppAssetColor.Grey.rawValue)
         case .lightest_Grey:
             return UIColor(named: AppAssetColor.lightest_Grey.rawValue)
         case .cyan_Light:
             return UIColor(named: AppAssetColor.cyan_Light.rawValue)
-        case .blue_Main:
-            return UIColor(named: AppAssetColor.blue_Main.rawValue)
+        case .transparent:
+            return UIColor(named: AppAssetColor.transparent.rawValue)
         case .light_Grey:
             return UIColor(named: AppAssetColor.light_Grey.rawValue)
         case .cyan_Main:
@@ -423,8 +423,8 @@ extension UIColor {
             return UIColor(named: AppAssetColor.pale_Grey.rawValue)
         case .cyan_Light_Stroke:
             return UIColor(named: AppAssetColor.cyan_Light_Stroke.rawValue)
-        case .black_001 :
-            return UIColor(named: AppAssetColor.black_001.rawValue)
+        case .whiteOpacity :
+            return UIColor(named: AppAssetColor.whiteOpacity.rawValue)
         case .dark_Grey:
             return UIColor(named: AppAssetColor.dark_Grey.rawValue)
         case .pink_Light:
@@ -443,8 +443,8 @@ extension UIColor {
             return UIColor(named: AppAssetColor.gradient_yellow_dark.rawValue)
         case .fadeGrey:
             return UIColor(named: AppAssetColor.fadeGrey.rawValue)
-        case .grey056:
-            return UIColor(named: AppAssetColor.grey056.rawValue)
+        case .whiteTransparent:
+            return UIColor(named: AppAssetColor.whiteTransparent.rawValue)
         case .lightYellow:
             return UIColor(named: AppAssetColor.lightYellow.rawValue)
         case .backgroundWhite:

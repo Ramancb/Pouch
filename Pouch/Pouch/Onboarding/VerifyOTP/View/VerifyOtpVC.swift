@@ -8,8 +8,9 @@
 import UIKit
 import ObjectMapper
 
-class OtpVC: UIViewController {
+class VerifyOtpVC: UIViewController, VerifyOtpViewProtocol {
     
+
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var otpStackView: UIStackView!
     @IBOutlet weak var verifyNumberLabel: UILabel!
@@ -25,35 +26,27 @@ class OtpVC: UIViewController {
     var timer: Timer?
     var runCount = 120
     var mobileNumber:String?
+    var presenter: VerifyOtpPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        verifyPhoneNumber()
         otpBGView.applyGradient(colours: [UIColor(hexString: "#343434"), UIColor(hexString: "#000000") ], locations: [0,1])
         setData()
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        otpField1.setPlaceHolderColorWith(strPH: "0", color: UIColor.white.withAlphaComponent(0.3))
-        otpField2.setPlaceHolderColorWith(strPH: "0", color: UIColor.white.withAlphaComponent(0.3))
-        otpField3.setPlaceHolderColorWith(strPH: "0", color: UIColor.white.withAlphaComponent(0.3))
-        otpField4.setPlaceHolderColorWith(strPH: "0", color: UIColor.white.withAlphaComponent(0.3))
-        otpField5.setPlaceHolderColorWith(strPH: "0", color: UIColor.white.withAlphaComponent(0.3))
-        otpField6.setPlaceHolderColorWith(strPH: "0", color: UIColor.white.withAlphaComponent(0.3))
+        otpField1.setPlaceHolderColorWith(strPH: "-", color: UIColor.white.withAlphaComponent(0.3))
+        otpField2.setPlaceHolderColorWith(strPH: "-", color: UIColor.white.withAlphaComponent(0.3))
+        otpField3.setPlaceHolderColorWith(strPH: "-", color: UIColor.white.withAlphaComponent(0.3))
+        otpField4.setPlaceHolderColorWith(strPH: "-", color: UIColor.white.withAlphaComponent(0.3))
+        otpField5.setPlaceHolderColorWith(strPH: "-", color: UIColor.white.withAlphaComponent(0.3))
+        otpField6.setPlaceHolderColorWith(strPH: "-", color: UIColor.white.withAlphaComponent(0.3))
     }
     
-    //to set in to next line
-    func verifyPhoneNumber() {
-        let attributedString = NSMutableAttributedString(string: "We have sent you a code \n to verify your phone number")
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 5
-        paragraphStyle.alignment = .center
-        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
-        verifyNumberLabel.attributedText = attributedString
-    }
     
     func setData(){
+        self.verifyNumberLabel.setLineSpacing(lineSpacing: 5.0, textAlignment: .center)
         otpField1.myDelegate = self
         otpField2.myDelegate = self
         otpField3.myDelegate = self
@@ -82,32 +75,17 @@ class OtpVC: UIViewController {
         }
     }
     
+    func resendOtpSucceed() {
+        self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.fireTimer), userInfo: nil, repeats: true)
+    }
+    
 
     @IBAction func backAction(_ sender: Any) {
         self.popVC()
     }
    
     @IBAction func resendOtpAction(_ sender: UIButton) {
-        let apiName = API.Name.login_Init + (self.mobileNumber ?? "")
-        ApiHandler.call(apiName: apiName, params: [:], httpMethod: .POST) { (data:MessageResponse?, error) in
-            DispatchQueue.main.async {
-                guard let _ = data else {
-                    Singleton.shared.showMessage(message: error ?? "", isError: .error)
-                    return
-                }
-                self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.fireTimer), userInfo: nil, repeats: true)
-            }
-        }
-    }
-    
-    func jsonToVarifyOtp()-> JSON{
-        var json = JSON()
-        json["username"] = self.mobileNumber
-        json["otp"] = self.getOtpString()
-        json["appVersion"] = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        json["fcmToken"] = UserDefaultsCustom.getDeviceToken()
-        json["deviceId"] = ""
-        return json
+        self.presenter?.resendOtpAction(phoneNo: self.mobileNumber)
     }
     
     func getOtpString()->String?{
@@ -141,21 +119,11 @@ class OtpVC: UIViewController {
     
     func verifyOtP(){
         self.view.endEditing(true)
-        ApiHandler.call( apiName: API.Name.login_attempt, params: self.jsonToVarifyOtp(), httpMethod:.POST) { (data:MessageResponse?, error) in
-            DispatchQueue.main.async {
-                guard let _ = data else {
-                    Singleton.shared.showMessage(message: error ?? "", isError: .error)
-                    return
-                }
-                UserDefaultsCustom.setValue(value: data?.response ?? "", for: UserDefaultsCustom.accessToken)
-                Singleton.shared.gotoHome()
-            }
-        }
-
+        self.presenter?.verifyOtpApiCall(phoneNo: self.mobileNumber, otpStr: self.getOtpString())
     }
 }
 
-extension OtpVC : UITextFieldDelegate, MyOTPTFDelegate {
+extension VerifyOtpVC : UITextFieldDelegate, MyOTPTFDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // On inputing value to textfield

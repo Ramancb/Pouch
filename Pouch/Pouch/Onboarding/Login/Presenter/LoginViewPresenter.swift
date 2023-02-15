@@ -32,15 +32,15 @@ class LoginPresenter: LoginPresenterProtocol{
             return
         }
         let apiName = API.Name.login_Init + (phone_number ?? "")
-//        ApiHandler.call(apiName: apiName, params: [:], httpMethod: .POST) { (data:MessageResponse?, error) in
-//            DispatchQueue.main.async {
-//                guard let _ = data else {
-//                    Singleton.shared.showMessage(message: error ?? "", isError: .error)
-//                    return
-//                }
-//                self.redirectToVerifyOTP(number: phone_number)
-//            }
-//        }
+        ApiHandler.call(apiName: apiName, params: [:], httpMethod: .POST) { (data:MessageResponse?, error) in
+            DispatchQueue.main.async {
+                guard let _ = data else {
+                    Singleton.shared.showMessage(message: error ?? "", isError: .error)
+                    return
+                }
+                self.redirectToVerifyOTP(number: phone_number)
+            }
+        }
         self.redirectToVerifyOTP(number: phone_number)
     }
     

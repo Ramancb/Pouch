@@ -33,14 +33,14 @@ class Singleton: NSObject {
     //MARK: ERROR MESSAGE
     func showErrorMessage(error:String, isError: ERROR_TYPE) {
         DispatchQueue.main.async {
-            guard let window = UIWindow.key else {return}
+//            guard let window = UIWindow.key else {return}
             if self.errorMessageView == nil {
                 self.errorMessageView = UINib(nibName: NIB_NAME.errorView, bundle: nil).instantiate(withOwner: self, options: nil)[0] as? ErrorView
                 self.errorMessageView.delegate = self
                 self.errorMessageView.statusIconBgView.isHidden = true
                 self.errorMessageView.frame = CGRect(x: 10, y: 43 , width: SCREEN_SIZE.width-20, height: HEIGHT.errorMessageHeight)
 //    visibleController?.view.addSubview(errorMessageView)
-                window.addSubview(self.errorMessageView)
+                self.window?.addSubview(self.errorMessageView)
             }
             self.errorMessageView.setErrorMessage(message: error, isError: isError)
         }
@@ -62,11 +62,8 @@ class Singleton: NSObject {
             let view = LoginPresenter.createLoginModule()
             let navController = UINavigationController(rootViewController: view)
             navController.navigationBar.isHidden = true
-            if let window = UIWindow.key{
-                window.rootViewController = navController
-                Singleton.shared.window = window
-                window.makeKeyAndVisible()
-            }
+            self.window?.rootViewController = navController
+            self.window?.makeKeyAndVisible()
         }
         
     }

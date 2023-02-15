@@ -7,11 +7,15 @@
 
 import UIKit
 
-class HomeCollectionCell: UICollectionViewCell {
 
+class HomeCollectionCell: UICollectionViewCell {
+    
+    @IBOutlet weak var cardBgView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
-
+    
 }

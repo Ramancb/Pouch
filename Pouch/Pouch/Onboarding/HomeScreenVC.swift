@@ -9,7 +9,7 @@ import UIKit
 
 class HomeScreenVC: UIViewController {
     
-    var item:[String] = ["Memberships","Vouchers","Coupons","BoardingPasses","Tickets"]
+    var item:[String] = ["Memberships","Vouchers","Coupons","BoardingPasses","Tickets,"]
     
     @IBOutlet weak var moreBtn: UIButton!
     @IBOutlet weak var contentView: UIView!
@@ -21,14 +21,14 @@ class HomeScreenVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        homeCollectionView.isPagingEnabled = true
+        homeCollectionView.showsHorizontalScrollIndicator = false
+        homeCollectionView.delaysContentTouches = false
         self.view.applyGradient(colours: [UIColor(hexString: "#343434"), UIColor(hexString: "#000000") ], locations: [0,1])
         self.setCollectionView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
+                                                                                                             
     func setCollectionView(){
         itemCollectionView.delegate = self
         itemCollectionView.dataSource = self
@@ -38,16 +38,15 @@ class HomeScreenVC: UIViewController {
         itemCollectionView.register(cellClass: ItemsCollectionCell.self)
     }
     
-    func setHomeCollectionView(){
-        
-    }
-    
     @IBAction func moreAction(_ sender: Any) {
         let vc = SideMenuVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionView == itemCollectionView ? item.count : 4
@@ -72,6 +71,7 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         
     }
     
+   
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == itemCollectionView{
             self.selectedIndex = indexPath.row
@@ -95,3 +95,6 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
 extension HomeScreenVC: HomeViewProtocol{
     
 }
+
+                                                                
+

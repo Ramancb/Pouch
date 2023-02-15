@@ -151,6 +151,9 @@
                 <constraint firstAttribute="trailing" secondItem="Bn5-kf-7rM" secondAttribute="trailing" constant="25" id="vyl-h5-YsL"/>
             </constraints>
             <size key="customSize" width="445" height="488"/>
+            <connections>
+                <outlet property="cardBgView" destination="Bn5-kf-7rM" id="RRY-b5-a4g"/>
+            </connections>
             <point key="canvasLocation" x="423.91304347826087" y="105.80357142857143"/>
         </collectionViewCell>
     </objects>

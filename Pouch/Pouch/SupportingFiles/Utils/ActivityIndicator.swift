@@ -55,7 +55,7 @@ class ActivityIndicator: UIView {
             self.activityIndicator.clipsToBounds = true
             self.activityIndicator.startAnimating()
             self.addSubview(self.activityIndicator)
-             if let keyWindow = UIWindow.key {
+             if let keyWindow = Singleton.shared.window {
                  keyWindow.addSubview(self)
              }
         })
@@ -75,7 +75,7 @@ class ActivityIndicator: UIView {
             self.activityIndicator.clipsToBounds = true
             self.activityIndicator.startAnimating()
             self.addSubview(self.activityIndicator)
-            if let keyWindow = UIWindow.key {
+            if let keyWindow = Singleton.shared.window {
                 keyWindow.addSubview(self)
             }
         })

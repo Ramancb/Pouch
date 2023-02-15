@@ -9,7 +9,7 @@ import UIKit
 import ObjectMapper
 
 class OtpVC: UIViewController {
-
+    
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var otpStackView: UIStackView!
     @IBOutlet weak var verifyNumberLabel: UILabel!
@@ -20,10 +20,8 @@ class OtpVC: UIViewController {
     @IBOutlet weak var otpField4: MyOTPTF!
     @IBOutlet weak var otpField5: MyOTPTF!
     @IBOutlet weak var otpField6: MyOTPTF!
-    
-    
     @IBOutlet weak var resendOtpButton: UIButton!
-    
+
     var timer: Timer?
     var runCount = 120
     var mobileNumber:String?
@@ -54,6 +52,7 @@ class OtpVC: UIViewController {
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
         verifyNumberLabel.attributedText = attributedString
     }
+    
     func setData(){
         otpField1.myDelegate = self
         otpField2.myDelegate = self
@@ -148,7 +147,7 @@ class OtpVC: UIViewController {
                     Singleton.shared.showMessage(message: error ?? "", isError: .error)
                     return
                 }
-                UserDefaultsCustom.setValue(value: UserDefaultsCustom.accessToken, for: data?.response ?? "")
+                UserDefaultsCustom.setValue(value: data?.response ?? "", for: UserDefaultsCustom.accessToken)
                 Singleton.shared.gotoHome()
             }
         }

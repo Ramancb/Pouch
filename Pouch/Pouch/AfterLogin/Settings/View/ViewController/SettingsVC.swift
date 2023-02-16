@@ -97,7 +97,9 @@ extension SettingsVC: UITableViewDelegate,UITableViewDataSource{
         switch self.settingsData[indexPath.section].rowData?[indexPath.row].type{
         case .editProfile:
             let vc = EditProfilePresenter.CreateEditProfileModule()
-            self.pushViewController(vc, true)
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, true)
+         //   self.pushViewController(vc, true)
         case .privacy:
             break
         case .country:

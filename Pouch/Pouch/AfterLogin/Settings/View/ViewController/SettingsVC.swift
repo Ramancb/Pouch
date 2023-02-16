@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SideMenuVC: UIViewController {
+class SettingsVC: UIViewController {
     
     @IBOutlet weak var viewOutlet: UIView!
     @IBOutlet weak var sideMenuTableView: UITableView!
@@ -58,7 +58,7 @@ class SideMenuVC: UIViewController {
     }
 }
 
-extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
+extension SettingsVC: UITableViewDelegate,UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.settingsData.count
@@ -125,7 +125,7 @@ extension SideMenuVC: UITableViewDelegate,UITableViewDataSource{
         return sectionHeader
     }
 }
-extension SideMenuVC: CustomPickerControllerDelegate{
+extension SettingsVC: CustomPickerControllerDelegate{
     
     func didSelectPicker(_ value: String, _ index: Int, _ tag: Int?, custom picker: CustomPickerController) {
         if tag == 0 {
@@ -143,7 +143,7 @@ extension SideMenuVC: CustomPickerControllerDelegate{
         
     }
 }
-extension SideMenuVC: SideMenuTableCellDelegate{
+extension SettingsVC: SideMenuTableCellDelegate{
     func updatedRowData(sender: UIButton) {
         let section = sender.tag / 10
         let row = sender.tag % 10

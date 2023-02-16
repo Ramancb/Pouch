@@ -17,8 +17,8 @@
 		4B4278D229911A0E005DD94F /* ItemsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4278D029911A0E005DD94F /* ItemsCollectionCell.xib */; };
 		4B4278D329911A0E005DD94F /* ItemsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4278D129911A0E005DD94F /* ItemsCollectionCell.swift */; };
 		4B4C06A1298A3428002C9E4F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C06A0298A3428002C9E4F /* LoginVC.swift */; };
-		4B5534EB298BC9500024916A /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5534E9298BC9500024916A /* SideMenuVC.swift */; };
-		4B5534EC298BC9500024916A /* SideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5534EA298BC9500024916A /* SideMenuVC.xib */; };
+		4B5534EB298BC9500024916A /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5534E9298BC9500024916A /* SettingsVC.swift */; };
+		4B5534EC298BC9500024916A /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5534EA298BC9500024916A /* SettingsVC.xib */; };
 		4B5534F3298BDD5F0024916A /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5534F2298BDD5F0024916A /* SectionHeaderView.swift */; };
 		4B6EE1F8298AA06F000C89F3 /* VerifyOtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6EE1F6298AA06F000C89F3 /* VerifyOtpVC.swift */; };
 		4B6EE1F9298AA06F000C89F3 /* VerifyOtpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6EE1F7298AA06F000C89F3 /* VerifyOtpVC.xib */; };
@@ -27,14 +27,14 @@
 		4B8FEB002990D1B00071CD92 /* HomeScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B8FEAFE2990D1B00071CD92 /* HomeScreenVC.xib */; };
 		4B92C118298CD49F00ED318C /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B92C117298CD49F00ED318C /* SectionHeaderView.xib */; };
 		4B92C11B298CEAA900ED318C /* SideMenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92C119298CEAA900ED318C /* SideMenuTableCell.swift */; };
-		4BB0AF84299A5AA400F63D1F /* Membership Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB0AF83299A5AA400F63D1F /* Membership Model.swift */; };
-		4BB0AF86299A5ABD00F63D1F /* Membership Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB0AF85299A5ABD00F63D1F /* Membership Presenter.swift */; };
+		4BB0AF84299A5AA400F63D1F /* CardDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB0AF83299A5AA400F63D1F /* CardDetailModel.swift */; };
+		4BB0AF86299A5ABD00F63D1F /* CardDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB0AF85299A5ABD00F63D1F /* CardDetailPresenter.swift */; };
 		4BCADD55298949270091A183 /* InformationPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADD53298949270091A183 /* InformationPopUpController.swift */; };
 		4BCADD56298949270091A183 /* InformationPopUpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCADD54298949270091A183 /* InformationPopUpController.xib */; };
 		4BDBE23A2994CD71007C8A0A /* SettingsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBE2392994CD71007C8A0A /* SettingsDataModel.swift */; };
 		4BDBE23C2994E71D007C8A0A /* SideMenuTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BDBE23B2994E71D007C8A0A /* SideMenuTableCell.xib */; };
-		A32541562991286500E051B4 /* MembershipVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32541542991286500E051B4 /* MembershipVC.swift */; };
-		A32541572991286500E051B4 /* MembershipVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32541552991286500E051B4 /* MembershipVC.xib */; };
+		A32541562991286500E051B4 /* CardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32541542991286500E051B4 /* CardDetailVC.swift */; };
+		A32541572991286500E051B4 /* CardDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A32541552991286500E051B4 /* CardDetailVC.xib */; };
 		A325415E299272C900E051B4 /* DeletePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A325415C299272C900E051B4 /* DeletePopUpVC.swift */; };
 		A325415F299272C900E051B4 /* DeletePopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A325415D299272C900E051B4 /* DeletePopUpVC.xib */; };
 		B952CCF1D49E5B2814BEE52A /* Pods_Pouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */; };
@@ -130,8 +130,8 @@
 		4B4278D029911A0E005DD94F /* ItemsCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsCollectionCell.xib; sourceTree = "<group>"; };
 		4B4278D129911A0E005DD94F /* ItemsCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsCollectionCell.swift; sourceTree = "<group>"; };
 		4B4C06A0298A3428002C9E4F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		4B5534E9298BC9500024916A /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
-		4B5534EA298BC9500024916A /* SideMenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuVC.xib; sourceTree = "<group>"; };
+		4B5534E9298BC9500024916A /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		4B5534EA298BC9500024916A /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		4B5534F2298BDD5F0024916A /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		4B6EE1F6298AA06F000C89F3 /* VerifyOtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpVC.swift; sourceTree = "<group>"; };
 		4B6EE1F7298AA06F000C89F3 /* VerifyOtpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyOtpVC.xib; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 		4B8FEAFE2990D1B00071CD92 /* HomeScreenVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenVC.xib; sourceTree = "<group>"; };
 		4B92C117298CD49F00ED318C /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 		4B92C119298CEAA900ED318C /* SideMenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableCell.swift; sourceTree = "<group>"; };
-		4BB0AF83299A5AA400F63D1F /* Membership Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Membership Model.swift"; sourceTree = "<group>"; };
-		4BB0AF85299A5ABD00F63D1F /* Membership Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Membership Presenter.swift"; sourceTree = "<group>"; };
+		4BB0AF83299A5AA400F63D1F /* CardDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailModel.swift; sourceTree = "<group>"; };
+		4BB0AF85299A5ABD00F63D1F /* CardDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailPresenter.swift; sourceTree = "<group>"; };
 		4BCADD53298949270091A183 /* InformationPopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPopUpController.swift; sourceTree = "<group>"; };
 		4BCADD54298949270091A183 /* InformationPopUpController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationPopUpController.xib; sourceTree = "<group>"; };
 		4BDBE2392994CD71007C8A0A /* SettingsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataModel.swift; sourceTree = "<group>"; };
@@ -149,8 +149,8 @@
 		5F9AA0F2AF9379AE7E7458C6 /* Pods-Pouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pouch.debug.xcconfig"; path = "Target Support Files/Pods-Pouch/Pods-Pouch.debug.xcconfig"; sourceTree = "<group>"; };
 		784445D4F4816B0D94C76EE2 /* Pods_Pouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4F90C311984A2732F20C4D /* Pods-Pouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pouch.release.xcconfig"; path = "Target Support Files/Pods-Pouch/Pods-Pouch.release.xcconfig"; sourceTree = "<group>"; };
-		A32541542991286500E051B4 /* MembershipVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipVC.swift; sourceTree = "<group>"; };
-		A32541552991286500E051B4 /* MembershipVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MembershipVC.xib; sourceTree = "<group>"; };
+		A32541542991286500E051B4 /* CardDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailVC.swift; sourceTree = "<group>"; };
+		A32541552991286500E051B4 /* CardDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailVC.xib; sourceTree = "<group>"; };
 		A325415C299272C900E051B4 /* DeletePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePopUpVC.swift; sourceTree = "<group>"; };
 		A325415D299272C900E051B4 /* DeletePopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeletePopUpVC.xib; sourceTree = "<group>"; };
 		F17E14C12988F82000C336C2 /* Pouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -583,7 +583,7 @@
 		F1D1EB9B299CF63E00E96012 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				4BB0AF85299A5ABD00F63D1F /* Membership Presenter.swift */,
+				4BB0AF85299A5ABD00F63D1F /* CardDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -599,7 +599,7 @@
 		F1D1EB9D299CF64800E96012 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4BB0AF83299A5AA400F63D1F /* Membership Model.swift */,
+				4BB0AF83299A5AA400F63D1F /* CardDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -607,8 +607,8 @@
 		F1D1EB9F299CF69900E96012 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A32541542991286500E051B4 /* MembershipVC.swift */,
-				A32541552991286500E051B4 /* MembershipVC.xib */,
+				A32541542991286500E051B4 /* CardDetailVC.swift */,
+				A32541552991286500E051B4 /* CardDetailVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -725,8 +725,8 @@
 		F1D1EBAE299CFDEA00E96012 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4B5534E9298BC9500024916A /* SideMenuVC.swift */,
-				4B5534EA298BC9500024916A /* SideMenuVC.xib */,
+				4B5534E9298BC9500024916A /* SettingsVC.swift */,
+				4B5534EA298BC9500024916A /* SettingsVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -947,7 +947,7 @@
 				F1BBC9922990DE8000D1EFDA /* Lato-ThinItalic.ttf in Resources */,
 				F1BBC98F2990DE8000D1EFDA /* Lato-BlackItalic.ttf in Resources */,
 				F17E14D42988F82200C336C2 /* LaunchScreen.storyboard in Resources */,
-				A32541572991286500E051B4 /* MembershipVC.xib in Resources */,
+				A32541572991286500E051B4 /* CardDetailVC.xib in Resources */,
 				F1BBC98E2990DE8000D1EFDA /* Lato-Regular.ttf in Resources */,
 				F1BBC98D2990DE8000D1EFDA /* LatoSemibold.ttf in Resources */,
 				F1BBC9892990DE8000D1EFDA /* Lato-LightItalic.ttf in Resources */,
@@ -956,7 +956,7 @@
 				F1BBC98B2990DE8000D1EFDA /* Lato-Bold.ttf in Resources */,
 				4B8FEB002990D1B00071CD92 /* HomeScreenVC.xib in Resources */,
 				F1AD97E02988FBBF00FB83DA /* ErrorView.xib in Resources */,
-				4B5534EC298BC9500024916A /* SideMenuVC.xib in Resources */,
+				4B5534EC298BC9500024916A /* SettingsVC.xib in Resources */,
 				F1AD97DC2988FBBF00FB83DA /* CustomNavigationBar.xib in Resources */,
 				4B6EE1F9298AA06F000C89F3 /* VerifyOtpVC.xib in Resources */,
 				F1A640AD2997889F0029C0F5 /* HomeCollectionCell.xib in Resources */,
@@ -1026,7 +1026,7 @@
 				F1AD97832988FBBE00FB83DA /* UIFont+Custom.swift in Sources */,
 				F1AD97782988FBBE00FB83DA /* String+Custom.swift in Sources */,
 				4B1EABF7298D32A3001E89DB /* EditProfileVC.swift in Sources */,
-				4BB0AF84299A5AA400F63D1F /* Membership Model.swift in Sources */,
+				4BB0AF84299A5AA400F63D1F /* CardDetailModel.swift in Sources */,
 				F1AD977D2988FBBE00FB83DA /* UICollectionView+Custom.swift in Sources */,
 				F1A20B4029937C4600E30E4D /* LoginViewProtocols.swift in Sources */,
 				4B14F1E62992388A0073E6AA /* Protocol.swift in Sources */,
@@ -1046,9 +1046,9 @@
 				F1AD97D92988FBBF00FB83DA /* Values.swift in Sources */,
 				F1AD97B22988FBBE00FB83DA /* ActivityIndicator.swift in Sources */,
 				F1AD97862988FBBE00FB83DA /* UIImageView+Custom.swift in Sources */,
-				A32541562991286500E051B4 /* MembershipVC.swift in Sources */,
+				A32541562991286500E051B4 /* CardDetailVC.swift in Sources */,
 				F1AD97EC2988FBBF00FB83DA /* HttpManager.swift in Sources */,
-				4B5534EB298BC9500024916A /* SideMenuVC.swift in Sources */,
+				4B5534EB298BC9500024916A /* SettingsVC.swift in Sources */,
 				4BCADD55298949270091A183 /* InformationPopUpController.swift in Sources */,
 				4B14F1E4299218CD0073E6AA /* editProfileModel.swift in Sources */,
 				F1AC50BE2990E3F8007F1450 /* OTPTextField.swift in Sources */,
@@ -1056,7 +1056,7 @@
 				4B4C06A1298A3428002C9E4F /* LoginVC.swift in Sources */,
 				F1AD97B52988FBBE00FB83DA /* UserDefaultsCustom.swift in Sources */,
 				4B6EE1F8298AA06F000C89F3 /* VerifyOtpVC.swift in Sources */,
-				4BB0AF86299A5ABD00F63D1F /* Membership Presenter.swift in Sources */,
+				4BB0AF86299A5ABD00F63D1F /* CardDetailPresenter.swift in Sources */,
 				F17E14CF2988F82000C336C2 /* Pouch.xcdatamodeld in Sources */,
 				F1AD97872988FBBE00FB83DA /* Double+Custom.swift in Sources */,
 				4B8FEAFF2990D1B00071CD92 /* HomeScreenVC.swift in Sources */,

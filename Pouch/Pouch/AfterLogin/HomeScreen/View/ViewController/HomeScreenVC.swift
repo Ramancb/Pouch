@@ -1,9 +1,6 @@
 //
 //  HomeScreenVC.swift
 //  Pouch
-//
-//  Created by Piyush Kumar on 06/02/23.
-//
 
 import UIKit
 
@@ -28,7 +25,6 @@ class HomeScreenVC: UIViewController {
         self.setCollectionView()
     }
     
-                                                                                                             
     func setCollectionView(){
         itemCollectionView.delegate = self
         itemCollectionView.dataSource = self
@@ -39,7 +35,7 @@ class HomeScreenVC: UIViewController {
     }
     
     @IBAction func moreAction(_ sender: Any) {
-        let vc = SideMenuVC()
+        let vc = SettingsVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -77,7 +73,7 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
             self.selectedIndex = indexPath.row
             collectionView.reloadData()
         }else{
-            self.pushViewController(MembershipVC(), true)
+            self.pushViewController(CardDetailVC(), true)
         }
     }
     

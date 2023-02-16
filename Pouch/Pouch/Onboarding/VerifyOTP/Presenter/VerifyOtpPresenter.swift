@@ -9,10 +9,6 @@ import UIKit
 
 class VerifyOtpPresenter: VerifyOtpPresenterProtocol{
     
-    
-   
-    
-    
     var view: VerifyOtpViewProtocol?
     
     static func createVerifyOtpModule(phoneNo:String?) -> UIViewController{
@@ -59,7 +55,5 @@ class VerifyOtpPresenter: VerifyOtpPresenterProtocol{
             }
         }
     }
-    
-    
 }
 

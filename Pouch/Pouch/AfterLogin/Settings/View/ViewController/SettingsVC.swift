@@ -98,7 +98,7 @@ extension SettingsVC: UITableViewDelegate,UITableViewDataSource{
         case .editProfile:
             let vc = EditProfilePresenter.CreateEditProfileModule()
             vc.modalPresentationStyle = .overFullScreen
-            self.present(vc, true)
+            self.present(vc, false)
          //   self.pushViewController(vc, true)
         case .privacy:
             break

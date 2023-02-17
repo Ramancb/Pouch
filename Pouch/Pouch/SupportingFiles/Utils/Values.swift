@@ -38,6 +38,7 @@ struct AppStrings {
     static let rsOff = "Rs \nOFF"
     static let hotelName = "This is non transferable coupon"
     static let coupon = "Coupon_ic"
+    static let city = "City"
 }
 
 struct Messages {

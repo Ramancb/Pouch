@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B14F1E4299218CD0073E6AA /* editProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14F1E3299218CD0073E6AA /* editProfileModel.swift */; };
 		4B14F1E62992388A0073E6AA /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14F1E52992388A0073E6AA /* Protocol.swift */; };
 		4B14F1E82992424E0073E6AA /* editProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14F1E72992424E0073E6AA /* editProfilePresenter.swift */; };
 		4B14F1F129926EBF0073E6AA /* CustomPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B14F1EF29926EBF0073E6AA /* CustomPickerController.swift */; };
@@ -119,7 +118,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4B14F1E3299218CD0073E6AA /* editProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfileModel.swift; sourceTree = "<group>"; };
 		4B14F1E52992388A0073E6AA /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		4B14F1E72992424E0073E6AA /* editProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editProfilePresenter.swift; sourceTree = "<group>"; };
 		4B14F1EF29926EBF0073E6AA /* CustomPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerController.swift; sourceTree = "<group>"; };
@@ -761,7 +759,6 @@
 		F1D1EBB2299CFE5E00E96012 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4B14F1E3299218CD0073E6AA /* editProfileModel.swift */,
 				4B14F1E52992388A0073E6AA /* Protocol.swift */,
 			);
 			path = Model;
@@ -1050,7 +1047,6 @@
 				F1AD97EC2988FBBF00FB83DA /* HttpManager.swift in Sources */,
 				4B5534EB298BC9500024916A /* SettingsVC.swift in Sources */,
 				4BCADD55298949270091A183 /* InformationPopUpController.swift in Sources */,
-				4B14F1E4299218CD0073E6AA /* editProfileModel.swift in Sources */,
 				F1AC50BE2990E3F8007F1450 /* OTPTextField.swift in Sources */,
 				F1AD97A42988FBBE00FB83DA /* Validator.swift in Sources */,
 				4B4C06A1298A3428002C9E4F /* LoginVC.swift in Sources */,

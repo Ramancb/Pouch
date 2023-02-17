@@ -11,6 +11,7 @@ import UIKit
 class EditProfilePresenter: EditProfilePresenterProtocol {
     
     var view: EditProfileViewProtocol?
+    
     static func CreateEditProfileModule()->UIViewController{
         let view =  EditProfileVC()
         var presenter:EditProfilePresenterProtocol = EditProfilePresenter()
@@ -19,7 +20,29 @@ class EditProfilePresenter: EditProfilePresenterProtocol {
         return view
     }
     
-    func validateFields(firstName: String, email : String, lastName : String) -> Bool {
+    func jsonToVerifyProfile(firstName:String, lastName:String, email:String, city:String)-> JSON{
+        var json = JSON()
+        json["firstName"] = firstName
+        json["lastName"] = lastName
+        json["email"] = email
+        json["city"] = city
+        return json
+    }
+    
+    func editProfileApiCall(firstName:String, lastName:String, email:String, city:String) {
+        if validateFields(firstName: firstName , email : email , lastName : lastName , city: city ) == true{
+            ApiHandler.call( apiName: API.Name.logout, params: self.jsonToVerifyProfile(firstName: firstName, lastName: lastName, email: email, city: city), httpMethod:.PUT) { (data:MessageResponse?, error) in
+                DispatchQueue.main.async {
+                    guard let _ = data else {
+                        Singleton.shared.showMessage(message: error ?? "", isError: .error)
+                        return
+                    }
+                }
+            }
+        }
+    }
+    
+    func validateFields(firstName: String, email : String, lastName : String, city : String) -> Bool {
         
         guard firstName != "" else {
             Singleton.shared.showErrorMessage(error: "Please enter first name.", isError: .error)
@@ -29,19 +52,22 @@ class EditProfilePresenter: EditProfilePresenterProtocol {
             Singleton.shared.showErrorMessage(error: "Please enter last name.", isError: .error)
             return false
         }
+        guard city != "" else {
+            Singleton.shared.showErrorMessage(error: "Please enter city", isError: .error)
+            return false
+            
+        }
         guard email != "" else {
             Singleton.shared.showErrorMessage(error: "Please enter your email.", isError: .error)
             return false
         }
-        
-        let isValidEmail = Validator.validateEmail(candidate: email ?? "")
+        let isValidEmail = Validator.validateEmail(candidate: email )
         if isValidEmail == true {
             return isValidEmail
         }else {
             Singleton.shared.showErrorMessage(error: "Please enter valid email.", isError: .error)
             return false
         }
-        //   self.view?.receiveData()
-        
+       
     }
 }

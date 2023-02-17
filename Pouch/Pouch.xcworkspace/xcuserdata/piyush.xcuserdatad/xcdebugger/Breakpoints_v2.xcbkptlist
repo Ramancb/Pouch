@@ -3,4 +3,230 @@
    uuid = "4A9B7A97-A82D-4367-AC8F-C97AF5DA3976"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "777A922D-E5A5-4E72-BABA-D9A2556BAFB3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pouch/AfterLogin/EditProfile/View/EditProfileVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "777A922D-E5A5-4E72-BABA-D9A2556BAFB3 - 6d9168b02e2235d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pouch.EditProfileVC.textField(_: __C.UITextField, shouldChangeCharactersIn: __C._NSRange, replacementString: Swift.String) -&gt; Swift.Bool"
+                  moduleName = "Pouch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piyush/Documents/GitHub/pouch/Pouch/Pouch/AfterLogin/EditProfile/View/EditProfileVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "222">
+               </Location>
+               <Location
+                  uuid = "777A922D-E5A5-4E72-BABA-D9A2556BAFB3 - 6d9168b02e2235d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pouch.EditProfileVC.textField(_: __C.UITextField, shouldChangeCharactersIn: __C._NSRange, replacementString: Swift.String) -&gt; Swift.Bool"
+                  moduleName = "Pouch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piyush/Documents/GitHub/pouch/Pouch/Pouch/AfterLogin/EditProfile/View/EditProfileVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "283">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FCBC695E-7A86-4E3A-9856-4F31C0E167D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pouch/AfterLogin/DeletePopUp/View/Controller/DeletePopUpVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9058EFEF-E9D9-46D8-BE40-1A9640AB4740"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pouch/AfterLogin/DeletePopUp/View/Controller/DeletePopUpVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC817DA1-ECC7-4733-B611-6F66897F5B0F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pouch/AfterLogin/DeletePopUp/View/Controller/DeletePopUpVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FC817DA1-ECC7-4733-B611-6F66897F5B0F - 28f834c6c90f1289"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pouch.DeletePopUpVC.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Pouch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piyush/Documents/GitHub/pouch/Pouch/Pouch/AfterLogin/DeletePopUp/View/Controller/DeletePopUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "FC817DA1-ECC7-4733-B611-6F66897F5B0F - 8361163c1a58b8fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Pouch.DeletePopUpVC.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "Pouch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piyush/Documents/GitHub/pouch/Pouch/Pouch/AfterLogin/DeletePopUp/View/Controller/DeletePopUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E40535EE-78CC-4A28-8D79-1CF0FB37114B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pouch/AfterLogin/DeletePopUp/View/Controller/DeletePopUpVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "dismissController()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E40535EE-78CC-4A28-8D79-1CF0FB37114B - 420570be86d81721"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pouch.DeletePopUpVC.dismissController() -&gt; ()"
+                  moduleName = "Pouch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piyush/Documents/GitHub/pouch/Pouch/Pouch/AfterLogin/DeletePopUp/View/Controller/DeletePopUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "E40535EE-78CC-4A28-8D79-1CF0FB37114B - e0953e082fb1e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Pouch.DeletePopUpVC.dismissController() -&gt; ()"
+                  moduleName = "Pouch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piyush/Documents/GitHub/pouch/Pouch/Pouch/AfterLogin/DeletePopUp/View/Controller/DeletePopUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4B4420C-BC52-4489-BC29-4D8E119AB740"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pouch/AfterLogin/DeletePopUp/View/Controller/DeletePopUpVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init?(coder:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F4B4420C-BC52-4489-BC29-4D8E119AB740 - 953ea6f994d5016a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pouch.DeletePopUpVC.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Pouch.DeletePopUpVC&gt;"
+                  moduleName = "Pouch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piyush/Documents/GitHub/pouch/Pouch/Pouch/AfterLogin/DeletePopUp/View/Controller/DeletePopUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "F4B4420C-BC52-4489-BC29-4D8E119AB740 - ff2d852bcd144f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pouch.DeletePopUpVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Pouch.DeletePopUpVC&gt;"
+                  moduleName = "Pouch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piyush/Documents/GitHub/pouch/Pouch/Pouch/AfterLogin/DeletePopUp/View/Controller/DeletePopUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

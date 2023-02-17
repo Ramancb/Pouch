@@ -27,6 +27,7 @@ class API {
     struct Name {
         static let login_Init = "login/init/"
         static let login_attempt = "login/attempt"
+        static let logout = "logout"
         
     }
     

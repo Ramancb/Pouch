@@ -8,8 +8,9 @@
 import Foundation
 
 protocol EditProfilePresenterProtocol{
-  func validateFields(firstName: String, email : String, lastName : String) -> Bool
-  var view: EditProfileViewProtocol? {get set}
+    func editProfileApiCall(firstName:String, lastName:String, email:String, city:String)
+    func validateFields(firstName: String, email : String, lastName : String, city : String) -> Bool
+    var view: EditProfileViewProtocol? {get set}
 }
 
 protocol EditProfileViewProtocol{

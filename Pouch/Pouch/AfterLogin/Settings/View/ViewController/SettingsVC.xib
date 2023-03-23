@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+        <array key="LatoSemibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsVC" customModule="Pouch" customModuleProvider="target">
+            <connections>
+                <outlet property="settingsTableView" destination="6tL-jx-wSg" id="Vae-g3-zsE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6tL-jx-wSg">
+                    <rect key="frame" x="0.0" y="111" width="414" height="701"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ud-bl-Zoi">
+                    <rect key="frame" x="154" y="812" width="106" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="fiB-ah-wUc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                    <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="LOGOUT">
+                        <color key="titleColor" name="lightestGrey"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="themeYellow"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="logoutAction:" destination="-1" eventType="touchUpInside" id="kLc-Pl-z9d"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ctc-JO-una">
+                    <rect key="frame" x="0.0" y="44" width="414" height="67"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2w-if-bwJ">
+                            <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="52" id="SDn-tb-IIT"/>
+                                <constraint firstAttribute="height" constant="52" id="jL1-3A-guD"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="back_ic"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="IW1-TA-ZlF"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIW-6l-wwZ">
+                            <rect key="frame" x="171.5" y="0.0" width="71" height="52"/>
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="20"/>
+                            <color key="textColor" name="themeYellow"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujE-dD-VmG">
+                            <rect key="frame" x="0.0" y="66" width="414" height="1"/>
+                            <color key="backgroundColor" name="fadeGrey"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="DEF-eN-3yg"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iIW-6l-wwZ" secondAttribute="trailing" constant="10" id="9ab-ER-erh"/>
+                        <constraint firstItem="iIW-6l-wwZ" firstAttribute="centerY" secondItem="c2w-if-bwJ" secondAttribute="centerY" id="QaR-sY-QdU"/>
+                        <constraint firstItem="iIW-6l-wwZ" firstAttribute="top" secondItem="Ctc-JO-una" secondAttribute="top" id="RTx-gI-VnU"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="iIW-6l-wwZ" secondAttribute="bottom" id="Tfq-LJ-GZ7"/>
+                        <constraint firstItem="c2w-if-bwJ" firstAttribute="leading" secondItem="Ctc-JO-una" secondAttribute="leading" id="XBY-ya-em4"/>
+                        <constraint firstItem="c2w-if-bwJ" firstAttribute="top" secondItem="Ctc-JO-una" secondAttribute="top" id="e5z-MS-sjQ"/>
+                        <constraint firstItem="ujE-dD-VmG" firstAttribute="leading" secondItem="Ctc-JO-una" secondAttribute="leading" id="ed1-cS-fiK"/>
+                        <constraint firstAttribute="trailing" secondItem="ujE-dD-VmG" secondAttribute="trailing" id="hag-DN-sCh"/>
+                        <constraint firstItem="ujE-dD-VmG" firstAttribute="top" secondItem="c2w-if-bwJ" secondAttribute="bottom" constant="14" id="kPI-3N-RVW"/>
+                        <constraint firstItem="iIW-6l-wwZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c2w-if-bwJ" secondAttribute="trailing" constant="10" id="m7i-NU-dgL"/>
+                        <constraint firstAttribute="bottom" secondItem="ujE-dD-VmG" secondAttribute="bottom" id="sIo-5L-kR6"/>
+                        <constraint firstItem="iIW-6l-wwZ" firstAttribute="centerX" secondItem="Ctc-JO-una" secondAttribute="centerX" id="th9-3B-Euk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5ud-bl-Zoi" secondAttribute="bottom" id="CKQ-Mx-ukb"/>
+                <constraint firstItem="Ctc-JO-una" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Cmh-Jx-I0Q"/>
+                <constraint firstItem="5ud-bl-Zoi" firstAttribute="top" secondItem="6tL-jx-wSg" secondAttribute="bottom" id="Ihu-yY-q0l"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ctc-JO-una" secondAttribute="trailing" id="OMx-Rh-fsC"/>
+                <constraint firstItem="Ctc-JO-una" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QE0-c9-qJ6"/>
+                <constraint firstItem="6tL-jx-wSg" firstAttribute="top" secondItem="Ctc-JO-una" secondAttribute="bottom" id="Rjf-Dd-Igy"/>
+                <constraint firstItem="5ud-bl-Zoi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bF4-gp-s6u"/>
+                <constraint firstItem="6tL-jx-wSg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ehm-4N-BVL"/>
+                <constraint firstItem="6tL-jx-wSg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jNX-rm-v6g"/>
+            </constraints>
+            <point key="canvasLocation" x="111.59420289855073" y="-70.3125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_ic" width="52" height="52"/>
+        <namedColor name="fadeGrey">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="0.14000000059604645" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightestGrey">
+            <color red="0.74901960784313726" green="0.75686274509803919" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="themeYellow">
+            <color red="0.86699998378753662" green="0.72200000286102295" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

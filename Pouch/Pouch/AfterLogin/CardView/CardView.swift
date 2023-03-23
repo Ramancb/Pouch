@@ -137,7 +137,8 @@ class CardView: UIView {
     }
     
     func setCardLayoutWise(card:CardsData?){
-        DatabaseManager.shared.isDbDocumentExist(dbName: DatabaseManager.kTemplateDBName, templateName: card?.templateName ?? "") { data, error in
+        guard let templateName = card?.templateName else{return}
+        DatabaseManager.shared.isDbDocumentExist(dbName: DatabaseManager.kTemplateDBName, templateName: templateName) { data, error in
             self.provider = data?.provider
             self.varient = data?.variant
             switch card?.type{

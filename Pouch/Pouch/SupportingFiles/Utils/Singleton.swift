@@ -24,21 +24,25 @@ class Singleton: NSObject {
 
     func logoutFromDevice() {
         DispatchQueue.main.async {
-//            OperationQueue.main.cancelAllOperations()
-//            UserDefaults.standard.removeObject(forKey: UserDefaultsCustom.accessToken)
-//            UserDefaults.standard.removeObject(forKey: UserDefaultsCustom.userData)
-//            NotificationCenter.default.removeObserver(self)
-            do{
-                try Database.delete(withName: DatabaseManager.kDBName)
-                try Database.delete(withName: DatabaseManager.kTemplateDBName)
-                try Database.delete(withName: DatabaseManager.kProfileDBName)
-                Singleton.alreadyLogin = false
-//                self.gotoLogin()
-            } catch{
-                print("error:\(error.localizedDescription)")
-                Singleton.shared.showErrorMessage(error: error.localizedDescription, isError: .error)
-            }
-            
+            OperationQueue.main.cancelAllOperations()
+            UserDefaults.standard.removeObject(forKey: UserDefaultsCustom.accessToken)
+            UserDefaults.standard.removeObject(forKey: UserDefaultsCustom.userData)
+            NotificationCenter.default.removeObserver(self)
+//            do{
+//                try Database.delete(withName: DatabaseManager.kDBName)
+//                try Database.delete(withName: DatabaseManager.kTemplateDBName)
+//                try Database.delete(withName: DatabaseManager.kProfileDBName)
+//                Singleton.alreadyLogin = false
+////                self.gotoLogin()
+//            } catch{
+//                print("error:\(error.localizedDescription)")
+//                Singleton.shared.showErrorMessage(error: error.localizedDescription, isError: .error)
+//            }
+            let _ = DatabaseManager.shared.closeDatabase(db_name: DatabaseManager.kDBName)
+            let _ = DatabaseManager.shared.closeDatabase(db_name: DatabaseManager.kTemplateDBName)
+            let _ =  DatabaseManager.shared.closeDatabase(db_name: DatabaseManager.kProfileDBName)
+            Singleton.alreadyLogin = false
+            self.gotoLogin()
         }
     }
     

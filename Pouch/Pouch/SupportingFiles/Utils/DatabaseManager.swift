@@ -171,9 +171,9 @@ extension DatabaseManager {
             print(#function)
             // Get handle to DB  specified path
              let db = try Database(name: db_name)
-                deregisterForDatabaseChanges()
-                try db.close()
+//                deregisterForDatabaseChanges()
                 try db.delete()
+                try db.close()
                 _db = nil
             
             return true

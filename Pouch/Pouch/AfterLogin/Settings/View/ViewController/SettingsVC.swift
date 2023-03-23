@@ -62,6 +62,15 @@ extension SettingsVC: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch self.settingsData[indexPath.section].rowData?[indexPath.row].type{
+        case .privacy:
+            guard let url = URL(string:"https://www.pouch.club/privacy.html") else {
+                return
+            }
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }else{
+                Singleton.shared.showErrorMessage(error: "Invalid url!", isError: .error)
+            }
         case .editProfile:
             let vc = EditProfilePresenter.CreateEditProfileModule(delegate: nil)
             self.present(vc, animated: false)

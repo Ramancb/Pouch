@@ -33,7 +33,6 @@ class HomeCollectionCell: UICollectionViewCell {
     
     func setCellData(cardData: CardsData?){
         self.card_View.setCardViewData(data: cardData)
-        
     }
 }
 

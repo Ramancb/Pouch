@@ -49,19 +49,24 @@ class HomePresenter: HomePresenterProtocol{
             DatabaseManager.shared.isDbDocumentExist(dbName: DatabaseManager.kTemplateDBName, templateName: template_name) { template,error  in
                 if error != nil{
                     self.getTemplateWithNameApiCall(card: card) { isComplete in
+                        if isComplete == true{
+                            self.view?.updateCardsCollection(data: cards)
+                        }
                     }
                 }
             }
         }
-        self.view?.updateCardsCollection(data: cards)
+//        self.view?.updateCardsCollection(data: cards)
     }
     
     func getTemplateWithNameApiCall(card:CardsData,handler: @escaping(_ isComplete: Bool)-> Void){
         ApiHandler.call(apiName: API.Name.templates_name, id: card.templateName) { (data:TemplateByNameModel?, error) in
             guard let data = data?.response else {
+                handler(false)
                 return
             }
             DatabaseManager.shared.createOrUpdateDocumentForDb(_id: data.id ?? "", dbName: DatabaseManager.kTemplateDBName, json: data.toJSON())
+            handler(true)
 
         }
     }

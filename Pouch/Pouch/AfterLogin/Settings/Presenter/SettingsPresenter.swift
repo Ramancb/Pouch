@@ -20,10 +20,9 @@ class SettingsPresenter:SettingsPresenterProtocol{
     }
     
     func userLogOutAction() {
-//        ApiHandler.call(apiName: API.Name.logout, params: [:], httpMethod: .POST) { (data:MessageResponse?, error) in
-//            Singleton.shared.logoutFromDevice()
-//        }
-        Singleton.shared.logoutFromDevice()
+        ApiHandler.call(apiName: API.Name.logout, params: [:], httpMethod: .POST) { (data:MessageResponse?, error) in
+            Singleton.shared.logoutFromDevice()
+        }
     }
     
     func updatePreferencesJson(data:SettingsSectionData) -> JSON{

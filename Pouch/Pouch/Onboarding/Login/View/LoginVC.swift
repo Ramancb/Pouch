@@ -58,6 +58,7 @@ class LoginVC: UIViewController, LoginViewProtocol {
     
     /// ViewController IBActions
     @IBAction func infoAction(_ sender: Any) {
+        self.view.endEditing(true)
         self.presenter?.presentInformationScreen()
     }
     

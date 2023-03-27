@@ -13,9 +13,7 @@ class LoginVC: UIViewController, LoginViewProtocol {
     @IBOutlet weak var countryCodeBtn: UIButton!
     @IBOutlet weak var continueBtn: UIButton!
     @IBOutlet weak var phoneNoTextField: UITextField!
-    @IBOutlet weak var continuebottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var enterDetailLabel: UILabel!
-    @IBOutlet weak var continueBtnBgView: UIView!
     
     /// ViewController global variables
     var presenter: LoginPresenterProtocol?
@@ -23,7 +21,6 @@ class LoginVC: UIViewController, LoginViewProtocol {
     /// ViewController lyfecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setKeyboard()
         self.phoneNoTextField.delegate = self
         self.setInitalViews()
         let _ = Device_ID.getIDFA()
@@ -32,30 +29,29 @@ class LoginVC: UIViewController, LoginViewProtocol {
     /// Method to set gradiant color and sapacing to views
     func setInitalViews(){
         self.enterDetailLabel.setLineSpacing(lineSpacing: 5.0, textAlignment: .center)
-        self.continueBtnBgView.applyGradient(colours: [UIColor(hexString: "#f8d777"), UIColor(hexString: "#bb962d") ], locations: [0,1])
         self.view.applyGradient(colours: [UIColor(hexString: "#161a1a"), UIColor(hexString: "#000000") ], locations: [0,0.7])
     }
     
     ///  Set keyboard layout
-    func setKeyboard(){
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification , object:nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification , object:nil)
-    }
+//    func setKeyboard(){
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification , object:nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification , object:nil)
+//    }
     
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            continuebottomConstraint.constant = keyboardHeight+23
-            view.layoutIfNeeded()
-        }
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        continuebottomConstraint.constant = 40
-        view.layoutIfNeeded()
-    }
-    
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+//            let keyboardRectangle = keyboardFrame.cgRectValue
+//            let keyboardHeight = keyboardRectangle.height
+//            continuebottomConstraint.constant = keyboardHeight+23
+//            view.layoutIfNeeded()
+//        }
+//    }
+//
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        continuebottomConstraint.constant = 40
+//        view.layoutIfNeeded()
+//    }
+//
     /// ViewController IBActions
     @IBAction func infoAction(_ sender: Any) {
         self.view.endEditing(true)

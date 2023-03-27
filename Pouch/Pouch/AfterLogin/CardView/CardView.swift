@@ -158,18 +158,20 @@ class CardView: UIView {
     
     func setBackgroudViews(layout:BackgroundFront?){
         self.backgroundImageView.image = layout?.image?.base64ToImage()
-        cardBgView.backgroundColor = UIColor(hex: layout?.color ?? "#FFFFF")
+        cardBgView.backgroundColor = UIColor(hex: layout?.color ?? "#FFFFFF")
         if layout?.type == BackGroundFrontType.grad_color_Image.rawValue ||  layout?.type == BackGroundFrontType.gradient.rawValue{
-            cardBgView.applyGradient(colours: [UIColor(hex: layout?.colorPrimary ?? "#FFFFF") ?? .clear,UIColor(hex: layout?.colorSecondary ?? "#FFFFF") ?? .clear], locations: [0,1])
+            cardBgView.applyGradient(colours: [UIColor(hex: layout?.colorPrimary ?? "#FFFFFF") ?? .clear,UIColor(hex: layout?.colorSecondary ?? "#FFFFFF") ?? .clear], locations: [0,1])
         }else{
-            cardBgView.backgroundColor = UIColor(hex: layout?.colorPrimary ?? "#FFFFF")
+            cardBgView.backgroundColor = UIColor(hex: layout?.colorPrimary ?? "#FFFFFF")
         }
     }
     
     func setBottomContactView(){
-        self.botttomCardTitleLabel.setLabel(provider?.displayName, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoSemibold,14)
-        self.phoneLabel.setLabel(provider?.phone, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoSemibold,14)
-        self.websiteLabel.setLabel(provider?.website, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoSemibold,14)
+        self.botttomCardTitleLabel.setLabel(provider?.displayName, UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF"),.latoSemibold,14)
+        self.phoneLabel.setLabel(provider?.phone, UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF"),.latoSemibold,14)
+        self.websiteLabel.setLabel(provider?.website, UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF"),.latoSemibold,14)
+        self.phoneLabel.set(text: provider?.phone ?? "",leftIcon: UIImage(named: "ico_support_phone"))
+        self.websiteLabel.set(text: provider?.website ?? "",leftIcon: UIImage(named: "ico_website"))
         self.phoneLabel.isUserInteractionEnabled = true
         self.websiteLabel.isUserInteractionEnabled = true
         self.phoneLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.callAction(gesture:))))
@@ -185,7 +187,8 @@ class CardView: UIView {
     }
     
     @objc func openWebsite(gesture:UIGestureRecognizer){
-        guard let url = URL(string: provider?.website ?? "") else {
+        guard let webLink = provider?.website else{return}
+        guard let url = URL(string: webLink.hasPrefix("https://") ? webLink : "https://\(webLink)" ) else {
             return
         }
         if UIApplication.shared.canOpenURL(url) {
@@ -196,8 +199,8 @@ class CardView: UIView {
     }
     
     func setViewForDetail(card:CardsData?){
-        self.qrTitleLabel.setLabel(provider?.displayName, UIColor(hex: layoutData?.qrColor ?? "#ffffff"),.latoBold,14)
-        self.addressLabel.setLabel("\(provider?.address?.streetAddress ?? ""),  \(provider?.address?.locality ?? ""), \(provider?.address?.city ?? ""), \(provider?.address?.state ?? ""), \(provider?.address?.country ?? "")", UIColor(hex: layoutData?.qrColor ?? "#ffffff"),.latoRegular,14)
+        self.qrTitleLabel.setLabel(provider?.displayName, UIColor(hex: layoutData?.qrColor ?? "#FFFFFF"),.latoBold,14)
+        self.addressLabel.setLabel("\(provider?.address?.streetAddress ?? ""),  \(provider?.address?.locality ?? ""), \(provider?.address?.city ?? ""), \(provider?.address?.state ?? ""), \(provider?.address?.country ?? "")", UIColor(hex: layoutData?.qrColor ?? "#FFFFFF"),.latoRegular,14)
         self.howToUseLabel.setLabel(layoutData?.headingDetailExtra, UIColor(hex: layoutData?.secondaryText?.color ?? "#FFFFFF"), .latoBold, 18)
         self.extraDescLabel.attributedText = BulletListHelper.createBulletedList(fromStringArray: layoutData?.detailListExtra ?? [],font: UIFont.setCustom(.latoRegular, 14), color: UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF"))
         self.largeQrCodeImageView.image = card?.qrCode?.base64ToImage()
@@ -209,21 +212,21 @@ class CardView: UIView {
         self.setBackgroudViews(layout: layoutData?.backgroundFront)
         
         // set varientData
-        self.membershipTypeLabel.setLabel(varient?.layoutVariant?.displayName, UIColor(hex: layoutData?.secondaryText?.color ?? "#ffffff"),.latoRegular,18)
+        self.membershipTypeLabel.setLabel(varient?.layoutVariant?.displayName, UIColor(hex: layoutData?.secondaryText?.color ?? "#FFFFFF"),.latoRegular,18)
         // set provider data
         self.logoImage.image = provider?.logoSmall?.base64ToImage()
-        self.cardDescLabel.setLabel(provider?.displayName, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoSemibold,14)
-        self.contactLabel.setLabel(provider?.phone, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoSemibold,14)
+        self.cardDescLabel.setLabel(provider?.displayName, UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF"),.latoSemibold,14)
+        self.contactLabel.setLabel(provider?.phone, UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF"),.latoSemibold,14)
         self.setBottomContactView()
         // set card data
-        self.validThruLabel.setLabel("Valid Thru", UIColor(hex: layoutData?.secondaryText?.color ?? "#ffffff"),.latoRegular,15)
-        self.dueDateLabel.setLabel("Due Date", UIColor(hex: layoutData?.secondaryText?.color ?? "#ffffff"),.latoRegular,15)
-        self.validThruValueLabel.setLabel(card?.expiry, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoSemibold,18)
-        self.dueDateValueLabel.setLabel(card?.renewalDate, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoSemibold,18)
+        self.validThruLabel.setLabel("Valid Thru", UIColor(hex: layoutData?.secondaryText?.color ?? "#FFFFFF"),.latoRegular,15)
+        self.dueDateLabel.setLabel("Due Date", UIColor(hex: layoutData?.secondaryText?.color ?? "#FFFFFF"),.latoRegular,15)
+        self.validThruValueLabel.setLabel(card?.expiry, UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF"),.latoSemibold,18)
+        self.dueDateValueLabel.setLabel(card?.renewalDate, UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF"),.latoSemibold,18)
         self.membershipIdLabel.setLabel(card?.valueToEncode,  UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoSemibold,18)
         self.personNameLabel.setLabel(card?.nameOnAccount,  UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoSemibold,18)
         self.durationDescLabel.setLabel(self.getBalanceString(cardData: card),  UIColor(hex: layoutData?.secondaryText?.color ?? "#ffffff"),.latoRegular,18)
-        self.termConditionsLabel.setLabel(card?.tnCText, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoRegular,15)
+        self.termConditionsLabel.setLabel("t&c", UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoRegular,15)
         self.contactBgView.backgroundColor = .clear
         self.setViewForDetail(card: card)
     }
@@ -259,7 +262,7 @@ class CardView: UIView {
         countLabel.setLabel("\(card?.maxPersons ?? 0)",  UIColor(hex: layoutData?.secondaryText?.color ?? "#FFFFFF"), .latoSemibold, 16)
         voucherCodeLabel.setLabel(card?.valueToEncode, UIColor(hex: layoutData?.primaryText?.color ?? ""), .latoSemibold, 16)
         self.setViewForDetail(card: card)
-        self.termConditionsLabel.setLabel(card?.tnCText, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoRegular,15)
+        self.termConditionsLabel.setLabel("t&c", UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoRegular,15)
         contactBgView.backgroundColor = .white
     }
     
@@ -285,7 +288,7 @@ class CardView: UIView {
         }
         self.dottedLineBgView.addHorizontalDashedBorder(color: UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF") ?? .gray)
         self.setViewForDetail(card: card)
-        self.termConditionsLabel.setLabel(card?.tnCText, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoRegular,15)
+        self.termConditionsLabel.setLabel("t&c", UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoRegular,15)
         self.contactBgView.backgroundColor = .clear
     }
     
@@ -316,7 +319,7 @@ class CardView: UIView {
         self.validThruValueLabel.setLabel(dateOnly, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoSemibold,18)
         self.dueDateValueLabel.setLabel(timeOnly, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoSemibold,18)
         self.setViewForDetail(card: card)
-        self.termConditionsLabel.setLabel(card?.tnCText, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoRegular,15)
+        self.termConditionsLabel.setLabel("t&c", UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoRegular,15)
         self.invitationTextLabel.setLabel(varient?.layoutVariant?.invitationText, UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoRegular,15)
         self.contactBgView.backgroundColor = .white
     }

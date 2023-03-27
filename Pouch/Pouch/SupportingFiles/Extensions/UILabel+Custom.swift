@@ -10,6 +10,50 @@ import UIKit
 
 extension UILabel {
     
+    
+    func set(text:String, leftIcon: UIImage? = nil, rightIcon: UIImage? = nil) {
+        
+        let leftAttachment = NSTextAttachment()
+        leftAttachment.image = leftIcon
+        leftAttachment.bounds = CGRect(x: 0, y: -2.5, width: self.frame.height, height: self.frame.height)
+        if let _ = leftIcon {
+            leftAttachment.bounds = CGRect(x: 0, y: -2.5, width: self.font.pointSize, height: self.font.pointSize)
+        }
+        let leftAttachmentStr = NSAttributedString(attachment: leftAttachment)
+        
+        let myString = NSMutableAttributedString(string: "")
+        
+        let rightAttachment = NSTextAttachment()
+        rightAttachment.image = rightIcon
+        rightAttachment.bounds = CGRect(x: 0, y: -5, width: self.frame.height, height: self.frame.height)
+        let rightAttachmentStr = NSAttributedString(attachment: rightAttachment)
+        
+        
+        if semanticContentAttribute == .forceRightToLeft {
+            if rightIcon != nil {
+                myString.append(rightAttachmentStr)
+                myString.append(NSAttributedString(string: " "))
+            }
+            myString.append(NSAttributedString(string: text))
+            if leftIcon != nil {
+                myString.append(NSAttributedString(string: " "))
+                myString.append(leftAttachmentStr)
+            }
+        } else {
+            if leftIcon != nil {
+                myString.append(leftAttachmentStr)
+                myString.append(NSAttributedString(string: " "))
+            }
+            myString.append(NSAttributedString(string: text))
+            if rightIcon != nil {
+                myString.append(NSAttributedString(string: " "))
+                myString.append(rightAttachmentStr)
+            }
+        }
+        attributedText = myString
+    }
+    
+    
     // Mark:- UiLabel fond acc to device size
     func setFont(_ fontName:FONT_NAME,_ minSize:CGFloat){
         let deviceType = UIDevice.current.deviceType
@@ -30,7 +74,7 @@ extension UILabel {
             
         default:
             self.font = UIFont.setCustom(fontName, minSize + 8)
-
+            
         }
     }
     
@@ -41,10 +85,10 @@ extension UILabel {
     //MARK:- out line
     func makeOutLine(oulineColor: UIColor, foregroundColor: UIColor) {
         let strokeTextAttributes = [
-        NSAttributedString.Key.strokeColor : oulineColor,
-        NSAttributedString.Key.foregroundColor : foregroundColor,
-        NSAttributedString.Key.strokeWidth : -4.0,
-        NSAttributedString.Key.font : font ?? UIFont.systemFontSize
+            NSAttributedString.Key.strokeColor : oulineColor,
+            NSAttributedString.Key.foregroundColor : foregroundColor,
+            NSAttributedString.Key.strokeWidth : -4.0,
+            NSAttributedString.Key.font : font ?? UIFont.systemFontSize
         ] as [NSAttributedString.Key : Any]
         self.attributedText = NSMutableAttributedString(string: self.text ?? "", attributes: strokeTextAttributes)
     }
@@ -54,25 +98,25 @@ extension UILabel {
         if let textString = text {
             let attributedString = NSMutableAttributedString(string: textString)
             attributedString.addAttribute(NSAttributedString.Key.underlineStyle,
-                                             value: NSUnderlineStyle.single.rawValue,
-                                             range: NSRange(location: 0,
-                                                            length: attributedString.length))
+                                          value: NSUnderlineStyle.single.rawValue,
+                                          range: NSRange(location: 0,
+                                                         length: attributedString.length))
             attributedText = attributedString
         }
     }
     
     func drawLineOnBothSides(labelWidth: CGFloat, color: UIColor) {
-
+        
         let fontAttributes = [NSAttributedString.Key.font: self.font]
         let size = self.text?.size(withAttributes: fontAttributes as [NSAttributedString.Key : Any])
         let widthOfString = size!.width
-
+        
         let width = CGFloat(1)
-
+        
         let leftLine = UIView(frame: CGRect(x: 0, y: self.frame.height/2 - width/2, width: labelWidth/2 - widthOfString/2 - 10, height: width))
         leftLine.backgroundColor = color
         self.addSubview(leftLine)
-
+        
         let rightLine = UIView(frame: CGRect(x: labelWidth/2 + widthOfString/2 + 10, y: self.frame.height/2 - width/2, width: labelWidth/2 - widthOfString/2 - 10, height: width))
         rightLine.backgroundColor = color
         self.addSubview(rightLine)
@@ -83,10 +127,10 @@ extension UILabel {
     func setAttributed(str1:String, font1:UIFont?, color1:UIColor, str2:String, font2:UIFont?, color2:UIColor)  {
         
         let attributed = NSMutableAttributedString(string: str1, attributes: [
-        .font: font1 ?? UIFont(), .foregroundColor: color1])
+            .font: font1 ?? UIFont(), .foregroundColor: color1])
         
         let attributed2 = NSMutableAttributedString(string: str2, attributes: [
-        .font: font2 ?? UIFont(), .foregroundColor: color2])
+            .font: font2 ?? UIFont(), .foregroundColor: color2])
         
         let attributedStirng = NSMutableAttributedString(attributedString: attributed)
         attributedStirng.append(attributed2)
@@ -96,13 +140,13 @@ extension UILabel {
     func setAttributedUpToThree(str1:String, font1:UIFont?, color1:UIColor, str2:String, font2:UIFont?, color2:UIColor,str3:String, font3:UIFont?, color3:UIColor)  {
         
         let attributed = NSMutableAttributedString(string: str1, attributes: [
-        .font: font1 ?? UIFont(), .foregroundColor: color1])
+            .font: font1 ?? UIFont(), .foregroundColor: color1])
         
         let attributed2 = NSMutableAttributedString(string: str2, attributes: [
-        .font: font2 ?? UIFont(), .foregroundColor: color2])
+            .font: font2 ?? UIFont(), .foregroundColor: color2])
         
         let attributed3 = NSMutableAttributedString(string: str3, attributes: [
-        .font: font3 ?? UIFont(), .foregroundColor: color3])
+            .font: font3 ?? UIFont(), .foregroundColor: color3])
         
         let attributedStirng = NSMutableAttributedString(attributedString: attributed)
         attributedStirng.append(attributed2)
@@ -114,19 +158,19 @@ extension UILabel {
     func setAttributedForFourText(str1:String, font1:UIFont?,  color1:UIColor, str2:String, font2:UIFont?,  color2:UIColor, str3:String, font3:UIFont?,  color3:UIColor, str4:String, font4:UIFont?,  color4:UIColor, str5:String, font5:UIFont?,  color5:UIColor ) {
         
         let attributed1 = NSMutableAttributedString(string: str1, attributes: [
-        .font: font1 ?? UIFont(), .foregroundColor: color1])
+            .font: font1 ?? UIFont(), .foregroundColor: color1])
         
         let attributed2 = NSMutableAttributedString(string: str2, attributes: [
-        .font: font2 ?? UIFont(), .foregroundColor: color2])
+            .font: font2 ?? UIFont(), .foregroundColor: color2])
         
         let attributed3 = NSMutableAttributedString(string: str3, attributes: [
-        .font: font3 ?? UIFont(), .foregroundColor: color3])
+            .font: font3 ?? UIFont(), .foregroundColor: color3])
         
         let attributed4 = NSMutableAttributedString(string: str4, attributes: [
-        .font: font4 ?? UIFont(), .foregroundColor: color4])
+            .font: font4 ?? UIFont(), .foregroundColor: color4])
         
         let attributed5 = NSMutableAttributedString(string: str5, attributes: [
-        .font: font5 ?? UIFont(), .foregroundColor: color5])
+            .font: font5 ?? UIFont(), .foregroundColor: color5])
         
         
         let attributedStirng1 = NSMutableAttributedString(attributedString: attributed1)
@@ -134,13 +178,13 @@ extension UILabel {
         attributedStirng1.append(attributed3)
         attributedStirng1.append(attributed4)
         attributedStirng1.append(attributed5)
-         
+        
         self.attributedText = attributedStirng1
-    
+        
     }
     
     func setLabel(_ text:String?, _ color:UIColor?, _ font:FONT_NAME, _ size: CGFloat) {
-        self.textColor = color ?? UIColor.black
+        self.textColor = color
         self.text = text
         self.font = UIFont.setCustom(font, size)
     }
@@ -181,9 +225,9 @@ extension UILabel {
     }
     
     func setLineSpacing(lineSpacing: CGFloat = 0.0, lineHeightMultiple: CGFloat = 0.0, textAlignment: NSTextAlignment = .natural) {
-
+        
         guard let labelText = self.text else { return }
-
+        
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = lineSpacing
         paragraphStyle.lineHeightMultiple = lineHeightMultiple
@@ -194,19 +238,19 @@ extension UILabel {
         } else {
             attributedString = NSMutableAttributedString(string: labelText)
         }
-
+        
         // (Swift 4.2 and above) Line spacing attribute
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
-
+        
         // (Swift 4.1 and 4.0) Line spacing attribute
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
-
+        
         self.attributedText = attributedString
     }
     func addTextSpacing(spacing: CGFloat){
-            let attributedString = NSMutableAttributedString(string: self.text!)
+        let attributedString = NSMutableAttributedString(string: self.text!)
         attributedString.addAttribute(NSAttributedString.Key.kern, value: spacing, range: NSRange(location: 0, length: self.text?.count ?? 0))
-            self.attributedText = attributedString
-        }
+        self.attributedText = attributedString
     }
+}
 

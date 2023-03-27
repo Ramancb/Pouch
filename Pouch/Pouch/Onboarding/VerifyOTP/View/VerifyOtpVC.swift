@@ -13,7 +13,7 @@ class VerifyOtpVC: UIViewController, VerifyOtpViewProtocol {
     /// ViewController IBoutlets
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var otpStackView: UIStackView!
-    @IBOutlet weak var verifyNumberLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var otpBGView: UIView!
     @IBOutlet weak var otpField1: MyOTPTF!
     @IBOutlet weak var otpField2: MyOTPTF!
@@ -48,7 +48,8 @@ class VerifyOtpVC: UIViewController, VerifyOtpViewProtocol {
     
     ///  Set textfields delegate
     func setData(){
-        self.verifyNumberLabel.setLineSpacing(lineSpacing: 5.0, textAlignment: .center)
+        self.descLabel.text = "\(AppStrings.otpDescText) \(self.mobileNumber ?? "")"
+        self.descLabel.setLineSpacing(lineSpacing: 5.0, textAlignment: .center)
         otpField1.myDelegate = self
         otpField2.myDelegate = self
         otpField3.myDelegate = self
@@ -62,6 +63,12 @@ class VerifyOtpVC: UIViewController, VerifyOtpViewProtocol {
         otpField5.delegate = self
         otpField6.delegate = self
         otpField1.becomeFirstResponder()
+        otpField1.textContentType = .oneTimeCode
+        otpField2.textContentType = .oneTimeCode
+        otpField3.textContentType = .oneTimeCode
+        otpField4.textContentType = .oneTimeCode
+        otpField5.textContentType = .oneTimeCode
+        otpField6.textContentType = .oneTimeCode
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
     }
     
@@ -122,6 +129,10 @@ class VerifyOtpVC: UIViewController, VerifyOtpViewProtocol {
         return otpString
     }
     
+    @IBAction func continueAction(_ sender: UIButton) {
+        self.view.endEditing(true)
+        self.presenter?.verifyOtpApiCall(phoneNo: self.mobileNumber, otpStr: self.getOtpString())
+    }
     ///  Method to verify entered otp
     func verifyOtP(){
         self.view.endEditing(true)
@@ -136,12 +147,20 @@ extension VerifyOtpVC : UITextFieldDelegate, MyOTPTFDelegate {
         if ((textField.text?.count)! < 1  && string.count > 0){
             let nextTag = textField.tag + 1
             var nextResponder = self.otpStackView.viewWithTag(nextTag)//textField.superview?.viewWithTag(nextTag);
+//            if (nextResponder == nil) {
+//                if textField.tag == 6{
+//                    textField.text = string
+////                    self.verifyOtP()
+//                }
+//                nextResponder = self.otpStackView.viewWithTag(1)//textField.superview?.viewWithTag(1);
+//            } else {
+//                textField.text = string
+//                nextResponder?.becomeFirstResponder()
+//                return false
+//            }
             if (nextResponder == nil) {
-                if textField.tag == 6{
-                    textField.text = string
-                    self.verifyOtP()
-                }
-                nextResponder = self.otpStackView.viewWithTag(1)//textField.superview?.viewWithTag(1);
+//                self.enableDisableContinueBtn(enable: true)
+                nextResponder = textField.superview?.viewWithTag(1);
             } else {
                 textField.text = string
                 nextResponder?.becomeFirstResponder()

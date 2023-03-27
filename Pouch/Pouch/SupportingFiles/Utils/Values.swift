@@ -43,6 +43,7 @@ struct AppStrings {
     static let appNotificationOnDesc = "App notification are on."
     static let appNotificationOffDesc = "Notifications are off, we recommend to enable this to get all notifications of any new rewards and offers."
     static let infoDesc = "We need your mobile number for OTP verification to make your account secure. Also, we recommended to use your primary mobile number for registration which you used while opting for a service with card issuer. We use this to securely connect with card vendor to sync the status of your cards so that all your cards are up to date."
+    static let otpDescText = "We have sent you a 6 digit one time passcode on your mobile number"
 }
 
 struct Messages {

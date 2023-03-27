@@ -46,6 +46,7 @@ extension UIColor {
                     r = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
                     g = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
                     b = CGFloat(hexNumber & 0x000000ff) / 255
+                    print("color:: \(hex)===r:\(r),g:\(g),b:\(b),a:\(a)")
                     self.init(red: r, green: g, blue: b, alpha: a)
                     return
                 }

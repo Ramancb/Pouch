@@ -22,7 +22,7 @@ class VerifyOtpPresenter: VerifyOtpPresenterProtocol{
     }
     
     /// create json for verify otp
-    func jsonToVarifyOtp(phoneNo:String?,otpStr:String?)-> JSON{
+    func jsonToVarifyOtp(phoneNo:String?,otpStr:String)-> JSON{
         var json = JSON()
         json["username"] = phoneNo
         json["otp"] = otpStr
@@ -34,6 +34,11 @@ class VerifyOtpPresenter: VerifyOtpPresenterProtocol{
     
     /// Verify otp api call
     func verifyOtpApiCall(phoneNo:String?,otpStr:String?) {
+        guard let otpStr = otpStr else {
+            Singleton.shared.showMessage(message: "Enter valid otp!", isError: .error)
+            return
+        }
+
         ApiHandler.call( apiName: API.Name.login_attempt, params: self.jsonToVarifyOtp(phoneNo: phoneNo, otpStr: otpStr), httpMethod:.POST) { (data:MessageResponse?, error) in
             DispatchQueue.main.async {
                 guard let _ = data else {

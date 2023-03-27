@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseMessaging
+import Firebase
 
 
 
@@ -15,6 +16,7 @@ import FirebaseMessaging
 //MARK: SET NOTIFICATION
 extension AppDelegate {
     func setNotification(_ application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        FirebaseApp.configure()
         UNUserNotificationCenter.current().delegate = self
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
@@ -44,20 +46,26 @@ extension AppDelegate {
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate{
-    //MARK: - Background Fetch Result
-//    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
-//        UIApplication.shared.applicationIconBadgeNumber = 1
-//        return .newData
-//    }
-    
+//    MARK: - Background Fetch Result
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
+        UIApplication.shared.applicationIconBadgeNumber = 100
+        if let value = userInfo["some-key"] as? String {
+              print("=======::",value) // output: "some-value"
+            Singleton.shared.showErrorMessage(error: value, isError: .success)
+           }
+        return .newData
+    }
     
     //MARK: - Forground push notification
     // Receive displayed notifications for iOS 10 devices.
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-          
-//        let actionButton = UNNotificationAction(identifier: "TapToReadAction", title: "Tap to read", options: .foreground)
-//        let notificationCategory = UNNotificationCategory(identifier: "alarm", actions: [actionButton,deleteButton], intentIdentifiers: [])
-//        UNUserNotificationCenter.current().setNotificationCategories([notificationCategory])
+        let userInfo = notification.request.content.userInfo
+        print(userInfo)
+        /* ====Add action on notification =====
+         let actionButton = UNNotificationAction(identifier: "TapToReadAction", title: "Tap to read", options: .foreground)
+         let notificationCategory = UNNotificationCategory(identifier: "alarm", actions: [actionButton,deleteButton], intentIdentifiers: [])
+         UNUserNotificationCenter.current().setNotificationCategories([notificationCategory])
+         */
         completionHandler( [.alert, .badge, .sound])
     }
     
@@ -66,16 +74,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate{
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()
     }
-    
-//    //MARK: Forground push notification handle
-//    func handleTap(_onForgroundNotification pushData: PushModel, controller:UIViewController) {
-//
-//    }
-//
-//    //MARK: Background push notification
-//    func handleTap(_onBackgroundController pushData: PushModel) {
-//
-//    }
+
 }
 
 //MARK: FCM TOKEN

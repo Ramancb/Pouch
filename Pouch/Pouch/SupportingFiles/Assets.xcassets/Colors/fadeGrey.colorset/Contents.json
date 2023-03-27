@@ -4,10 +4,10 @@
       "color" : {
         "color-space" : "srgb",
         "components" : {
-          "alpha" : "1.000",
-          "blue" : "77",
-          "green" : "184",
-          "red" : "221"
+          "alpha" : "0.140",
+          "blue" : "0.439",
+          "green" : "0.439",
+          "red" : "0.439"
         }
       },
       "idiom" : "universal"
@@ -16,5 +16,8 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
   }
 }

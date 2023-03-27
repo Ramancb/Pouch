@@ -175,7 +175,6 @@ extension DatabaseManager {
                 try db.delete()
                 try db.close()
                 _db = nil
-            
             return true
         }
         catch {

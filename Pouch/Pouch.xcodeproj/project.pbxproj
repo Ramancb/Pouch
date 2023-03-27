@@ -51,6 +51,7 @@
 		F13C5A1529C9B81900096E37 /* CircleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C5A0829C9B81900096E37 /* CircleSpinner.swift */; };
 		F13C5A1629C9B81900096E37 /* CubeGridSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C5A0929C9B81900096E37 /* CubeGridSpinner.swift */; };
 		F141260929A686CB000170A8 /* FloatingPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141260829A686CB000170A8 /* FloatingPlaceholderTextField.swift */; };
+		F151D74429D189ED001C1FFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F151D74329D189ED001C1FFE /* GoogleService-Info.plist */; };
 		F15D7A1D29ACBE8500EF4C7B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D7A1C29ACBE8500EF4C7B /* DatabaseManager.swift */; };
 		F1667DA629CC673E0058D171 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1667DA529CC673E0058D171 /* SwipeableView.swift */; };
 		F1688F5429A4A5DE00A598BA /* UserCardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1688F5329A4A5DE00A598BA /* UserCardsModel.swift */; };
@@ -138,7 +139,6 @@
 		F1D1EBCB299D214900E96012 /* VerifyOtpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D1EBCA299D214900E96012 /* VerifyOtpPresenter.swift */; };
 		F1D1EBCF299D2A5B00E96012 /* InformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D1EBCE299D2A5B00E96012 /* InformationProtocol.swift */; };
 		F1D1EBD1299D2A7A00E96012 /* InformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D1EBD0299D2A7A00E96012 /* InformationPresenter.swift */; };
-		F1F21C6D29BB666900AD3CAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1F21C6C29BB666900AD3CAE /* GoogleService-Info.plist */; };
 		F1F21C7029BB69E300AD3CAE /* IDFA.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F21C6F29BB69E300AD3CAE /* IDFA.swift */; };
 		F1FF5C2429B9FF6200A923BA /* BoardingPassCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF5C2229B9FF6200A923BA /* BoardingPassCardCell.swift */; };
 		F1FF5C2529B9FF6200A923BA /* BoardingPassCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1FF5C2329B9FF6200A923BA /* BoardingPassCardCell.xib */; };
@@ -193,6 +193,8 @@
 		F13C5A0829C9B81900096E37 /* CircleSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleSpinner.swift; sourceTree = "<group>"; };
 		F13C5A0929C9B81900096E37 /* CubeGridSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeGridSpinner.swift; sourceTree = "<group>"; };
 		F141260829A686CB000170A8 /* FloatingPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPlaceholderTextField.swift; sourceTree = "<group>"; };
+		F151D74229D18895001C1FFE /* Pouch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pouch.entitlements; sourceTree = "<group>"; };
+		F151D74329D189ED001C1FFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F15D7A1C29ACBE8500EF4C7B /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		F1667DA529CC673E0058D171 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
 		F1688F5329A4A5DE00A598BA /* UserCardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardsModel.swift; sourceTree = "<group>"; };
@@ -282,7 +284,6 @@
 		F1D1EBCA299D214900E96012 /* VerifyOtpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOtpPresenter.swift; sourceTree = "<group>"; };
 		F1D1EBCE299D2A5B00E96012 /* InformationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationProtocol.swift; sourceTree = "<group>"; };
 		F1D1EBD0299D2A7A00E96012 /* InformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPresenter.swift; sourceTree = "<group>"; };
-		F1F21C6C29BB666900AD3CAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1F21C6F29BB69E300AD3CAE /* IDFA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDFA.swift; sourceTree = "<group>"; };
 		F1FF5C2229B9FF6200A923BA /* BoardingPassCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingPassCardCell.swift; sourceTree = "<group>"; };
 		F1FF5C2329B9FF6200A923BA /* BoardingPassCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardingPassCardCell.xib; sourceTree = "<group>"; };
@@ -443,6 +444,7 @@
 		F17E14C32988F82000C336C2 /* Pouch */ = {
 			isa = PBXGroup;
 			children = (
+				F151D74229D18895001C1FFE /* Pouch.entitlements */,
 				F17E14DC2988F8C000C336C2 /* Onboarding */,
 				F1D1EB92299CF1B800E96012 /* AfterLogin */,
 				F17E14DB2988F88A00C336C2 /* AppGlobals */,
@@ -487,7 +489,7 @@
 				F1AD964F2988FBB900FB83DA /* Utils */,
 				F17E14DD2988F8FE00C336C2 /* Storyboards */,
 				F17E14D02988F82200C336C2 /* Assets.xcassets */,
-				F1F21C6C29BB666900AD3CAE /* GoogleService-Info.plist */,
+				F151D74329D189ED001C1FFE /* GoogleService-Info.plist */,
 				F17E14D52988F82200C336C2 /* Info.plist */,
 				F17E14CD2988F82000C336C2 /* Pouch.xcdatamodeld */,
 			);
@@ -1097,6 +1099,7 @@
 				F1BBC9912990DE8000D1EFDA /* Lato-Light.ttf in Resources */,
 				F1BBC9882990DE8000D1EFDA /* Lato-Italic.ttf in Resources */,
 				4B92C118298CD49F00ED318C /* SettingsSectionHeader.xib in Resources */,
+				F151D74429D189ED001C1FFE /* GoogleService-Info.plist in Resources */,
 				F1BBC9902990DE8000D1EFDA /* Lato-BoldItalic.ttf in Resources */,
 				F1B80B9529B664730073741B /* nimbus-sans-d-ot-ultra-light.ttf in Resources */,
 				4BCADD56298949270091A183 /* InformationPopUpController.xib in Resources */,
@@ -1121,7 +1124,6 @@
 				F1AD97E02988FBBF00FB83DA /* ErrorView.xib in Resources */,
 				4B5534EC298BC9500024916A /* SettingsVC.xib in Resources */,
 				F1B80B9229B601E10073741B /* Lato-Thin.ttf in Resources */,
-				F1F21C6D29BB666900AD3CAE /* GoogleService-Info.plist in Resources */,
 				F1AD97DC2988FBBF00FB83DA /* CustomNavigationBar.xib in Resources */,
 				4B6EE1F9298AA06F000C89F3 /* VerifyOtpVC.xib in Resources */,
 				F1A640AD2997889F0029C0F5 /* HomeCollectionCell.xib in Resources */,
@@ -1425,6 +1427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pouch/Pouch.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1462,6 +1465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pouch/Pouch.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

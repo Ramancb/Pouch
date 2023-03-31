@@ -34,6 +34,7 @@ class HomePresenter: HomePresenterProtocol{
             }
         }else {
             ApiHandler.call(apiName: API.Name.get_cards) { (data:UserCardsModel?, error) in
+                Singleton.alreadyLogin = true
                 guard let cardsData = data?.response else{return}
                 let filterData = cardsData.filter({$0.type != CardType.boardingPass.rawValue})
                 self.mergeTemplateData(cards: filterData)

@@ -30,10 +30,10 @@ extension AppDelegate {
         }
         application.registerForRemoteNotifications()
         Messaging.messaging().delegate = self
+        onLaunchPushNotification(launchOptions: launchOptions)
     }
     
-    func setBgNotification(_ application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
-    }
+   
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Messaging.messaging().apnsToken = deviceToken
@@ -46,40 +46,60 @@ extension AppDelegate {
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate{
-//    MARK: - Background Fetch Result
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
-        UIApplication.shared.applicationIconBadgeNumber = 100
-        if let value = userInfo["some-key"] as? String {
-              print("=======::",value) // output: "some-value"
-            Singleton.shared.showErrorMessage(error: value, isError: .success)
-           }
-        return .newData
+    
+    //    MARK: - Terminate app push notification receive
+    func onLaunchPushNotification(launchOptions:[UIApplication.LaunchOptionsKey: Any]?){
+        guard let dic = launchOptions?[.remoteNotification] as? [AnyHashable: Any] else{
+            return
+        }
+//        UIApplication.shared.applicationIconBadgeNumber = 40
+        print(dic)
+        processNotificationData(json: dic)
     }
     
-    //MARK: - Forground push notification
-    // Receive displayed notifications for iOS 10 devices.
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        let userInfo = notification.request.content.userInfo
-        print(userInfo)
-        /* ====Add action on notification =====
-         let actionButton = UNNotificationAction(identifier: "TapToReadAction", title: "Tap to read", options: .foreground)
-         let notificationCategory = UNNotificationCategory(identifier: "alarm", actions: [actionButton,deleteButton], intentIdentifiers: [])
-         UNUserNotificationCenter.current().setNotificationCategories([notificationCategory])
-         */
-        completionHandler( [.alert, .badge, .sound])
+    func processNotificationData(json: [AnyHashable: Any]){
+        if let json = json as? JSON{
+            print("payLoadData:\(json)")
+        }
+    }
+    
+    //MARK: - Forground push notification receive
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+        let dic = notification.request.content.userInfo
+//        UIApplication.shared.applicationIconBadgeNumber = 10
+        print(dic)
+        processNotificationData(json: dic)
+        if #available(iOS 14.0, *) {
+            return [.badge,.sound,.banner]
+        } else {
+            return [.badge,.sound]
+        }
     }
     
     //MARK: Background push notification Receive
     
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        completionHandler()
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+//        UIApplication.shared.applicationIconBadgeNumber = 20
+        let dic = response.notification.request.content.userInfo
+        print(dic)
+        processNotificationData(json: dic)
     }
+    
+    
 
 }
 
-//MARK: FCM TOKEN
 extension AppDelegate: MessagingDelegate {
+    //MARK: FCM TOKEN
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         print("Firebase registration token: \(fcmToken)")
+    }
+    
+    //MARK: All common state payload access with firebase
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+//        UIApplication.shared.applicationIconBadgeNumber = 11
+        print(userInfo)
+        processNotificationData(json: userInfo)
+        completionHandler(.newData)
     }
 }

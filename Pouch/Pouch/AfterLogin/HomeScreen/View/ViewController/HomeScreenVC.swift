@@ -37,14 +37,18 @@ class HomeScreenVC: UIViewController {
         self.presenter?.getUserProfile()
     }
     
-    /// Method to set collections delegate and data source
-    func setCollectionView(){
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         homeCollectionView.isPagingEnabled = true
         homeCollectionView.showsHorizontalScrollIndicator = false
         homeCollectionView.delaysContentTouches = false
-//          let layout = CardsCollectionViewLayout()
-//        let itemSize = CGSize(width: 280, height: 400)
-//        homeCollectionView.collectionViewLayout = CardsCollectionViewLayout(item_size: itemSize)
+        let itemSize = CGSize(width: homeCollectionView.frame.width - 20, height: (homeCollectionView.frame.height))
+        homeCollectionView.collectionViewLayout = CardsCollectionViewLayout(item_size: itemSize)
+    }
+    
+    /// Method to set collections delegate and data source
+    func setCollectionView(){
+        
         itemCollectionView.delegate = self
         itemCollectionView.dataSource = self
         self.homeCollectionView.delegate = self

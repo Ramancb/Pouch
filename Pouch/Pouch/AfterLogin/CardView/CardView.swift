@@ -159,11 +159,11 @@ class CardView: UIView {
     func setBackgroudViews(layout:BackgroundFront?){
         self.backgroundImageView.image = layout?.image?.base64ToImage()
         cardBgView.backgroundColor = UIColor(hex: layout?.color ?? "#FFFFFF")
-        if layout?.type == BackGroundFrontType.grad_color_Image.rawValue ||  layout?.type == BackGroundFrontType.gradient.rawValue{
-            cardBgView.applyGradient(colours: [UIColor(hex: layout?.colorPrimary ?? "#FFFFFF") ?? .clear,UIColor(hex: layout?.colorSecondary ?? "#FFFFFF") ?? .clear], locations: [0,1])
-        }else{
-            cardBgView.backgroundColor = UIColor(hex: layout?.colorPrimary ?? "#FFFFFF")
-        }
+//        if layout?.type == BackGroundFrontType.grad_color_Image.rawValue ||  layout?.type == BackGroundFrontType.gradient.rawValue{
+//            cardBgView.applyGradient(colours: [UIColor(hex: layout?.colorPrimary ?? "#FFFFFF") ?? .clear,UIColor(hex: layout?.colorSecondary ?? "#FFFFFF") ?? .clear], locations: [0,1])
+//        }else{
+//            cardBgView.backgroundColor = UIColor(hex: layout?.colorPrimary ?? "#FFFFFF")
+//        }
     }
     
     func setBottomContactView(){

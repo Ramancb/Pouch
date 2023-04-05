@@ -207,8 +207,17 @@ internal extension UIView {
     }
     
     func applyGradient(colours: [UIColor], locations: [NSNumber]?) -> Void {
+        var gradient:CAGradientLayer = CAGradientLayer()
+        if let sublayers = self.layer.sublayers {
+                for sublayer in sublayers {
+                    if let gLayer = sublayer as? CAGradientLayer {
+                        gradient = gLayer
+                        break
+                    }
+                }
+            }
+        
         DispatchQueue.main.async {
-            let gradient:CAGradientLayer = CAGradientLayer()
             gradient.frame = self.bounds
             gradient.colors = colours.map { $0.cgColor }
             gradient.locations = locations
@@ -240,8 +249,8 @@ internal extension UIView {
         shapeLayer.lineWidth = 1
         shapeLayer.lineDashPattern = [5,5]
         let path = CGMutablePath()
-        let  p0 = CGPoint(x: self.bounds.minX + 14, y: self.bounds.midY)
-        let  p1 = CGPoint(x: self.bounds.maxX - 14, y: self.bounds.midY)
+        let  p0 = CGPoint(x: self.bounds.minX + 10, y: self.bounds.midY)
+        let  p1 = CGPoint(x: self.bounds.maxX - 10, y: self.bounds.midY)
         path.addLines(between: [p0,p1])
         shapeLayer.path = path
         layer.addSublayer(shapeLayer)

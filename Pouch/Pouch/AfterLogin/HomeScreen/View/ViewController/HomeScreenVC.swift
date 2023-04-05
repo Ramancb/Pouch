@@ -43,7 +43,7 @@ class HomeScreenVC: UIViewController {
         homeCollectionView.showsHorizontalScrollIndicator = false
         homeCollectionView.delaysContentTouches = false
         let itemSize = CGSize(width: homeCollectionView.frame.width - 20, height: (homeCollectionView.frame.height))
-        homeCollectionView.collectionViewLayout = CardsCollectionViewLayout(item_size: itemSize)
+        homeCollectionView.collectionViewLayout = CardsCollectionViewLayout(item_size: itemSize, delegate: self)
     }
     
     /// Method to set collections delegate and data source
@@ -116,17 +116,18 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
     }
     
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        guard scrollView == self.homeCollectionView else{return}
-        guard let cell = homeCollectionView.visibleCells.first else{ return}
-        if let indexPath = homeCollectionView.indexPath(for: cell){
-            if let index = self.categories?.firstIndex(where: {$0.name?.lowercased() == self.cardsData?[indexPath.item].type?.lowercased()}){
-                self.selectedIndex = index
-                self.itemCollectionView.reloadData()
-                self.itemCollectionView.scrollToItem(at: IndexPath(item: self.selectedIndex, section: 0), at: .centeredHorizontally, animated: true)
-            }
-        }
-    }
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        guard scrollView == self.homeCollectionView else{return}
+//        guard let cell = homeCollectionView.visibleCells.first else{ return}
+//        if let indexPath = homeCollectionView.indexPath(for: cell){
+//
+//            if let index = self.categories?.firstIndex(where: {$0.name?.lowercased() == self.cardsData?[indexPath.item].type?.lowercased()}){
+//                self.selectedIndex = index
+//                self.itemCollectionView.reloadData()
+//                self.itemCollectionView.scrollToItem(at: IndexPath(item: self.selectedIndex, section: 0), at: .centeredHorizontally, animated: true)
+//            }
+//        }
+//    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == itemCollectionView{
@@ -152,6 +153,19 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
             return CGSize(width: (calculatedFrame?.width ?? 0) + 40, height: 50)
         }else{
             return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        }
+    }
+}
+
+extension HomeScreenVC: CardsCollectionViewLayoutDelegate{
+    func frontCellIndex(index: Int) {
+        if let cell = homeCollectionView.cellForItem(at: IndexPath(row: index, section: 0)) as? HomeCollectionCell{
+            if let index = self.categories?.firstIndex(where: {$0.name?.lowercased() == self.cardsData?[index].type?.lowercased()}){
+                self.selectedIndex = index
+                self.itemCollectionView.reloadData()
+                self.itemCollectionView.scrollToItem(at: IndexPath(item: self.selectedIndex, section: 0), at: .centeredHorizontally, animated: true)
+            }
+//            cell.card_View.dottedLineView.layoutSubviews()
         }
     }
 }

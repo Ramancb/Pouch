@@ -6,6 +6,10 @@
 //
 import UIKit
 
+protocol CardsCollectionViewLayoutDelegate{
+    func frontCellIndex(index:Int)
+}
+
 open class CardsCollectionViewLayout: UICollectionViewLayout {
 
   // MARK: - Layout configuration
@@ -15,6 +19,7 @@ open class CardsCollectionViewLayout: UICollectionViewLayout {
       invalidateLayout()
     }
   }
+    var delegate:CardsCollectionViewLayoutDelegate?
 
   public var spacing: CGFloat = 10.0 {
     didSet{
@@ -22,14 +27,15 @@ open class CardsCollectionViewLayout: UICollectionViewLayout {
     }
   }
 
-  public var maximumVisibleItems: Int = 4 {
+  public var maximumVisibleItems: Int = 3 {
     didSet{
       invalidateLayout()
     }
   }
     
-    init(item_size:CGSize) {
+    init(item_size:CGSize,delegate:CardsCollectionViewLayoutDelegate?) {
         super.init()
+        self.delegate = delegate
         self.itemSize = item_size
         self.itemSize.height = item_size.height - (CGFloat(maximumVisibleItems) * spacing)
     }
@@ -82,7 +88,7 @@ open class CardsCollectionViewLayout: UICollectionViewLayout {
   }
 
   override open func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-
+      print("itemIndex:\(indexPath.row)")
     let contentCenterX = collectionView.contentOffset.x + (collectionView.bounds.width / 2.0)
     let minVisibleIndex = Int(collectionView.contentOffset.x) / Int(collectionView.bounds.width)
     let deltaOffset = Int(collectionView.contentOffset.x) % Int(collectionView.bounds.width)
@@ -125,10 +131,10 @@ fileprivate extension CardsCollectionViewLayout {
                                        contentCenterX: CGFloat,
                                        deltaOffset: CGFloat,
                                        percentageDeltaOffset: CGFloat) -> UICollectionViewLayoutAttributes {
-      print("index::\(indexPath)")
+      
     let attributes = UICollectionViewLayoutAttributes(forCellWith:indexPath)
     let visibleIndex = indexPath.row - minVisibleIndex
-      attributes.size = CGSize(width: itemSize.width - spacing * CGFloat(visibleIndex), height: itemSize.height)
+      attributes.size = CGSize(width: itemSize.width - 2*spacing * CGFloat(visibleIndex), height: itemSize.height)
     let midY = self.collectionView.bounds.midY
     attributes.center =  CGPoint(x: contentCenterX ,
                                  y: midY + spacing * CGFloat(visibleIndex))//CGPoint(x: contentCenterX + spacing * CGFloat(visibleIndex),
@@ -140,20 +146,29 @@ fileprivate extension CardsCollectionViewLayout {
     switch visibleIndex {
     case 0:
       attributes.center.x -= deltaOffset
+        attributes.alpha = 1
       break
     case 1..<maximumVisibleItems:
 //      attributes.center.x -= spacing * percentageDeltaOffset
       attributes.center.y -= spacing * percentageDeltaOffset
-        attributes.size.width += spacing * percentageDeltaOffset
-      if visibleIndex == maximumVisibleItems - 1 {
-        attributes.alpha = percentageDeltaOffset
-      }
+        attributes.size.width += 2*spacing * percentageDeltaOffset
+        
+//      if visibleIndex == maximumVisibleItems - 1 {
+//        attributes.alpha = percentageDeltaOffset
+//      }else{
+          attributes.alpha = 1 - CGFloat(visibleIndex) / CGFloat(maximumVisibleItems)
+//      }
       break
     default:
       attributes.alpha = 0
       break
     }
-      
+        self.delegate?.frontCellIndex(index: minVisibleIndex)
+//        print("index::\(indexPath)")
+//        print("visibleindex::\(visibleIndex)")
+//        print("minvisibleindex::\(minVisibleIndex)")
+//        print("layout percent delta:\(percentageDeltaOffset)")
+//        print("layout delta:\(deltaOffset)")
     return attributes
   }
 }

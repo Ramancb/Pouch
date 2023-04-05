@@ -14,7 +14,10 @@ protocol CardViewDelegate{
 
 class CardView: UIView {
 
+    @IBOutlet weak var dottedLineView: DottedLineView!
+    @IBOutlet weak var gradientView: GradientView!
     
+    @IBOutlet weak var containerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var invitationTextLabel: UILabel!
     @IBOutlet weak var invitationTextBgView: UIView!
     @IBOutlet weak var eventMarkView: UIView!
@@ -82,6 +85,7 @@ class CardView: UIView {
     private var layoutData:MEMBERSHIP?
     var cardData:CardsData?
     var delegate:CardViewDelegate?
+    public var isOpen:Bool = false
     
     private let nibName = "CardView"
     
@@ -95,7 +99,14 @@ class CardView: UIView {
         commonInIt()
     }
     
-    public var isOpen:Bool = false
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        cardBgView.layoutSubviews()
+        cardBgView.layoutIfNeeded()
+        cardBgView.layer.frame = cardBgView.bounds
+    }
+    
+   
     
     private func  commonInIt(){
          Bundle.main.loadNibNamed( nibName, owner: self, options: nil)
@@ -133,6 +144,7 @@ class CardView: UIView {
         self.verifiedImageView.isHidden = self.isOpen || data?.isActive == false
         self.verifiedImageView.image = UIImage(named: "Coupon_ic")
         self.scrollView.isUserInteractionEnabled = self.isOpen
+        self.containerViewHeightConstraint.priority = self.isOpen ? UILayoutPriority(250) : UILayoutPriority(1000)
         self.setCardLayoutWise(card: data)
     }
     
@@ -158,12 +170,17 @@ class CardView: UIView {
     
     func setBackgroudViews(layout:BackgroundFront?){
         self.backgroundImageView.image = layout?.image?.base64ToImage()
-        cardBgView.backgroundColor = UIColor(hex: layout?.color ?? "#FFFFFF")
-//        if layout?.type == BackGroundFrontType.grad_color_Image.rawValue ||  layout?.type == BackGroundFrontType.gradient.rawValue{
-//            cardBgView.applyGradient(colours: [UIColor(hex: layout?.colorPrimary ?? "#FFFFFF") ?? .clear,UIColor(hex: layout?.colorSecondary ?? "#FFFFFF") ?? .clear], locations: [0,1])
-//        }else{
-//            cardBgView.backgroundColor = UIColor(hex: layout?.colorPrimary ?? "#FFFFFF")
-//        }
+       
+        if layout?.type == BackGroundFrontType.grad_color_Image.rawValue ||  layout?.type == BackGroundFrontType.gradient.rawValue{
+            cardBgView.backgroundColor = UIColor(hex: layout?.color ?? "#FFFFFF")
+            gradientView.firstColor = UIColor(hex: layout?.colorPrimary ?? "#FFFFFF") ?? .clear
+            gradientView.secondColor = UIColor(hex: layout?.colorSecondary ?? "#FFFFFF") ?? .clear
+            //cardBgView.applyGradient(colours: [UIColor(hex: layout?.colorPrimary ?? "#FFFFFF") ?? .clear,UIColor(hex: layout?.colorSecondary ?? "#FFFFFF") ?? .clear], locations: [0,1])
+        }else{
+            gradientView.firstColor =  .clear
+            gradientView.secondColor = .clear
+            cardBgView.backgroundColor = UIColor(hex: layout?.colorPrimary ?? "#FFFFFF")
+        }
     }
     
     func setBottomContactView(){
@@ -286,7 +303,8 @@ class CardView: UIView {
             self.percentLabel.setLabel("%",  UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF"), .latoExtraLight, 38)
             self.percentOffLabel.setLabel("OFF",  UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF"), .latoExtraLight, 38)
         }
-        self.dottedLineBgView.addHorizontalDashedBorder(color: UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF") ?? .gray)
+//        self.dottedLineBgView.addHorizontalDashedBorder(color: UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF") ?? .gray)
+        self.dottedLineView.color = UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF") ?? .gray
         self.setViewForDetail(card: card)
         self.termConditionsLabel.setLabel("t&c", UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoRegular,15)
         self.contactBgView.backgroundColor = .clear
@@ -331,4 +349,60 @@ class CardView: UIView {
     @IBAction func closeAction(_ sender: UIButton) {
         self.delegate?.closeCard()
     }
+}
+
+
+import Foundation
+import UIKit
+
+class LabelWithAdaptiveTextHeight: UILabel {
+    
+var minFontSize: CGFloat = 30
+    
+var maxFontSize: CGFloat = 70
+
+override func layoutSubviews() {
+    super.layoutSubviews()
+    font = fontToFitHeight()
+}
+
+// Returns an UIFont that fits the new label's height.
+private func fontToFitHeight() -> UIFont {
+
+
+    var fontSizeAverage: CGFloat = 0
+    var textAndLabelHeightDiff: CGFloat = 0
+
+    while (minFontSize <= maxFontSize) {
+        fontSizeAverage = minFontSize + (maxFontSize - minFontSize) / 2
+
+        if let labelText: NSString = text as NSString?  {
+            let labelHeight = frame.size.height
+
+            let testStringHeight = labelText.size(
+                withAttributes: [NSAttributedString.Key.font: font.withSize(fontSizeAverage)]
+            ).height
+
+            textAndLabelHeightDiff = labelHeight - testStringHeight
+
+            if (fontSizeAverage == minFontSize || fontSizeAverage == maxFontSize) {
+                if (textAndLabelHeightDiff < 0) {
+                    return font.withSize(fontSizeAverage - 1)
+                }
+                return font.withSize(fontSizeAverage)
+            }
+            
+            if (textAndLabelHeightDiff < 0) {
+                maxFontSize = fontSizeAverage - 1
+
+            } else if (textAndLabelHeightDiff > 0) {
+                minFontSize = fontSizeAverage + 1
+
+            } else {
+                return font.withSize(fontSizeAverage)
+            }
+        }
+    }
+    return font.withSize(fontSizeAverage)
+}
 }

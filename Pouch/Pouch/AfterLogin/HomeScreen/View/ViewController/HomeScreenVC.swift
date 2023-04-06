@@ -48,7 +48,6 @@ class HomeScreenVC: UIViewController {
     
     /// Method to set collections delegate and data source
     func setCollectionView(){
-        
         itemCollectionView.delegate = self
         itemCollectionView.dataSource = self
         self.homeCollectionView.delegate = self
@@ -115,7 +114,6 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         
     }
     
-    
 //    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
 //        guard scrollView == self.homeCollectionView else{return}
 //        guard let cell = homeCollectionView.visibleCells.first else{ return}
@@ -134,7 +132,8 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
             self.selectedIndex = indexPath.row
             if let data = self.cardsData {
                 if let index = data.firstIndex(where: {$0.type == self.categories?[indexPath.item].name?.uppercased()}) {
-                    self.homeCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
+                    self.homeCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .left, animated: true)
+                    
                 }
             }
             collectionView.reloadData()
@@ -159,13 +158,10 @@ extension HomeScreenVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
 
 extension HomeScreenVC: CardsCollectionViewLayoutDelegate{
     func frontCellIndex(index: Int) {
-        if let cell = homeCollectionView.cellForItem(at: IndexPath(row: index, section: 0)) as? HomeCollectionCell{
-            if let index = self.categories?.firstIndex(where: {$0.name?.lowercased() == self.cardsData?[index].type?.lowercased()}){
-                self.selectedIndex = index
-                self.itemCollectionView.reloadData()
-                self.itemCollectionView.scrollToItem(at: IndexPath(item: self.selectedIndex, section: 0), at: .centeredHorizontally, animated: true)
-            }
-//            cell.card_View.dottedLineView.layoutSubviews()
+        if let index = self.categories?.firstIndex(where: {$0.name?.lowercased() == self.cardsData?[index].type?.lowercased()}){
+            self.selectedIndex = index
+            self.itemCollectionView.reloadData()
+            self.itemCollectionView.scrollToItem(at: IndexPath(item: self.selectedIndex, section: 0), at: .centeredHorizontally, animated: true)
         }
     }
 }

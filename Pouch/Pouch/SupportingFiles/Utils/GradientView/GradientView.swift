@@ -35,29 +35,74 @@ final class GradientView: UIView {
 
 
 
+//@IBDesignable
+//final class DottedLineView: UIView {
+//
+//    @IBInspectable var color: UIColor = .clear { didSet { updateView() } }
+//    @IBInspectable var lineWidth: CGFloat = 1.0 { didSet { updateView() } }
+//
+//    override class var layerClass: AnyClass { get { CAShapeLayer.self } }
+//
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        updateView()
+//        layer.frame = bounds
+//    }
+//
+//    private func updateView() {
+//        let layer = self.layer as! CAShapeLayer
+//        layer.strokeColor = color.cgColor
+//        layer.lineWidth = lineWidth
+//        layer.lineDashPattern = [5,5]
+//        let path = CGMutablePath()
+//        let  p0 = CGPoint(x: self.bounds.minX, y: self.bounds.midY)
+//        let  p1 = CGPoint(x: self.bounds.maxX, y: self.bounds.midY)
+//        path.addLines(between: [p0,p1])
+//        layer.path = path
+//    }
+//}
+
+
 @IBDesignable
-final class DottedLineView: UIView {
+class DashedLineView : UIView {
+    @IBInspectable var perDashLength: CGFloat = 5.0
+    @IBInspectable var spaceBetweenDash: CGFloat = 5.0
+    @IBInspectable var dashColor: UIColor = UIColor.lightGray
 
-    @IBInspectable var color: UIColor = .clear { didSet { updateView() } }
-    @IBInspectable var lineWidth: CGFloat = 1.0 { didSet { updateView() } }
 
-    override class var layerClass: AnyClass { get { CAShapeLayer.self } }
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        let  path = UIBezierPath()
+        if height > width {
+            let  p0 = CGPoint(x: self.bounds.midX, y: self.bounds.minY)
+            path.move(to: p0)
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        updateView()
-        layer.frame = bounds
+            let  p1 = CGPoint(x: self.bounds.midX, y: self.bounds.maxY)
+            path.addLine(to: p1)
+            path.lineWidth = width
+
+        } else {
+            let  p0 = CGPoint(x: self.bounds.minX, y: self.bounds.midY)
+            path.move(to: p0)
+
+            let  p1 = CGPoint(x: self.bounds.maxX, y: self.bounds.midY)
+            path.addLine(to: p1)
+            path.lineWidth = height
+        }
+
+        let  dashes: [ CGFloat ] = [ perDashLength, spaceBetweenDash ]
+        path.setLineDash(dashes, count: dashes.count, phase: 0.0)
+
+        path.lineCapStyle = .butt
+        dashColor.set()
+        path.stroke()
     }
 
-    private func updateView() {
-        let layer = self.layer as! CAShapeLayer
-        layer.strokeColor = color.cgColor
-        layer.lineWidth = lineWidth
-        layer.lineDashPattern = [5,5]
-        let path = CGMutablePath()
-        let  p0 = CGPoint(x: self.bounds.minX, y: self.bounds.midY)
-        let  p1 = CGPoint(x: self.bounds.maxX, y: self.bounds.midY)
-        path.addLines(between: [p0,p1])
-        layer.path = path
+    private var width : CGFloat {
+        return self.bounds.width
+    }
+
+    private var height : CGFloat {
+        return self.bounds.height
     }
 }

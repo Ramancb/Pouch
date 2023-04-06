@@ -14,7 +14,7 @@ protocol CardViewDelegate{
 
 class CardView: UIView {
 
-    @IBOutlet weak var dottedLineView: DottedLineView!
+    @IBOutlet weak var dottedLineView: DashedLineView!
     @IBOutlet weak var gradientView: GradientView!
     
     @IBOutlet weak var containerViewHeightConstraint: NSLayoutConstraint!
@@ -304,7 +304,7 @@ class CardView: UIView {
             self.percentOffLabel.setLabel("OFF",  UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF"), .latoExtraLight, 38)
         }
 //        self.dottedLineBgView.addHorizontalDashedBorder(color: UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF") ?? .gray)
-        self.dottedLineView.color = UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF") ?? .gray
+        self.dottedLineView.dashColor = UIColor(hex: layoutData?.primaryText?.color ?? "#FFFFFF") ?? .gray
         self.setViewForDetail(card: card)
         self.termConditionsLabel.setLabel("t&c", UIColor(hex: layoutData?.primaryText?.color ?? "#ffffff"),.latoRegular,15)
         self.contactBgView.backgroundColor = .clear

@@ -164,11 +164,7 @@ fileprivate extension CardsCollectionViewLayout {
       break
     }
         self.delegate?.frontCellIndex(index: minVisibleIndex)
-//        print("index::\(indexPath)")
-//        print("visibleindex::\(visibleIndex)")
-//        print("minvisibleindex::\(minVisibleIndex)")
-//        print("layout percent delta:\(percentageDeltaOffset)")
-//        print("layout delta:\(deltaOffset)")
+
     return attributes
   }
 }

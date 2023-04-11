@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqU-8y-HFa" customClass="CardView" customModule="Pouch">
-                        <rect key="frame" x="20" y="20" width="431" height="705"/>
+                        <rect key="frame" x="0.0" y="0.0" width="471" height="745"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -30,10 +30,10 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="hqU-8y-HFa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="F8E-Z1-MzR"/>
-                <constraint firstAttribute="bottom" secondItem="hqU-8y-HFa" secondAttribute="bottom" constant="20" id="VQr-uh-DJk"/>
-                <constraint firstAttribute="trailing" secondItem="hqU-8y-HFa" secondAttribute="trailing" constant="20" id="bxB-3m-Dwa"/>
-                <constraint firstItem="hqU-8y-HFa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="lRz-Sj-QBv"/>
+                <constraint firstItem="hqU-8y-HFa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="F8E-Z1-MzR"/>
+                <constraint firstAttribute="bottom" secondItem="hqU-8y-HFa" secondAttribute="bottom" id="VQr-uh-DJk"/>
+                <constraint firstAttribute="trailing" secondItem="hqU-8y-HFa" secondAttribute="trailing" id="bxB-3m-Dwa"/>
+                <constraint firstItem="hqU-8y-HFa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lRz-Sj-QBv"/>
             </constraints>
             <size key="customSize" width="471" height="745"/>
             <connections>

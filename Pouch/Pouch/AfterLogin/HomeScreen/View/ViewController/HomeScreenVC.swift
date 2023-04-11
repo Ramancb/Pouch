@@ -42,7 +42,10 @@ class HomeScreenVC: UIViewController {
         homeCollectionView.isPagingEnabled = true
         homeCollectionView.showsHorizontalScrollIndicator = false
         homeCollectionView.delaysContentTouches = false
-        let itemSize = CGSize(width: homeCollectionView.frame.width - 20, height: (homeCollectionView.frame.height))
+        let width = SCREEN_SIZE.width - 60
+        let height = (460 / 320) * width
+        
+        let itemSize = CGSize(width: width, height: height)//CGSize(width: homeCollectionView.frame.width - 20, height: (homeCollectionView.frame.height))
         homeCollectionView.collectionViewLayout = CardsCollectionViewLayout(item_size: itemSize, delegate: self)
     }
     

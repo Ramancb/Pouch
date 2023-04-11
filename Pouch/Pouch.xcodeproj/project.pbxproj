@@ -38,6 +38,7 @@
 		F108C6C029A658BF0071CF8B /* EditProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F108C6BC29A658BF0071CF8B /* EditProfileVC.xib */; };
 		F108C6C129A658BF0071CF8B /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108C6BD29A658BF0071CF8B /* EditProfileVC.swift */; };
 		F125D61D29DCAF6F0069588A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F125D61C29DCAF6E0069588A /* GradientView.swift */; };
+		F12988A829E578B80096F2C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F12988A729E578B80096F2C2 /* GoogleService-Info.plist */; };
 		F12F126529B74529004615A8 /* CardsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12F126429B74529004615A8 /* CardsCollectionViewLayout.swift */; };
 		F13C5A0B29C9B81900096E37 /* FadingCircleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C59FD29C9B81900096E37 /* FadingCircleSpinner.swift */; };
 		F13C5A0C29C9B81900096E37 /* WaveSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C59FE29C9B81900096E37 /* WaveSpinner.swift */; };
@@ -52,7 +53,6 @@
 		F13C5A1529C9B81900096E37 /* CircleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C5A0829C9B81900096E37 /* CircleSpinner.swift */; };
 		F13C5A1629C9B81900096E37 /* CubeGridSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C5A0929C9B81900096E37 /* CubeGridSpinner.swift */; };
 		F141260929A686CB000170A8 /* FloatingPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141260829A686CB000170A8 /* FloatingPlaceholderTextField.swift */; };
-		F151D74429D189ED001C1FFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F151D74329D189ED001C1FFE /* GoogleService-Info.plist */; };
 		F15D7A1D29ACBE8500EF4C7B /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D7A1C29ACBE8500EF4C7B /* DatabaseManager.swift */; };
 		F1667DA629CC673E0058D171 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1667DA529CC673E0058D171 /* SwipeableView.swift */; };
 		F1688F5429A4A5DE00A598BA /* UserCardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1688F5329A4A5DE00A598BA /* UserCardsModel.swift */; };
@@ -180,6 +180,7 @@
 		F108C6BC29A658BF0071CF8B /* EditProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileVC.xib; sourceTree = "<group>"; };
 		F108C6BD29A658BF0071CF8B /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		F125D61C29DCAF6E0069588A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F12988A729E578B80096F2C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F12F126429B74529004615A8 /* CardsCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCollectionViewLayout.swift; sourceTree = "<group>"; };
 		F13C59FD29C9B81900096E37 /* FadingCircleSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadingCircleSpinner.swift; sourceTree = "<group>"; };
 		F13C59FE29C9B81900096E37 /* WaveSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveSpinner.swift; sourceTree = "<group>"; };
@@ -196,7 +197,6 @@
 		F13C5A0929C9B81900096E37 /* CubeGridSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeGridSpinner.swift; sourceTree = "<group>"; };
 		F141260829A686CB000170A8 /* FloatingPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPlaceholderTextField.swift; sourceTree = "<group>"; };
 		F151D74229D18895001C1FFE /* Pouch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pouch.entitlements; sourceTree = "<group>"; };
-		F151D74329D189ED001C1FFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F15D7A1C29ACBE8500EF4C7B /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		F1667DA529CC673E0058D171 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
 		F1688F5329A4A5DE00A598BA /* UserCardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardsModel.swift; sourceTree = "<group>"; };
@@ -499,8 +499,8 @@
 				F1AD964F2988FBB900FB83DA /* Utils */,
 				F17E14DD2988F8FE00C336C2 /* Storyboards */,
 				F17E14D02988F82200C336C2 /* Assets.xcassets */,
-				F151D74329D189ED001C1FFE /* GoogleService-Info.plist */,
 				F17E14D52988F82200C336C2 /* Info.plist */,
+				F12988A729E578B80096F2C2 /* GoogleService-Info.plist */,
 				F17E14CD2988F82000C336C2 /* Pouch.xcdatamodeld */,
 			);
 			path = SupportingFiles;
@@ -1110,7 +1110,7 @@
 				F1BBC9912990DE8000D1EFDA /* Lato-Light.ttf in Resources */,
 				F1BBC9882990DE8000D1EFDA /* Lato-Italic.ttf in Resources */,
 				4B92C118298CD49F00ED318C /* SettingsSectionHeader.xib in Resources */,
-				F151D74429D189ED001C1FFE /* GoogleService-Info.plist in Resources */,
+				F12988A829E578B80096F2C2 /* GoogleService-Info.plist in Resources */,
 				F1BBC9902990DE8000D1EFDA /* Lato-BoldItalic.ttf in Resources */,
 				F1B80B9529B664730073741B /* nimbus-sans-d-ot-ultra-light.ttf in Resources */,
 				4BCADD56298949270091A183 /* InformationPopUpController.xib in Resources */,

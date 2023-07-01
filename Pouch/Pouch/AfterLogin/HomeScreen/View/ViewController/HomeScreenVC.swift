@@ -42,7 +42,7 @@ class HomeScreenVC: UIViewController {
         homeCollectionView.isPagingEnabled = true
         homeCollectionView.showsHorizontalScrollIndicator = false
         homeCollectionView.delaysContentTouches = false
-        let width = SCREEN_SIZE.width - 60
+        let width = SCREEN_SIZE.width - 80
         let height = (460 / 320) * width
         
         let itemSize = CGSize(width: width, height: height)//CGSize(width: homeCollectionView.frame.width - 20, height: (homeCollectionView.frame.height))

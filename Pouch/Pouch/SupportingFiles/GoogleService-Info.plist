@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1091685317713-j4oihs7tpor3pmn3i5tougdp5g3d559g.apps.googleusercontent.com</string>
+	<string>373680237487-k6ev6iabb9nuu0mdbu7r0ac3ic6qp2e3.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1091685317713-j4oihs7tpor3pmn3i5tougdp5g3d559g</string>
+	<string>com.googleusercontent.apps.373680237487-k6ev6iabb9nuu0mdbu7r0ac3ic6qp2e3</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDBrKg0ZgKDF2J5IoapdwMROYvvyTb7ImE</string>
+	<string>AIzaSyAw0CPMMhqLlHqSRRbq5Fv1qG0gppiOe9U</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1091685317713</string>
+	<string>373680237487</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.stackgeeks.Pouch</string>
 	<key>PROJECT_ID</key>
-	<string>pouch-dev-ios</string>
+	<string>pouch-dev-5ed3d</string>
 	<key>STORAGE_BUCKET</key>
-	<string>pouch-dev-ios.appspot.com</string>
+	<string>pouch-dev-5ed3d.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1091685317713:ios:31612dad0e2a22a8c3cc70</string>
+	<string>1:373680237487:ios:b6edd38da860c970605d5a</string>
 </dict>
 </plist>

@@ -28,7 +28,7 @@ extension AppDelegate {
             let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
             application.registerUserNotificationSettings(settings)
         }
-        application.registerForRemoteNotifications()
+        //application.registerForRemoteNotifications()
         Messaging.messaging().delegate = self
         onLaunchPushNotification(launchOptions: launchOptions)
     }
